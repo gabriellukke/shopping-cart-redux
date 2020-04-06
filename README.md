@@ -309,8 +309,6 @@ Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em alguma lugar da página **apenas durante** a requisição à API.
 
-### 10.
-
 ---
 
 ## Instruções para entregar seu projeto:
