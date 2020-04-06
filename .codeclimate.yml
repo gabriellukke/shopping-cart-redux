@@ -30,6 +30,10 @@ checks:
   identical-code:
     config:
       threshold: # language-specific defaults. an override will affect all languages.
+exclude_patterns:
+  - "**/*.{gif,png,jpeg,jpg}"
+  - "node_modules/"
+  - "cypress/"
 plugins:
   editorconfig:
     enabled: true
