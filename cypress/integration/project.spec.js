@@ -9,6 +9,15 @@ const EMPTY_CART_BUTTON = '.button-items'
 const TOTAL_PRICE = '.totalPrice_items'
 
 describe('Shopping Cart Project', () => {
+  let results;
+  before(() => {
+    fetch(API_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        results = data.results
+        console.log(results);
+      })
+    })
   
   beforeEach(() => {
     cy.visit(PROJECT_URL);
@@ -18,12 +27,14 @@ describe('Shopping Cart Project', () => {
   it('Adicione o produto ao carrinho de compras',() => {
     cy.get(ITEM_SELECTOR)
     .should('exist')
-    .eq(3)
+    .eq(36)
     .children(ADD_CART_BUTTON)
     .click();
     cy.get(CART_ITEMS)
       .children()
       .should('have.length', 1)
+      .first()
+      .should('have.text', results[36].title)
   });
   it('Remova o item do carrinho de compras ao clicar nele');
   it('Salve o carrinho de compras no **LocalStorage**');
@@ -54,18 +65,7 @@ describe('Shopping Cart Project', () => {
       .children()
       .should('have.length', 0)
   });
-  it('Custo total do carrinho de compras', () => {
-    let totalValue = 0;
-    cy.request(API_URL)
-      .then((response) => {
-        totalValue += response.body.results[9].price;
-        console.log(totalValue);
-        totalValue += response.body.results[40].price;
-        console.log(totalValue);
-        totalValue += response.body.results[23].price;
-        console.log(totalValue);
-        
-      })
+  it('Custo total do carrinho de compras', () => { 
     cy.visit(PROJECT_URL);
     cy.get(ITEM_SELECTOR)
       .should('exist')
@@ -83,11 +83,15 @@ describe('Shopping Cart Project', () => {
       .children(ADD_CART_BUTTON)
       .click();
     cy.get(TOTAL_PRICE)
-      .should('have.value', totalValue)
+      .should('have.value', (results[9].price +
+                             results[40].price +
+                             results[23].price).toString());
   });
   it('Adicionar um texto de "loading" durante uma requisição à API', () => {
     cy.request(PROJECT_URL)
     cy.get(LOADING)
       .should('exist')
+      .wait(3000)
+      .should('not.exist');
   });
 });
