@@ -17,7 +17,7 @@ describe('Shopping Cart Project', () => {
         results = data.results
         console.log(results);
       })
-    })
+  })
   
   beforeEach(() => {
     cy.visit(PROJECT_URL);
@@ -34,7 +34,9 @@ describe('Shopping Cart Project', () => {
       .children()
       .should('have.length', 1)
       .first()
-      .should('have.text', results[36].title)
+      .should('have.text', 'SKU: ' + results[36].id +
+                           ' | NAME: ' + results[36].title +
+                           ' | PRICE: $' + results[36].price)
   });
   it('Remova o item do carrinho de compras ao clicar nele');
   it('Salve o carrinho de compras no **LocalStorage**');
@@ -86,6 +88,13 @@ describe('Shopping Cart Project', () => {
       .should('have.value', (results[9].price +
                              results[40].price +
                              results[23].price).toString());
+    cy.get(CART_ITEMS)
+        .children()
+        .eq(1)
+        .click()
+    cy.get(TOTAL_PRICE)
+    .should('have.value', (results[9].price +
+                            results[23].price).toString());
   });
   it('Adicionar um texto de "loading" durante uma requisição à API', () => {
     cy.request(PROJECT_URL)
