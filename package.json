@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/betrybe/sd-0x-block10-project-shopping-cart/issues"
   },
-  "homepage": "https://github.com/betrybe/sd-0x-block10-project-shopping-cart#readme"
+  "homepage": "https://github.com/betrybe/sd-0x-block10-project-shopping-cart#readme",
+  "dependencies": {
+    "cypress": "^4.3.0",
+    "cypress-multi-reporters": "^1.2.4",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^4.1.0"
+  }
 }
