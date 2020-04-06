@@ -10,28 +10,22 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Você **não** deve alterar a lógica das funções implementadas no arquivo `script.js`.
 
-Os arquivos `index.html` e `style.css` serão alterados apenas se você decidir fazer os requisitos bônus.
-Você pode alterar estes arquivos, mas lembre-se de **não** alterar a hierarquia presente na estrutura.
+Você pode alterar os arquivos `index.html` e `style.css`, mas lembre-se de **não** alterar a hierarquia de componentes e estilos presente na estrutura. Adicione conteúdo, mas não delete nem mude nada de lugar.
 
 ---
 
 ## Requisitos do projeto
 
-⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e do **TravisCI**
+Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
 
-### 1. Salve o nome da pessoa no **SessionStorage**
+O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito. Este projeto tem como objetivo:
 
-Você deve salvar o nome da pessoa que utiliza a página na **SessionStorage**.
-A pessoa deve digitar o nome dela no campo `<input class="input-name" type="text">` (já presente na página).
+- Revisar seu conhecimento acerca de JavaScript, CSS e HTML;
+- Checar o seu conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
 
-### 2. Salve se a pessoa concorda com os termos da sua página nos **Cookies**
+Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e do **TravisCI**.
 
-Salve se a pessoa concorda com os termos da sua página ou não nos **Cookies**.
-A pessoa deve marcar ou desmarcar o campo `<input class="input-terms" type="checkbox">` (já presente na página).
-
-Os cookies não são salvos no navegador quando o site é acessado pelo file path, isto é, clicando no index.html. Recomendamos então o teste dos cookies utilizando o localhost via um servidor que é possivel utilizar pela instalação desta [extensão](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) do VS Code. Basta instalar ele, executar o clique secundário e abrir o Live Server. Para testar a aplicação, valeria colocar ela no GitHub Pages e verificar se os cookies são salvos.
-
-### 3. Listagem de produtos
+### 1. Listagem de produtos
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -235,9 +229,9 @@ Você **deve** utilizar a função `createProductItemElement(product)` para cria
 
 Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
-**Obs:** sku se referem as `id`
+**Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
-### 4. Adicione o produto ao carrinho de compras
+### 2. Adicione o produto ao carrinho de compras
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
 
@@ -284,28 +278,32 @@ Você **deve** utilizar a função `createCartItemElement()` para criar os compo
 
 Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
-### 5. Remova o item do carrinho de compras ao clicar nele
+### 3. Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
 Para isso, uma função (já existente) chamada `cartItemClickListener(event)` deve ser implementada com a lógica necessária para realizar a remoção.
 
-### 6. Salve o carrinho de compras no **LocalStorage**
+### 4. Salve o carrinho de compras no **LocalStorage**
 
 O carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
 
-### 7. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
+### 5. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**
 
-### 8. (BÔNUS) Botão para limpar carrinho de compras
+### 6. Some o valor total dos itens do carrinho de compras de forma assíncrona
+
+Cada vez que se adicionar um item ao carrinho de compras será necessário somar seus valores e apresentá-los na página principal do projeto. Não queremos que essa soma, no entanto, impacte no carregamento da página. Devemos, portanto, fazer essa soma de forma *assíncrona*. Use `async/await` para fazer isso.
+
+### 7. Botão para limpar carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras.
 
-### 9. (BÔNUS) Custo total do carrinho de compras
+### 8. Custo total do carrinho de compras
 
 Apresente o valor total do carrinho de compras.
 
-### 10. (BÔNUS) "loading" durante uma requisição à API
+### 9. Adicionar um texto de "loading" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
@@ -386,7 +384,7 @@ Mostre a palavra "loading..." em alguma lugar da página **apenas durante** a re
 
 ---
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO
+### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
