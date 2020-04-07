@@ -1,5 +1,5 @@
 const API_URL = "https://api.mercadolibre.com/sites/MLB/search?q=$computador"
-const PROJECT_URL = './index.html'
+const PROJECT_URL = 'index.html'
 
 const LOADING = '.loading';
 const ITEM_SELECTOR = '.item';
@@ -22,6 +22,14 @@ const countCart = (amount) => {
       .should('have.length', amount);
 }
 
+const checkPrice = (results, indexes) => {
+  cy.wait(1000);
+  let total = 0;
+  indexes.forEach(index => total += results[index].price);
+  cy.get(TOTAL_PRICE)
+      .should('have.value', total.toString());
+}
+
 describe('Shopping Cart Project', () => {
   let results;
   before(() => {
@@ -35,6 +43,7 @@ describe('Shopping Cart Project', () => {
 
   beforeEach(() => {
     cy.visit(PROJECT_URL);
+    cy.clearLocalStorage();
   });
 
   it('Listagem de produtos');
@@ -78,7 +87,16 @@ describe('Shopping Cart Project', () => {
     .contains(`SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
   });
 
-  it('Some o valor total dos itens do carrinho de compras de forma assíncrona');
+  it('Some o valor total dos itens do carrinho de compras de forma assíncrona', () => {
+    addToCart(5);
+    checkPrice(results, [5]);
+    addToCart(42);
+    checkPrice(results, [5, 42]);
+    addToCart(36);
+    checkPrice(results, [5, 42, 36]);
+    addToCart(15);
+    checkPrice(results, [5, 42, 36, 15]);
+  });
   it('Botão para limpar carrinho de compras', () => {
     addToCart(3);
     addToCart(0);
@@ -93,17 +111,12 @@ describe('Shopping Cart Project', () => {
     addToCart(9);
     addToCart(40);
     addToCart(23);
-    cy.get(TOTAL_PRICE)
-      .should('have.value', (results[9].price +
-                             results[40].price +
-                             results[23].price).toString());
+    checkPrice(results, [9, 40, 23]);
     cy.get(CART_ITEMS)
-        .children()
-        .eq(1)
-        .click()
-    cy.get(TOTAL_PRICE)
-    .should('have.value', (results[9].price +
-                            results[23].price).toString());
+      .children()
+      .eq(1)
+      .click()
+    checkPrice(results, [9, 23]);
   });
   it('Adicionar um texto de "loading" durante uma requisição à API', () => {
     cy.request(PROJECT_URL)
