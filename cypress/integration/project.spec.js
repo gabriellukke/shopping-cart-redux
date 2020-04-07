@@ -54,7 +54,7 @@ describe('Shopping Cart Project', () => {
 
   });
 
-  it('Salve o carrinho de compras no **LocalStorage**', () => {
+  it('Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página', () => {
     let first = 36;
     let last = 29;
 
@@ -78,7 +78,6 @@ describe('Shopping Cart Project', () => {
     .contains(`SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
   });
 
-  it('Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página');
   it('Some o valor total dos itens do carrinho de compras de forma assíncrona');
   it('Botão para limpar carrinho de compras', () => {
     addToCart(3);

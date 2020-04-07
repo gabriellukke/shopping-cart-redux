@@ -337,27 +337,24 @@ Adicione o elemento retornado da função `createCartItemElement(product)` como 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
 Para isso, uma função (já existente) chamada `cartItemClickListener(event)` deve ser implementada com a lógica necessária para realizar a remoção.
 
-### 4. Salve o carrinho de compras no **LocalStorage**
+### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
-O carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
+Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
+Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
 
-### 5. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
-
-Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**
-
-### 6. Some o valor total dos itens do carrinho de compras de forma assíncrona
+### 5. Some o valor total dos itens do carrinho de compras de forma assíncrona
 
 Cada vez que se adicionar um item ao carrinho de compras será necessário somar seus valores e apresentá-los na página principal do projeto. Não queremos que essa soma, no entanto, impacte no carregamento da página. Devemos, portanto, fazer essa soma de forma *assíncrona*. Use `async/await` para fazer isso.
 
-### 7. Botão para limpar carrinho de compras
+### 6. Botão para limpar carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras.
 
-### 8. Custo total do carrinho de compras
+### 7. Custo total do carrinho de compras
 
 Apresente o valor total do carrinho de compras.
 
-### 9. Adicionar um texto de "loading" durante uma requisição à API
+### 8. Adicionar um texto de "loading" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
