@@ -1,5 +1,5 @@
 const API_URL = "https://api.mercadolibre.com/sites/MLB/search?q=$computador"
-const PROJECT_URL = './JulioCezar/index.html'
+const PROJECT_URL = './index.html'
 
 const LOADING = '.loading';
 const ITEM_SELECTOR = '.item';
@@ -32,7 +32,7 @@ describe('Shopping Cart Project', () => {
         console.log(results);
       })
   })
-  
+
   beforeEach(() => {
     cy.visit(PROJECT_URL);
   });
@@ -45,16 +45,39 @@ describe('Shopping Cart Project', () => {
     cy.get(CART_ITEMS)
       .first()
       .contains(`SKU: ${results[36].id} | NAME: ${results[36].title} | PRICE: $${results[36].price}`)
-      
-      
   });
+
   it('Remova o item do carrinho de compras ao clicar nele', () => {
     addToCart(29);
     addToCart(31);
     countCart(2);
 
   });
-  it('Salve o carrinho de compras no **LocalStorage**');
+
+  it('Salve o carrinho de compras no **LocalStorage**', () => {
+    let first = 36;
+    let last = 29;
+
+    cy.wait(1000);
+    addToCart(first);
+    countCart(1);
+    cy.get(CART_ITEMS)
+      .first()
+      .contains(`SKU: ${results[first].id} | NAME: ${results[first].title} | PRICE: $${results[first].price}`)
+      addToCart(last);
+    cy.get(CART_ITEMS)
+    .last()
+    .contains(`SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
+
+    cy.reload()
+    cy.get(CART_ITEMS)
+    .first()
+    .contains(`SKU: ${results[first].id} | NAME: ${results[first].title} | PRICE: $${results[first].price}`)
+    cy.get(CART_ITEMS)
+    .last()
+    .contains(`SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
+  });
+
   it('Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página');
   it('Some o valor total dos itens do carrinho de compras de forma assíncrona');
   it('Botão para limpar carrinho de compras', () => {
@@ -66,7 +89,7 @@ describe('Shopping Cart Project', () => {
       .click()
     countCart(0);
   });
-  it('Custo total do carrinho de compras', () => { 
+  it('Custo total do carrinho de compras', () => {
     cy.visit(PROJECT_URL);
     addToCart(9);
     addToCart(40);
