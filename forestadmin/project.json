@@ -21,11 +21,6 @@
         "bonus": false
       },
       {
-        "description": "Salve o carrinho de compras no **LocalStorage**",
-        "enabled": true,
-        "bonus": false
-      },
-      {
         "description": "Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
         "enabled": true,
         "bonus": false
@@ -37,11 +32,6 @@
       },
       {
         "description": "Botão para limpar carrinho de compras",
-        "enabled": true,
-        "bonus": false
-      },
-      {
-        "description": "Custo total do carrinho de compras",
         "enabled": true,
         "bonus": false
       },
