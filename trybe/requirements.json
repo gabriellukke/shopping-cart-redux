@@ -27,6 +27,6 @@
       {
         "description":"Adicionar um texto de \"loading\" durante uma requisição à API" ,
         "bonus": false
-      },
+      }
     ]
   }

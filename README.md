@@ -77,8 +77,6 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 - Revisar seu conhecimento acerca de JavaScript, CSS e HTML;
 - Checar o seu conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
 
-Lembre-se de testar, usando Jest, quaisquer funções que criar para comportar a lógica da sua aplicação. Isso é um treinamento muito importante para o próximo trabalho!
-
 Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate** e do **TravisCI**.
 
 ### 1. Listagem de produtos
