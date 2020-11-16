@@ -1,3 +1,5 @@
+Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
+
 # Boas vindas ao repositório do projeto de Carrinho de Compras!
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
@@ -6,9 +8,29 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ---
 
-## Instruções para entregar seu projeto:
+## HABILIDADES
 
-### ANTES DE COMEÇAR A DESENVOLVER:
+Nesse projeto, você será capaz de:
+
+- Fazer requisições a uma API externa;
+
+---
+
+## SUMÁRIO
+
+## O QUE DEVERÁ SER DESENVOLVIDO
+
+### Protótipo do projeto
+
+---
+
+## DATA DE ENTREGA
+
+---
+
+## COMO DESENVOLVER
+
+### Antes de começar a desenvolver:
 
 1. Clone o repositório
   * `git clone https://github.com/tryber/sd-0x-project-shopping-cart.git`.
@@ -50,19 +72,25 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ---
 
-# Entregáveis
+## REQUISITOS DO PROJETO
 
 Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. Você pode adicionar outros arquivos se julgar necessário. ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
 
-## Requisitos do projeto
-
 A seguir, estão listados todos os requisitos do projeto. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+
+### Linter
+
+<!-- Verificar se precisa configurar -->
+
+### Execução de testes de requisito
 
 Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução `1366 x 768` (1366 pixels de largura por 768 pixels de altura). Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração dessa resolução.
 
 Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, **desde que tais comportamentos adicionais não conflitem com os requisitos propostos**. Em outras palavras, você pode fazer mais do que for pedido, mas nunca menos. Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos.
+
+### API shopping cart
 
 Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
 
@@ -75,7 +103,9 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 - Revisar seu conhecimento acerca de JavaScript, CSS e HTML;
 - Checar o seu conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
 
-Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**.
+<!-- Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**. -->
+
+### LISTA DE REQUISITOS
 
 ### 1. Listagem de produtos
 
@@ -356,6 +386,8 @@ Mostre a palavra "loading..." em alguma lugar da página **apenas durante** a re
 
 ---
 
+## Instruções para entregar seu projeto:
+
 ### DURANTE O DESENVOLVIMENTO
 
 * ⚠ **PULL REQUESTS COM ISSUES NO CODE CLIMATE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
@@ -396,3 +428,15 @@ Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um vid
 À medida que você e as outras pessoas que estudam na Trybe forem entregando os projetos, vocês receberão um alerta via Slack para também fazer a revisão dos Pull Requests dos seus colegas. Fiquem atentos às mensagens do "Pull Reminders" no Slack!
 
 Use o material que você já viu sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os projetos que chegaram para você.
+
+---
+
+# AVISOS FINAIS
+
+Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
+
+Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
+
+O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
+
+---
