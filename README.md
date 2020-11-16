@@ -12,7 +12,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Nesse projeto, você será capaz de:
 
-- Fazer requisições a uma API externa;
+- Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
+- Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
+- TRabalhar com funções assíncronas;
 
 ---
 
@@ -20,7 +22,13 @@ Nesse projeto, você será capaz de:
 
 ## O QUE DEVERÁ SER DESENVOLVIDO
 
+Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
+
 ### Protótipo do projeto
+
+Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finalizado, **não se preocupe em replicar o visual, o gif so ilustra o comportamento** :
+
+![Project Gif](./out.gif)
 
 ---
 
@@ -78,7 +86,7 @@ Para entregar o seu projeto você deverá criar um Pull Request neste repositór
 
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
 
-A seguir, estão listados todos os requisitos do projeto. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
 ### Linter
 
@@ -92,16 +100,7 @@ Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na 
 
 ### API shopping cart
 
-Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
-
-Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finalizado, **não se preocupe em replicar o visual, o gif so ilustra o comportamento** :
-
-![Project Gif](./out.gif)
-
-O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito. Este projeto tem como objetivo:
-
-- Revisar seu conhecimento acerca de JavaScript, CSS e HTML;
-- Checar o seu conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
+O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
 <!-- Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**. -->
 
