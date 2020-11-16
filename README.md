@@ -107,7 +107,7 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 ### LISTA DE REQUISITOS
 
-### 1. Listagem de produtos
+### 1. Criar listagem de produtos
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -115,9 +115,9 @@ Você deve utilizar o _endpoint_:
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
-onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser o termo `computador`.
+onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatóriamente** o termo `computador`.
 
-O retorno desse _endpoint_ será algo no formato json. Por exemplo, se for pesquisado "computador":
+O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pesquisado "computador":
 ```json
 {
     "site_id": "MLB",
@@ -372,9 +372,9 @@ Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**
 
 ### 5. Some o valor total dos itens do carrinho de compras de forma assíncrona
 
-Cada vez que se adicionar um item ao carrinho de compras será necessário somar seus valores e apresentá-los na página principal do projeto. Não queremos que essa soma, no entanto, impacte no carregamento da página. Devemos, portanto, fazer essa soma de forma *assíncrona*. Use `async/await` para fazer isso. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
+Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. Não queremos que essa soma, no entanto, impacte no carregamento da página. Devemos, portanto, fazer essa soma de forma *assíncrona*. Use `async/await` para fazer isso. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
 
-### 6. Botão para limpar carrinho de compras
+### 6. Crie um botão para limpar carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatóriamente**, ter a classe `empty-cart`.
 
@@ -382,7 +382,7 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
-Mostre a palavra "loading..." em alguma lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
+Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
 
 ---
 
