@@ -86,7 +86,7 @@ Para entregar o seu projeto você deverá criar um Pull Request neste repositór
 
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
 
-A seguir, estão listados todos os requisitos do projeto. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
 ### Linter
 
@@ -100,10 +100,7 @@ Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na 
 
 ### API shopping cart
 
-O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito. Este projeto tem como objetivo:
-
-- Revisar seu conhecimento acerca de JavaScript, CSS e HTML;
-- Checar o seu conhecimento acerca de JavaScript assíncrono através do uso da API do mercado livre.
+O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
 <!-- Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**. -->
 
