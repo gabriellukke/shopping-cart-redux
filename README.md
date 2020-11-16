@@ -4,7 +4,7 @@ Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos
+Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
 
 ---
 
@@ -14,7 +14,7 @@ Nesse projeto, você será capaz de:
 
 - Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
 - Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
-- TRabalhar com funções assíncronas;
+- Trabalhar com funções assíncronas;
 
 ---
 
@@ -26,7 +26,7 @@ Nesse projeto, você será capaz de:
 - [Como desenvolver](#como-desenvolver)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
 - [Requisitos do projeto](#requisitos-do-projeto)
-  - [Code Climate ????????????????????](#code-climate)
+  - [Code Climate](#code-climate)
   - [Execução de testes de requisito](#execução-de-testes-de-requisito)
   - [API Shopping Cart](#api-shopping-cart)
 - [Lista de requisitos](#lista-de-requisitos)
@@ -59,6 +59,11 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ## DATA DE ENTREGA
 
+  - Projeto individual.
+
+  - Serão dois dias de projeto.
+
+  - O projeto tem até a seguinte data: `DD/MM/YYYY - 14:00h` para ter entregue a avaliação final.
 ---
 
 ## COMO DESENVOLVER
@@ -113,9 +118,9 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
 
 A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
-### Linter
+### Code Climate
 
-<!-- Verificar se precisa configurar -->
+Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**.
 
 ### Execução de testes de requisito
 
@@ -127,9 +132,10 @@ Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na 
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
-<!-- Seu projeto só será avaliado se estiver passando pelos _checks_ do **CodeClimate**. -->
+---
 
 ### LISTA DE REQUISITOS
+---
 
 ### 1. Criar listagem de produtos
 
