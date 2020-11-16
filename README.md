@@ -20,6 +20,31 @@ Nesse projeto, você será capaz de:
 
 ## SUMÁRIO
 
+- [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
+  - [Protótipo do projeto](#protótipo-do-projeto)
+- [Data de entrega](#data-de-entrega)
+- [Como desenvolver](#como-desenvolver)
+  - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
+- [Requisitos do projeto](#requisitos-do-projeto)
+  - [Code Climate ????????????????????](#code-climate)
+  - [Execução de testes de requisito](#execução-de-testes-de-requisito)
+  - [API Shopping Cart](#api-shopping-cart)
+- [Lista de requisitos](#lista-de-requisitos)
+  - [1 - Criar listagem de produtos](#1-criar-listagem-de-produtos)
+  - [2 - Adicione o produto ao carrinho de compras](#2-adicione-o-produto-ao-carrinho-de-compras)
+  - [3 - Remova o item do carrinho de compras ao clicar nele](#3-remova-o-item-do-carrinho-de-compras-ao-clicar-nele)
+  - [4 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página](#4-carregue-o-carrinho-de-compras-através-do-LocalStorage-ao-iniciar-a-página)
+  - [5 - Some o valor total dos itens do carrinho de compras de forma assíncrona](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras-de-forma-assíncrona)
+  - [6 - Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
+  - [7 - Adicionar um texto de "loading" durante uma requisição à API](#7-adicionar-um-texto-de-"loading"-durante-uma-requisição-à-api)
+- [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
+  - [Durante o desenvolvimento](#durante-o-desenvolvimento)
+  - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
+  - [Revisando um Pull Request](#revisando-um-pull-request)
+- [Avisos finais](#avisos-finais)
+
+---
+
 ## O QUE DEVERÁ SER DESENVOLVIDO
 
 Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
@@ -98,7 +123,7 @@ Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a r
 
 Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, **desde que tais comportamentos adicionais não conflitem com os requisitos propostos**. Em outras palavras, você pode fazer mais do que for pedido, mas nunca menos. Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos.
 
-### API shopping cart
+### API Shopping Cart
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
