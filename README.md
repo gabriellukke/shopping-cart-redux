@@ -51,7 +51,7 @@ Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o
 
 ### Protótipo do projeto
 
-Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finalizado, **não se preocupe em replicar o visual, o gif so ilustra o comportamento** :
+Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finalizado, **não se preocupe em replicar o visual, o gif so ilustra o comportamento**:
 
 ![Project Gif](./out.gif)
 
@@ -59,9 +59,9 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ## DATA DE ENTREGA
 
-  - Projeto individual.
+  - Projeto individual;
 
-  - Serão dois dias de projeto.
+  - Serão dois dias de projeto;
 
   - O projeto tem até a seguinte data: `DD/MM/YYYY - 14:00h` para ter entregue a avaliação final.
 ---
@@ -137,7 +137,7 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 ### LISTA DE REQUISITOS
 ---
 
-### 1. Criar listagem de produtos
+### 1. Crie a listagem de produtos
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -408,7 +408,7 @@ Cada vez que se adicionar um item ao carrinho de compras, será necessário soma
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatóriamente**, ter a classe `empty-cart`.
 
-### 7. Adicionar um texto de "loading" durante uma requisição à API
+### 7. Adicione um texto de "loading" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
