@@ -1,3 +1,4 @@
+### Termos de acordos
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
 
 # Boas vindas ao repositório do projeto de Carrinho de Compras!
@@ -8,18 +9,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ---
 
-## HABILIDADES
-
-Nesse projeto, você será capaz de:
-
-- Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
-- Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
-- Trabalhar com funções assíncronas;
-
----
-
 ## SUMÁRIO
 
+- [Habilidades](#habilidades)
 - [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
   - [Protótipo do projeto](#protótipo-do-projeto)
 - [Data de entrega](#data-de-entrega)
@@ -45,7 +37,17 @@ Nesse projeto, você será capaz de:
 
 ---
 
-## O QUE DEVERÁ SER DESENVOLVIDO
+## Habilidades
+
+Nesse projeto, você será capaz de:
+
+- Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
+- Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
+- Trabalhar com funções assíncronas;
+
+---
+
+## O que será desenvolvido
 
 Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
 
@@ -57,16 +59,17 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ---
 
-## DATA DE ENTREGA
+## Data de entrega
 
   - Projeto individual;
 
   - Serão dois dias de projeto;
 
   - O projeto tem até a seguinte data: `DD/MM/YYYY - 14:00h` para ter entregue a avaliação final.
+
 ---
 
-## COMO DESENVOLVER
+## Como desenvolver
 
 ### Antes de começar a desenvolver:
 
@@ -110,7 +113,7 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ---
 
-## REQUISITOS DO PROJETO
+## Requisitos do projeto
 
 Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. Você pode adicionar outros arquivos se julgar necessário. ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
@@ -134,10 +137,11 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 ---
 
-### LISTA DE REQUISITOS
+### Lista de requisitos
+
 ---
 
-### 1. Crie a listagem de produtos
+### Crie a listagem de produtos
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -343,7 +347,7 @@ Adicione o elemento retornado da função `createProductItemElement(product)` co
 
 **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
-### 2. Adicione o produto ao carrinho de compras
+### Adicione o produto ao carrinho de compras
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
 
@@ -390,25 +394,25 @@ Você **deve** utilizar a função `createCartItemElement()` para criar os compo
 
 Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
-### 3. Remova o item do carrinho de compras ao clicar nele
+### Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
 Para isso, uma função (já existente) chamada `cartItemClickListener(event)` deve ser implementada com a lógica necessária para realizar a remoção.
 
-### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
+### Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
 Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
 
-### 5. Some o valor total dos itens do carrinho de compras de forma assíncrona
+### Some o valor total dos itens do carrinho de compras de forma assíncrona
 
 Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. Não queremos que essa soma, no entanto, impacte no carregamento da página. Devemos, portanto, fazer essa soma de forma *assíncrona*. Use `async/await` para fazer isso. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
 
-### 6. Crie um botão para limpar carrinho de compras
+### Crie um botão para limpar carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatóriamente**, ter a classe `empty-cart`.
 
-### 7. Adicione um texto de "loading" durante uma requisição à API
+### Adicione um texto de "loading" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
@@ -418,7 +422,7 @@ Mostre a palavra "loading..." em algum lugar da página **apenas durante** a req
 
 ## Instruções para entregar seu projeto:
 
-### DURANTE O DESENVOLVIMENTO
+### Durante o desenvolvimento
 
 * ⚠ **PULL REQUESTS COM ISSUES NO CODE CLIMATE NÃO SERÃO AVALIADAS, ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠
 
@@ -436,7 +440,7 @@ Mostre a palavra "loading..." em algum lugar da página **apenas durante** a req
 
 ---
 
-### DEPOIS DE TERMINAR O DESENVOLVIMENTO (OPCIONAL)
+### Depois de terminar o desenvolvimento (OPCIONAL)
 
 Para **"entregar"** seu projeto, siga os passos a seguir:
 
@@ -451,7 +455,7 @@ Se ainda houver alguma dúvida sobre como entregar seu projeto, [aqui tem um vid
 
 ---
 
-### REVISANDO UM PULL REQUEST
+### Revisando um Pull Request
 
 ⚠⚠⚠
 
@@ -461,7 +465,7 @@ Use o material que você já viu sobre [Code Review](https://course.betrybe.com/
 
 ---
 
-# AVISOS FINAIS
+## Avisos finais
 
 Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
 
