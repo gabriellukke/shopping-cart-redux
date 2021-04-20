@@ -27,7 +27,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [2 - Adicione o produto ao carrinho de compras](#2-adicione-o-produto-ao-carrinho-de-compras)
   - [3 - Remova o item do carrinho de compras ao clicar nele](#3-remova-o-item-do-carrinho-de-compras-ao-clicar-nele)
   - [4 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página](#4-carregue-o-carrinho-de-compras-através-do-LocalStorage-ao-iniciar-a-página)
-  - [5 - Some o valor total dos itens do carrinho de compras de forma assíncrona](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras-de-forma-assíncrona)
+  - [5 - Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
   - [6 - Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
   - [7 - Adicionar um texto de "loading" durante uma requisição à API](#7-adicionar-um-texto-de-"loading"-durante-uma-requisição-à-api)
 - [Instruções para entregar seu projeto](#instruções-para-entregar-seu-projeto)
@@ -446,9 +446,11 @@ Para isso, uma função (já existente) chamada `cartItemClickListener(event)` d
 Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
 Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
 
-### 5 - Some o valor total dos itens do carrinho de compras de forma assíncrona
+### 5 - Some o valor total dos itens do carrinho de compras
 
-Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. Não queremos que essa soma, no entanto, impacte no carregamento da página. Devemos, portanto, fazer essa soma de forma *assíncrona*. Use `async/await` para fazer isso. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
+Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
+
+Obs: Devemos tomar cuidado, no entanto, pois estamos buscando os dados do produto em uma API. Portanto, é necessário garantir que a API já retornou as informações para somente depois realizar o cálculo da soma.
 
 ### 6 - Crie um botão para limpar carrinho de compras
 
