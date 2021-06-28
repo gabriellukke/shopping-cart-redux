@@ -70,22 +70,24 @@ describe('Shopping Cart Project', () => {
       addToCart(29);
       addToCart(31);
       addToCart(15);
+
       cy.get(CART_ITEMS)
         .children()
         .eq(1)
         .click()
       countCart(2);
+
       cy.get(CART_ITEMS)
         .children()
         .eq(1)
         .click()
       countCart(1);
+
       cy.get(CART_ITEMS)
         .children()
         .eq(0)
         .click()
       countCart(0);
-  
     });
   });
 
@@ -93,21 +95,20 @@ describe('Shopping Cart Project', () => {
     it('Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página', () => {
       let first = 36;
       let last = 29;
-      cy.visit(PROJECT_URL, {
-        onBeforeLoad(win) {
-          win.fetch = fetchMock;
-        },
-      });
-      cy.wait(1000);
+
       addToCart(first);
+      cy.wait(1000);
+
       countCart(1);
+
       cy.get(CART_ITEMS)
         .children()
         .first()
         .should('have.text', `SKU: ${results[first].id} | NAME: ${results[first].title} | PRICE: $${results[first].price}`)
        
-        addToCart(last);
-        cy.wait(1000);
+      addToCart(last);
+      cy.wait(1000);
+
       cy.get(CART_ITEMS)
         .children()
         .last()
@@ -118,15 +119,47 @@ describe('Shopping Cart Project', () => {
           win.fetch = fetchMock;
         },
       });
+
       cy.get(CART_ITEMS)
         .children()
         .first()
         .should('have.text', `SKU: ${results[first].id} | NAME: ${results[first].title} | PRICE: $${results[first].price}`)
+
       cy.get(CART_ITEMS)
         .children()
         .last()
         .should('have.text', `SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
     });
+
+    it('Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após regarregar a página', () => {
+      addToCart(29);
+      addToCart(31);
+      addToCart(15);
+
+      cy.reload({
+        onBeforeLoad(win) {
+          win.fetch = fetchMock;
+        },
+      });
+
+      cy.get(CART_ITEMS)
+        .children()
+        .eq(1)
+        .click()
+      countCart(2);
+
+      cy.get(CART_ITEMS)
+        .children()
+        .eq(1)
+        .click()
+      countCart(1);
+
+      cy.get(CART_ITEMS)
+        .children()
+        .eq(0)
+        .click()
+      countCart(0);
+    })
   });
 
   describe('5 - Some o valor total dos itens do carrinho de compras de forma assíncrona', () => {
@@ -166,7 +199,6 @@ describe('Shopping Cart Project', () => {
 
   describe('7 - Adicione um texto de `loading` durante uma requisição à API', () => {
     it('Adicionar um texto de "loading" durante uma requisição à API', () => {
-
       cy.visit(PROJECT_URL)
       cy.get(LOADING)
         .should('exist')
