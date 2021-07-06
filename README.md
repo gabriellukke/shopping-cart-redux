@@ -17,7 +17,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
   - [Data de entrega](#data-de-entrega)
-- [Como desenvolver](#como-desenvolver)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
@@ -83,7 +82,7 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
   - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
 
-### Antes de começar a desenvolver:
+## Antes de começar a desenvolver:
 
 1. Clone o repositório
   * `git clone https://github.com/tryber/sd-0x-project-shopping-cart.git`.
@@ -129,7 +128,7 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
 
 ---
 
-### Durante o desenvolvimento
+## Durante o desenvolvimento
 
 * Faça `commits` das alterações que você fizer no código regularmente;
 
@@ -146,10 +145,6 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
   4. `git push -u nome-da-branch` _(para enviar o commit para o repositório remoto na primeira vez que fizer o `push` de uma nova branch)_;
 
   5. `git push` _(para enviar o commit para o repositório remoto após o passo anterior)_.
-
----
-
-# Como desenvolver
 
 ---
 
