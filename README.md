@@ -169,7 +169,7 @@ e de fácil manutenção! Para rodá-los localmente no projeto, execute os coman
 
 Em caso de dúvidas, confira o material do course sobre [ESLint e Stylelint](https://app.betrybe.com/course/real-life-engineer/eslint).
 
-⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ dos **linters**.
+⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ do **linter**.
 
 ---
 
