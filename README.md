@@ -17,6 +17,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
   - [Data de entrega](#data-de-entrega)
+- [Como desenvolver](#como-desenvolver) 
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
@@ -81,6 +82,9 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
   - Serão `X` dias de projeto.
   - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
+---
+
+# Como desenvolver
 
 ## Antes de começar a desenvolver:
 
@@ -148,7 +152,7 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
 
 ---
 
-## ESLint e Stylelint
+### ESLint e Stylelint
 
 Para garantir a qualidade do código, vamos utilizar neste projeto os linters `ESLint` e `Stylelint`.
 Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível
@@ -165,7 +169,7 @@ Em caso de dúvidas, confira o material do course sobre [ESLint e Stylelint](htt
 
 ---
 
-## Cypress
+### Cypress
 
 Cypress é uma ferramenta de teste de front-end desenvolvida para a web.
 Você pode rodar o cypress localmente para verificar se seus requisitos estão passando, para isso execute o um dos seguintes comandos:
@@ -196,7 +200,7 @@ Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) ví
 
 ---
 
-## API Shopping Cart
+### API Shopping Cart
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
