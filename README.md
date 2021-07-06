@@ -74,6 +74,8 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente.
 
+Caso você faça o download de bibliotecas externas, utilize o diretório `libs` (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
+
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
 
 ---
@@ -203,8 +205,6 @@ Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) ví
 ---
 
 # Requisitos do projeto
-
-Caso você faça o download de bibliotecas externas, utilize o diretório libs (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
 
 ## API Shopping Cart
 
