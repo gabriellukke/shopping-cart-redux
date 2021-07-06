@@ -13,15 +13,16 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 ## SUMÁRIO
 
 - [Habilidades](#habilidades)
-- [O que deverá ser desenvolvido](#o-que-deverá-ser-desenvolvido)
-  - [Protótipo do projeto](#protótipo-do-projeto)
-- [Data de entrega](#data-de-entrega)
+- [Entregáveis](#entregáveis)
+  - [O que será desenvolvido](#o-que-será-desenvolvido)
+    - [Protótipo do projeto](#protótipo-do-projeto)
+  - [Data de entrega](#data-de-entrega)
 - [Como desenvolver](#como-desenvolver)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
-- [Requisitos do projeto](#requisitos-do-projeto)
-  - [Linter](#linter)
-  - [Execução de testes de requisito](#execução-de-testes-de-requisito)
+  - [ESLint e Stylelint](#eslint-e-stylelint)
+  - [Cypress](#cypress)
   - [API Shopping Cart](#api-shopping-cart)
+- [Requisitos do projeto](#requisitos-do-projeto)
 - [Lista de requisitos](#lista-de-requisitos)
   - [1 - Criar listagem de produtos](#1-criar-listagem-de-produtos)
   - [2 - Adicione o produto ao carrinho de compras](#2-adicione-o-produto-ao-carrinho-de-compras)
@@ -48,6 +49,12 @@ Nesse projeto, você será capaz de:
 
 ---
 
+# Entregáveis
+
+Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
+
+Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
+
 ## O que será desenvolvido
 
 Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o melhor: consumindo dados diretamente de uma **API!** Isso mesmo. Da sigla em inglês _Application Programming Interface_, uma API é um ponto de contato na internet com determinado serviço. Através de **requisições HTTP** a essa API é possível interagir com ela da forma como quem a criou planejou. Aqui usaremos a API do Mercado Livre para buscarmos produtos à venda.
@@ -60,16 +67,21 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ---
 
+## Desenvolvimento
+
+⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
+
+O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente.
+
+Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
+
+
 ## Data de entrega
 
   - Projeto individual;
-
   - Serão `X` dias de projeto.
   - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
 
----
-
-## Como desenvolver
 
 ### Antes de começar a desenvolver:
 
@@ -78,16 +90,20 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-0x-project-shopping-cart`
 
-2. Crie uma branch a partir da branch `master`
+2. Instale as dependências e inicialize o projeto
+  * Instale as dependências:
+    * `npm install`
+
+3. Crie uma branch a partir da branch `master`
   * Verifique que você está na branch `master`
     * Exemplo: `git branch`
   * Se não estiver, mude para a branch `master`
     * Exemplo: `git checkout master`
   * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
-    * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
-    * Exemplo: `git checkout -b joaozinho-project-shopping-cart`
+    * Você deve criar uma branch no seguinte formato: `nome-sobrenome-nome-do-projeto`
+    * Exemplo: `git checkout -b maria-silva-shopping-cart`
 
-3. Quando fizer mudanças, adicione-as ao _stage_ do Git e faça um `commit`
+4. Quando fizer mudanças, adicione-as ao _stage_ do Git e faça um `commit`
   * Verifique que as mudanças ainda não estão no _stage_
     * Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
   * Adicione o novo arquivo ao _stage_ do Git
@@ -99,10 +115,10 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
         * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
         * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
-4. Adicione a sua branch com o novo `commit` ao repositório remoto
-  * Usando o exemplo anterior: `git push -u origin joaozinho-project-shopping-cart`
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
+  * Usando o exemplo anterior: `git push -u origin maria-silva-shopping-cart`
 
-5. Crie um novo `Pull Request` _(PR)_
+6. Crie um novo `Pull Request` _(PR)_
   * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-0x-project-shopping-cart/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
@@ -113,9 +129,7 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ---
 
-## Durante o desenvolvimento
-
-* ⚠ **LEMBRE-SE DE CRIAR TODOS OS ARQUIVOS DENTRO DA PASTA COM O SEU NOME** ⚠
+### Durante o desenvolvimento
 
 * Faça `commits` das alterações que você fizer no código regularmente;
 
@@ -135,51 +149,75 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ---
 
-## Requisitos do projeto
-
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório. Este Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. Você pode adicionar outros arquivos se julgar necessário. ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
-
-Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria. Lembre-se que você pode consultar nosso conteúdo sobre Git & GitHub sempre que quiser!
-
-A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de ids que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+# Como desenvolver
 
 ---
 
-## Linter
+## ESLint e Stylelint
 
-Para garantir a qualidade do código, vamos utilizar neste projeto os linters `ESLint` e `StyleLint`.
+Para garantir a qualidade do código, vamos utilizar neste projeto os linters `ESLint` e `Stylelint`.
 Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível
-e de fácil manutenção! Para roda-los localmente no projeto, execute os comandos abaixo:
+e de fácil manutenção! Para rodá-los localmente no projeto, execute os comandos abaixo:
 
 ```bash
-npm run lint
-npm run lint:styles
+  npm run lint
+  npm run lint:styles
 ```
 
-⚠️ **PULL REQUESTS COM ISSUES DE LINTER NÃO SERÃO AVALIADAS.
-ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
+Em caso de dúvidas, confira o material do course sobre [ESLint e Stylelint](https://app.betrybe.com/course/real-life-engineer/eslint).
+
+⚠️ Lembre-se que o seu projeto só será avaliado se estiver passando pelos _checks_ dos **linters**.
 
 ---
 
-### Execução de testes de requisito
+## Cypress
 
-Os requisitos do seu projeto são avaliados automaticamente, sendo utilizada a resolução `1366 x 768` (1366 pixels de largura por 768 pixels de altura). Logo, recomenda-se desenvolver seu projeto usando a mesma resolução, via instalação [deste plugin](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh?hl=en) do `Chrome` para facilitar a configuração dessa resolução.
+Cypress é uma ferramenta de teste de front-end desenvolvida para a web.
+Você pode rodar o cypress localmente para verificar se seus requisitos estão passando, para isso execute o um dos seguintes comandos:
 
-Você tem liberdade para adicionar novos comportamentos ao seu projeto, seja na forma de aperfeiçoamentos em requisitos propostos ou novas funcionalidades, **desde que tais comportamentos adicionais não conflitem com os requisitos propostos**. Em outras palavras, você pode fazer mais do que for pedido, mas nunca menos. Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos.
+Para executar os testes apenas no terminal:
 
-Para o projeto ser validado, todos os testes de comportamento devem passar. É possível testar isso localmente rodando `npm run cypress:open`. Esse comando roda a suite de testes do Cypress que valida se o fluxo geral e os requisitos funcionais estão funcionando como deveriam.
+```bash
+npm test
+```
 
-Esses testes não consideram o layout de maneira geral, mas sim os atributos e informações corretas, então preste atenção nisso! Os testes te darão uma mensagem de erro caso não estejam passando (seja qual for o motivo). 😉
+Para executar os testes e vê-los rodando em uma janela de navegador:
 
-Atenção: Sua aplicação deve estar rodando para o Cypress poder testar.
+```bash
+npm run cypress:open
+```
 
-### API Shopping Cart
+***ou***
+
+```bash
+npx cypress open
+```
+
+Após executar um dos dois comandos acima, será aberta uma janela de navegador e então basta clicar no nome do arquivo de teste que quiser executar (project.spec.js), ou para executar todos os testes clique em Run all specs
+
+Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) vídeo 😉🎙
+
+**Para rodar o cypress é preciso ter rodado o comando npm install anteriormente.**
+
+---
+
+## API Shopping Cart
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
 
 ---
 
-### Lista de requisitos
+## Observações técnicas
+
+A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+
+---
+
+# Requisitos do projeto
+
+Caso você faça o download de bibliotecas externas, utilize o diretório libs (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
+
+## Lista de requisitos
 
 ---
 
