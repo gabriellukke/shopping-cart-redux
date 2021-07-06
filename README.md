@@ -21,8 +21,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
-  - [API Shopping Cart](#api-shopping-cart)
 - [Requisitos do projeto](#requisitos-do-projeto)
+  - [API Shopping Cart](#api-shopping-cart)
+  - [Observações técnicas](#observações-técnicas)
 - [Lista de requisitos](#lista-de-requisitos)
   - [1 - Criar listagem de produtos](#1-criar-listagem-de-produtos)
   - [2 - Adicione o produto ao carrinho de compras](#2-adicione-o-produto-ao-carrinho-de-compras)
@@ -201,11 +202,13 @@ Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) ví
 
 ---
 
-### API Shopping Cart
+# Requisitos do projeto
+
+Caso você faça o download de bibliotecas externas, utilize o diretório libs (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
+
+## API Shopping Cart
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém muitas informações sobre ela. Utilizaremos alguns dos _endpoints_, e a forma de uso está detalhada no primeiro requisito.
-
----
 
 ## Observações técnicas
 
@@ -213,13 +216,7 @@ A seguir, estão listados como será a avaliação do seu projeto e todos os req
 
 ---
 
-# Requisitos do projeto
-
-Caso você faça o download de bibliotecas externas, utilize o diretório libs (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
-
 ## Lista de requisitos
-
----
 
 ### 1 - Crie uma listagem de produtos
 
