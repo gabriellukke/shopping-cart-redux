@@ -17,7 +17,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
 - [Data de entrega](#data-de-entrega)
-- [Como desenvolver](#como-desenvolver) 
+- [Como desenvolver](#como-desenvolver)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
