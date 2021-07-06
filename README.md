@@ -16,7 +16,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 - [Entregáveis](#entregáveis)
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
-  - [Data de entrega](#data-de-entrega)
+- [Data de entrega](#data-de-entrega)
 - [Como desenvolver](#como-desenvolver) 
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [ESLint e Stylelint](#eslint-e-stylelint)
@@ -75,8 +75,9 @@ O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `scrip
 
 Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
 
+---
 
-## Data de entrega
+# Data de entrega
 
   - Projeto individual;
   - Serão `X` dias de projeto.
