@@ -32,7 +32,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página](#4-carregue-o-carrinho-de-compras-através-do-LocalStorage-ao-iniciar-a-página)
   - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
   - [6. Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
-  - [7. Adicione um texto de "loading" durante uma requisição à API](#7-adicione-um-texto-de-"loading"-durante-uma-requisição-à-api)
+  - [7. Adicione um texto de "loading" durante uma requisição à API](#7-adicione-um-texto-de-loading-durante-uma-requisição-à-api)
 
 
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
