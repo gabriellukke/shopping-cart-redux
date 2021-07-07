@@ -17,7 +17,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
 - [Data de entrega](#data-de-entrega)
-- [Como desenvolver](#como-desenvolver)
+- [Desenvolvimento](#desenvolvimento)
   - [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [ESLint e Stylelint](#eslint-e-stylelint)
@@ -25,7 +25,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [API Shopping Cart](#api-shopping-cart)
   - [Observações técnicas](#observações-técnicas)
-- [Lista de requisitos](#lista-de-requisitos)
   - [1. Crie uma listagem de produtos](#1-crie-uma-listagem-de-produtos)
   - [2. Adicione o produto ao carrinho de compras](#2-adicione-o-produto-ao-carrinho-de-compras)
   - [3. Remova o item do carrinho de compras ao clicar nele](#3-remova-o-item-do-carrinho-de-compras-ao-clicar-nele)
@@ -33,8 +32,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
   - [6. Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
   - [7. Adicione um texto de "loading" durante uma requisição à API](#7-adicione-um-texto-de-loading-durante-uma-requisição-à-api)
-
-
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Revisando um Pull Request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -69,18 +66,6 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ---
 
-## Desenvolvimento
-
-⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
-
-O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente.
-
-Caso você faça o download de bibliotecas externas, utilize o diretório `libs` (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
-
-Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
-
----
-
 # Data de entrega
 
   - Projeto individual;
@@ -89,7 +74,15 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, pr
 
 ---
 
-# Como desenvolver
+# Desenvolvimento
+
+⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
+
+O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente.
+
+Caso você faça o download de bibliotecas externas, utilize o diretório `libs` (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
+
+Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a monitoria.
 
 ## Antes de começar a desenvolver:
 
@@ -214,10 +207,6 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 ## Observações técnicas
 
 A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
-
----
-
-## Lista de requisitos
 
 ### 1. Crie uma listagem de produtos
 
