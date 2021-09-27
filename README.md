@@ -212,7 +212,7 @@ A seguir, estão listados como será a avaliação do seu projeto e todos os req
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
-Para isso, você terá de implementar a função `fetchProducts` que já está criada no arquivo `api.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `api.js` deve ser implementada **apenas** a função `fetchProducts`.
+Para isso, você terá de implementar a função `fetchProducts` que já está criada no arquivo `fetchProducts.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `fetchProducts.js` deve ser implementada **apenas** a função `fetchProducts`.
 
 A função `fetchProducts` que você irá implementar, deve consumir o seguinte _endpoint_:
 
