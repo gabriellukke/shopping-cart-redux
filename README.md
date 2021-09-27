@@ -212,7 +212,10 @@ A seguir, estão listados como será a avaliação do seu projeto e todos os req
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
-Você deve utilizar o _endpoint_:
+Para isso, você terá de implementar a função `fetchProducts` que já está criada no arquivo `api.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `api.js` deve ser implementada **apenas** a função `fetchProducts`.
+
+A função `fetchProducts` que você irá implementar, deve consumir o seguinte _endpoint_:
+
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
@@ -408,7 +411,7 @@ O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pes
 ```
 A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acima.
 
-Você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
+Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
 
 Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
