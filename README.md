@@ -469,7 +469,9 @@ Para isso, dentro do arquivo `script.js` você deve procurar pela função `cart
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
-Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva. Se você sentir a necessidade de criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
+
+**Atenção:** Se você sentir a necessidade de criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
 ### 5. Some o valor total dos itens do carrinho de compras
 
@@ -477,15 +479,21 @@ Cada vez que se adicionar um item ao carrinho de compras, será necessário soma
 
 Obs: Devemos tomar cuidado, no entanto, pois estamos buscando os dados do produto em uma API. Portanto, é necessário garantir que a API já retornou as informações para somente depois realizar o cálculo da soma.
 
+**Atenção:** Se você sentir a necessidade de criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+
 ### 6. Crie um botão para limpar carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatóriamente**, ter a classe `empty-cart`.
+
+**Atenção:** Se você sentir a necessidade de criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
 ### 7. Adicione um texto de "loading" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
+
+**Atenção:** Se você sentir a necessidade de criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
 ---
 
