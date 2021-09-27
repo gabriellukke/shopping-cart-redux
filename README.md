@@ -469,7 +469,7 @@ Para isso, dentro do arquivo `script.js` você deve procurar pela função `cart
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
-Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
+Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva. Se você sentir a necessidade de criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
 ### 5. Some o valor total dos itens do carrinho de compras
 
