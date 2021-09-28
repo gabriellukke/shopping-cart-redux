@@ -487,6 +487,14 @@ Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
 
+### 10. Desenvolva os testes unitários para a função `saveCartItems`
+
+> Implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
+
+- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada.
+
+- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
+
 ---
 
 ## Depois de terminar o desenvolvimento
