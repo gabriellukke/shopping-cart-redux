@@ -491,7 +491,7 @@ Mostre a palavra "loading..." em algum lugar da página **apenas durante** a req
 
 > Implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
-- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada.
+- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada;
 
 - Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
 
