@@ -333,7 +333,7 @@ const item = {
   "channels": [
     "marketplace",
     "mshops"
-  ]
-}
+  ],
+};
 
 module.exports = item;
