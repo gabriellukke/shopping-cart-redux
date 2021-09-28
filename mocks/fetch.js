@@ -26,9 +26,9 @@ const fetch = (url) => {
           return resolve(search);
         }
 
-        return resolve({ results: [] })
-      }, TIME_IN_MILLISECONDS)
-    })
+        return resolve({ results: [] });
+      }, TIME_IN_MILLISECONDS);
+    }),
   });
 };
 
