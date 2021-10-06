@@ -417,6 +417,16 @@ Adicione o elemento retornado da função `createProductItemElement(product)` co
 
 **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
+Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchProducts.test.js` e implemente os seguintes testes:
+
+1 - Teste se `fetchProducts` é uma função;
+
+2 - Execute a função `fetchProducts` e teste se ela foi chamada;
+
+3 - Teste se a função `fetchProducts` é chamada corretamente com o endpoint utilizado neste requisito;
+
+4 - Para este último teste, você precisará importar o arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do arquivo `search.js`, que você acabou de importar.
+
 ### 2. Adicione o produto ao carrinho de compras
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
