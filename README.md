@@ -418,7 +418,7 @@ Adicione o elemento retornado da função `createProductItemElement(product)` co
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
 
-Ao clicar nesse botão você deve realizar uma requisição. Para isso, você terá de implementar a função `fetchItem` que já está criada no arquivo `fetchItem.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `fetchItem.js` deve ser implementada **apenas** a função `fetchItem`.
+Ao clicar nesse botão você deve realizar uma requisição. Para isso, acesse o arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
 
 A função `fetchItem` que você irá implementar, deve consumir o seguinte _endpoint_:
 
