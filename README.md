@@ -474,6 +474,8 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 4 - Para este último teste, você precisará importar o objeto `item` que se encontra no arquivo `item.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchItem` é uma estrutura de dados igual ao objeto importado.
 
+Use o comando `npm test` para verificar se seus testes estão passando.
+
 ### 3. Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
