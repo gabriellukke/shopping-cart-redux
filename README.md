@@ -488,6 +488,8 @@ Além disso, implemente testes para as duas funções de acordo com as seguintes
 
 - Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada com o 'cartItems' como parâmetro.
 
+Use o comando `npm test` para verificar se seus testes estão passando.
+
 **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 
 ### 5. Some o valor total dos itens do carrinho de compras
