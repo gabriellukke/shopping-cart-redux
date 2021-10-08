@@ -425,7 +425,7 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 3 - Teste se a função `fetchProducts` é chamada corretamente com o endpoint utilizado neste requisito;
 
-4 - Para este último teste, você precisará importar o arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do arquivo `search.js`, que você acabou de importar.
+4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
 
 ### 2. Adicione o produto ao carrinho de compras
 
