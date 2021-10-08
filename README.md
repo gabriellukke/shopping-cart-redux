@@ -500,6 +500,7 @@ Foi pedido que você realize testes em determinadas funções, mas quem avalia o
 **Não se esqueça de que a cobertura irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
 
 #### O que será avaliado
+
 - Será avaliado se os testes implementados atigem 40% da cobertura de testes.
 
 ### 9. Desenvolva testes para atingir 60% de cobertura
