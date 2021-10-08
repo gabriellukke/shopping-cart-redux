@@ -489,6 +489,8 @@ Além disso, implemente testes para as duas funções de acordo com as seguintes
 
 - Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada com o 'cartItems' como parâmetro.
 
+**Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+
 ### 5. Some o valor total dos itens do carrinho de compras
 
 Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
@@ -504,10 +506,6 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
-
-### 10. Desenvolva os testes unitários para a função `saveCartItems`
-
-
 
 ---
 
