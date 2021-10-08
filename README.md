@@ -427,6 +427,8 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
 
+Use o comando `npm test` para verificar se seus testes estão passando.
+
 ### 2. Adicione o produto ao carrinho de compras
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
