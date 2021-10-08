@@ -469,8 +469,25 @@ Para isso, uma função (já existente) chamada `cartItemClickListener(event)` d
 
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
-Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**.
-Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista atual seja salva.
+Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
+A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
+Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
+
+**Atenção:** as funções já estão importadas no `index.html`, sendo necessário apenas a sua implementação.
+
+Além disso, implemente testes para as duas funções de acordo com as seguintes especificações:
+
+> Para a função `saveCartItems`: implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
+
+- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada;
+
+- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
+
+> Para a função `getSavedCartItems`: implemente os testes no arquivo `getSavedCartItems.test.js` da pasta `tests` que está na raiz do projeto.
+
+- Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada;
+
+- Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada com o 'cartItems' como parâmetro.
 
 ### 5. Some o valor total dos itens do carrinho de compras
 
@@ -490,11 +507,7 @@ Mostre a palavra "loading..." em algum lugar da página **apenas durante** a req
 
 ### 10. Desenvolva os testes unitários para a função `saveCartItems`
 
-> Implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
-- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada;
-
-- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
 
 ---
 

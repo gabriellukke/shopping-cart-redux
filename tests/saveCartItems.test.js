@@ -1,5 +1,5 @@
-import saveCartItems from '../helpers/saveCartItems';
+const saveCartItems = require('../helpers/saveCartItems');
 
-describe('Função saveCartItems', () => {
+describe('A função saveCartItems', () => {
   // implemente seus testes aqui
 });
