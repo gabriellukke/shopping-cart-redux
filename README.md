@@ -22,6 +22,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
+  - [Cobertura de testes](#cobertura-de-testes)
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [API Shopping Cart](#api-shopping-cart)
   - [Observações técnicas](#observações-técnicas)
