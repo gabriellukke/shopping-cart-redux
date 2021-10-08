@@ -481,7 +481,7 @@ Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
-### 6. Crie um botão para limpar carrinho de compras
+### 6. Crie um botão para limpar o carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatoriamente**, ter a classe `empty-cart`.
 
