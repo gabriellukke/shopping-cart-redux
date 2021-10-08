@@ -471,6 +471,7 @@ Para isso, uma função (já existente) chamada `cartItemClickListener(event)` d
 Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
 A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
 Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
+Após ter implementado com sucesso as funções `saveCartItems` e `getSavedCartItems`, você deve utilizá-las dentro do arquivo `script.js`. **Não** é necessário importá-las, basta chamá-las no escopo principal do arquivo.
 
 **Atenção:** as funções já estão importadas no `index.html`, sendo necessário apenas a sua implementação.
 
