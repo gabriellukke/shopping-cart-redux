@@ -8,7 +8,7 @@ const ENDPOINTS = {
 
 const TIME_IN_MILLISECONDS = 200;
 
-const fetch = (url) => {
+const fetchSimulator = (url) => {
   if (typeof url === 'undefined') {
     return Promise.reject(new Error('You must provide an url'));
   }
@@ -32,4 +32,4 @@ const fetch = (url) => {
   });
 };
 
-module.exports = fetch;
+module.exports = fetchSimulator;
