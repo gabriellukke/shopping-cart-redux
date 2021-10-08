@@ -483,7 +483,7 @@ Obs: Devemos tomar cuidado, no entanto, pois estamos buscando os dados do produt
 
 ### 6. Crie um botão para limpar carrinho de compras
 
-Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatóriamente**, ter a classe `empty-cart`.
+Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatoriamente**, ter a classe `empty-cart`.
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
