@@ -26,7 +26,6 @@
     "cypress-multi-reporters": "1.2.4",
     "eslint-config-trybe-fundamentals": "1.1.0",
     "jest": "24.9.0",
-    "minimist": "1.2.2",
     "mocha": "7.1.1",
     "mochawesome": "5.0.0",
     "mochawesome-merge": "4.0.3",
