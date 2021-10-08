@@ -22,6 +22,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
+  - [Cobertura de testes](#cobertura-de-testes)
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [API Shopping Cart](#api-shopping-cart)
   - [Observações técnicas](#observações-técnicas)
@@ -45,6 +46,7 @@ Nesse projeto, você será capaz de:
 - Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
 - Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
 - Trabalhar com funções assíncronas;
+- Implementar testes unitários.
 
 ---
 
@@ -195,6 +197,24 @@ Após executar um dos dois comandos acima, será aberta uma janela de navegador 
 Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) vídeo 😉🎙
 
 **Para rodar o cypress é preciso ter rodado o comando npm install anteriormente.**
+
+---
+
+### Cobertura de testes
+
+Neste projeto, você irá implementar testes para quatro funções e, para avaliá-los, será utilizado a cobertura de testes.
+
+Essa cobertura avalia a eficácia dos testes implementados de acordo com os requisitos, determinando se cobrem o que foi pedido ou não.
+
+**Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
+
+Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 40%, 60%, 80%, e, por fim, 100% dos testes.
+
+Para executar a cobertura de testes, rode o comando abaixo:
+
+```bash
+npm run test:coverage
+```
 
 ---
 
