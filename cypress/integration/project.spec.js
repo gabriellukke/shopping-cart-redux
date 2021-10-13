@@ -197,8 +197,8 @@ describe('Shopping Cart Project', () => {
     });
   });
 
-  describe('7 - Adicione um texto de `loading` durante uma requisição à API', () => {
-    it('Adicionar um texto de "loading" durante uma requisição à API', () => {
+  describe('7 - Adicione um texto de `carregando` durante uma requisição à API', () => {
+    it('Adicionar um texto de "carregando" durante uma requisição à API', () => {
       cy.visit(PROJECT_URL)
       cy.get(LOADING)
         .should('exist')
