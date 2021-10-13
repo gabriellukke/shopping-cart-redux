@@ -486,11 +486,16 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
-### 7. Adicione um texto de "loading" durante uma requisição à API
+### 7. Adicione um texto de "carregando" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
-Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
-Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatoriamente**, ter a classe `loading`.
+Normalmente é utilizada alguma forma para mostrar para a pessoa usuária que a requisição está em andamento.
+
+* Crie um elemento que contenha o texto "carregando...", que deve ser exibido em algum lugar da página;
+* Este elemento deve ser mostrado **apenas durante** a requisição à API;
+* Este elemento deve **obrigatoriamente** ter a classe `loading`;
+
+***spoiler-alert***: você pode criar uma função que adicione ao DOM o elemento com o texto "carregando" e outra para retirá-lo, o que acha?
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
