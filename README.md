@@ -236,7 +236,10 @@ A seguir, estão listados como será a avaliação do seu projeto e todos os req
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
-Você deve utilizar o _endpoint_:
+Para isso, você terá de implementar a função `fetchProducts` que já está criada no arquivo `fetchProducts.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `fetchProducts.js` deve ser implementada **apenas** a função `fetchProducts`.
+
+A função `fetchProducts` que você irá implementar, deve consumir o seguinte _endpoint_:
+
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
@@ -432,11 +435,25 @@ O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pes
 ```
 A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acima.
 
-Você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
+Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
 
 Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
 **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+
+Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchProducts.test.js` e implemente os seguintes testes:
+
+1 - Teste se `fetchProducts` é uma função;
+
+2 - Execute a função `fetchProducts` e teste se ela foi chamada;
+
+3 - Teste se a função `fetchProducts` é chamada corretamente com o endpoint utilizado neste requisito;
+
+4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
+
+Use o comando `npm test` para verificar se seus testes estão passando.
+
+OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
 
 ### 2. Adicione o produto ao carrinho de compras
 
