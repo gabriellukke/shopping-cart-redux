@@ -535,6 +535,7 @@ Para isso, dentro do arquivo `script.js` você deve procurar pela função `cart
 Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
 A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
 Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
+Após ter implementado com sucesso as funções `saveCartItems` e `getSavedCartItems`, você deve utilizá-las dentro do arquivo `script.js`. **Não** é necessário importá-las, basta chamá-las no escopo principal do arquivo.
 
 **Atenção:** as funções já estão importadas no `index.html`, sendo necessário apenas a sua implementação.
 
@@ -551,6 +552,8 @@ Além disso, implemente testes para as duas funções de acordo com as seguintes
 - Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada;
 
 - Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada com o 'cartItems' como parâmetro.
+
+Use o comando `npm test` para verificar se seus testes estão passando.
 
 **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 
