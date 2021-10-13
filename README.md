@@ -459,7 +459,7 @@ OBS: Você deve implementar os 4 requisitos, independente do que for suficiente 
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
 
-Ao clicar nesse botão você deve realizar uma requisição. Para isso, você terá de implementar a função `fetchItem` que já está criada no arquivo `fetchItem.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `fetchItem.js` deve ser implementada **apenas** a função `fetchItem`.
+Ao clicar nesse botão você deve realizar uma requisição. Para isso, acesse o arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
 
 A função `fetchItem` que você irá implementar, deve consumir o seguinte _endpoint_:
 
@@ -504,6 +504,20 @@ Preste atenção que o JSON deve conter apenas **um** item.
 Após ter implementado com sucesso a função `fetchItem`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchItem` você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
 
 Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
+
+Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchItem.test.js` e implemente os seguintes testes:
+
+1 - Teste se `fetchItem` é uma função;
+
+2 - Execute a função `fetchItem` e teste se ela foi chamada;
+
+3 - Teste se a função `fetchItem` é chamada corretamente com o endpoint utilizado neste requisito;
+
+4 - Para este último teste, você precisará importar o objeto `item` que se encontra no arquivo `item.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchItem` é uma estrutura de dados igual ao objeto importado.
+
+Use o comando `npm test` para verificar se seus testes estão passando.
+
+OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
 
 ### 3. Remova o item do carrinho de compras ao clicar nele
 
