@@ -489,7 +489,7 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 ### 7. Adicione um texto de "carregando" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
-Normalmente é utilizada alguma forma para mostrar para a pessoa usuária que a requisição está em andamento.
+Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requisição está em andamento.
 
 * Crie um elemento que contenha o texto "carregando...", que deve ser exibido em algum lugar da página;
 * Este elemento deve ser mostrado **apenas durante** a requisição à API;
