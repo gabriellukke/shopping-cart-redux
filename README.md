@@ -476,6 +476,8 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
+OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
+
 ### 3. Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
