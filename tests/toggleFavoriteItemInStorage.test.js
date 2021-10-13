@@ -11,4 +11,4 @@ describe('toggleFavoriteItemInStorage', () => {
 
     expect(getLocal[0]).toEqual('1234567');
   });
-})
+});
