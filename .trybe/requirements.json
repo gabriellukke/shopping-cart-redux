@@ -94,6 +94,22 @@
         "1fda945a-b901-42dd-8697-ba74e12cbec0",
         "3188fe8a-e359-4666-8ad5-bf8bcb4d9a7b"
       ]
+    },
+    {
+      "description": "8 - Desenvolva testes para atingir 40% de cobertura",
+      "bonus": false
+    },
+    {
+      "description": "9 - Desenvolva testes para atingir 60% de cobertura",
+      "bonus": false
+    },
+    {
+      "description": "10 - Desenvolva testes para atingir 80% de cobertura",
+      "bonus": false
+    },
+    {
+      "description": "11 - Desenvolva testes para atingir 100% de cobertura",
+      "bonus": false
     }
   ]
 }
