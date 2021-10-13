@@ -2,9 +2,9 @@ const { sumProducts } = require('../helpers/sumProducts');
 const computadorSearch = require('../mocks/search.js');
 
 const selectProducts = (obj) => {
-  const results = obj.results.filter((_product, index) => index <= 9)
+  const results = obj.results.filter((_product, index) => index <= 9);
   return results;
-}
+};
 const expected = selectProducts(computadorSearch);
 
 describe('sumProducts', () => {
