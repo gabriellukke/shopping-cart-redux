@@ -33,6 +33,10 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
   - [6. Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
   - [7. Adicione um texto de "loading" durante uma requisição à API](#7-adicione-um-texto-de-loading-durante-uma-requisição-à-api)
+  - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
+  - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
+  - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
+  - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Revisando um Pull Request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -506,6 +510,48 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
+
+### 8. Desenvolva testes para atingir 40% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+Foi pedido que você realize testes em determinadas funções, mas quem avalia os testes? Para isso se tem a cobertura de testes. Ela é muito importante para garantir que os requisitos testados estejam cobrindo o que se foi pedido.
+
+**Não se esqueça de que a cobertura irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 40% da cobertura de testes.
+
+### 9. Desenvolva testes para atingir 60% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 60% da cobertura de testes.
+
+### 10. Desenvolva testes para atingir 80% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 80% da cobertura de testes.
+
+### 11. Desenvolva testes para atingir 100% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 100% da cobertura de testes.
 
 ---
 
