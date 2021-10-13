@@ -501,7 +501,7 @@ Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no form
 ```
 Preste atenção que o JSON deve conter apenas **um** item.
 
-Após ter implementado com sucesso a função `fetchItem`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchItem` você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
+Após ter implementado com sucesso a função `fetchItem`, você deve utilizá-la dentro do arquivo `script.js`.  **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchItem` você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
 
 Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
