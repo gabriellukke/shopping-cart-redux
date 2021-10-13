@@ -435,7 +435,7 @@ O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pes
 ```
 A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acima.
 
-Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
+Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
 
 Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
@@ -452,6 +452,8 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
+
+OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
 
 ### 2. Adicione o produto ao carrinho de compras
 
