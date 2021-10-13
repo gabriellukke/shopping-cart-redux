@@ -474,7 +474,7 @@ Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**
 
 ### 5. Some o valor total dos itens do carrinho de compras
 
-Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatóriamente**, a classe `total-price`.
+Cada vez que se adicionar um item ao carrinho de compras, será necessário somar seus valores e apresentá-los na página principal do projeto. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatoriamente**, a classe `total-price`.
 
 Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API. Portanto, é necessário garantir que a API já retornou as informações para somente depois realizar o cálculo da soma.
 
@@ -489,7 +489,7 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 ### 7. Adicione um texto de "carregando" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
-Normalmente é utilizada alguma forma para mostrar para a pessoa usuária que a requisição está em andamento.
+Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requisição está em andamento.
 
 * Crie um elemento que contenha o texto "carregando...", que deve ser exibido em algum lugar da página;
 * Este elemento deve ser mostrado **apenas durante** a requisição à API;
