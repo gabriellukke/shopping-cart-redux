@@ -539,17 +539,19 @@ Além disso, implemente testes para as duas funções de acordo com as seguintes
 
 > Para a função `saveCartItems`: implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
-- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada;
+- Teste se ao executar `saveCartItems`, `localStorage.setItem` é chamada;
 
-- Teste se ao executar `saveCartItems`, `window.localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
+- Teste se ao executar `saveCartItems`, `localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
 
 > Para a função `getSavedCartItems`: implemente os testes no arquivo `getSavedCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
-- Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada;
+- Teste se ao executar `getSavedCartItems`, `localStorage.getItem` é chamada;
 
-- Teste se ao executar `getSavedCartItems`, `window.localStorage.getItem` é chamada com o 'cartItems' como parâmetro.
+- Teste se ao executar `getSavedCartItems`, `localStorage.getItem` é chamada com o 'cartItems' como parâmetro.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
+
+OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
 
 **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 

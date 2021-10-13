@@ -6,6 +6,7 @@ Object.defineProperty(window, 'localStorage', {
   },
 });
 
-describe('A função getSavedCartItems', () => {
+describe('4 - Teste a função getSavedCartItems', () => {
   // implemente seus testes aqui
+  fail('Teste vazio');
 });
