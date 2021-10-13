@@ -22,6 +22,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
+  - [Cobertura de testes](#cobertura-de-testes)
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [API Shopping Cart](#api-shopping-cart)
   - [Observações técnicas](#observações-técnicas)
@@ -32,6 +33,10 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
   - [6. Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
   - [7. Adicione um texto de "loading" durante uma requisição à API](#7-adicione-um-texto-de-loading-durante-uma-requisição-à-api)
+  - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
+  - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
+  - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
+  - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Revisando um Pull Request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -45,6 +50,7 @@ Nesse projeto, você será capaz de:
 - Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
 - Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
 - Trabalhar com funções assíncronas;
+- Implementar testes unitários.
 
 ---
 
@@ -195,6 +201,24 @@ Após executar um dos dois comandos acima, será aberta uma janela de navegador 
 Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) vídeo 😉🎙
 
 **Para rodar o cypress é preciso ter rodado o comando npm install anteriormente.**
+
+---
+
+### Cobertura de testes
+
+Neste projeto, você irá implementar testes para quatro funções e, para avaliá-los, será utilizado a cobertura de testes.
+
+Essa cobertura avalia a eficácia dos testes implementados de acordo com os requisitos, determinando se cobrem o que foi pedido ou não.
+
+**Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
+
+Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 40%, 60%, 80%, e, por fim, 100% dos testes.
+
+Para executar a cobertura de testes, rode o comando abaixo:
+
+```bash
+npm run test:coverage
+```
 
 ---
 
@@ -501,6 +525,48 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
+
+### 8. Desenvolva testes para atingir 40% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+Foi pedido que você realize testes em determinadas funções, mas quem avalia os testes? Para isso se tem a cobertura de testes. Ela é muito importante para garantir que os requisitos testados estejam cobrindo o que se foi pedido.
+
+**Não se esqueça de que a cobertura irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 40% da cobertura de testes.
+
+### 9. Desenvolva testes para atingir 60% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 60% da cobertura de testes.
+
+### 10. Desenvolva testes para atingir 80% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 80% da cobertura de testes.
+
+### 11. Desenvolva testes para atingir 100% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 100% da cobertura de testes.
 
 ---
 
