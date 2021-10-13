@@ -22,6 +22,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
   - [ESLint e Stylelint](#eslint-e-stylelint)
   - [Cypress](#cypress)
+  - [Cobertura de testes](#cobertura-de-testes)
 - [Requisitos do projeto](#requisitos-do-projeto)
   - [API Shopping Cart](#api-shopping-cart)
   - [Observações técnicas](#observações-técnicas)
@@ -32,6 +33,10 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
   - [6. Crie um botão para limpar carrinho de compras](#6-crie-um-botão-para-limpar-carrinho-de-compras)
   - [7. Adicione um texto de "loading" durante uma requisição à API](#7-adicione-um-texto-de-loading-durante-uma-requisição-à-api)
+  - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
+  - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
+  - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
+  - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
 - [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
 - [Revisando um Pull Request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -45,6 +50,7 @@ Nesse projeto, você será capaz de:
 - Fazer requisições a uma API *(Application Programming Interface)* do Mercado Livre;
 - Utilizar os seus conhecimentos sobre JavaScript, CSS e HTML;
 - Trabalhar com funções assíncronas;
+- Implementar testes unitários.
 
 ---
 
@@ -198,6 +204,24 @@ Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) ví
 
 ---
 
+### Cobertura de testes
+
+Neste projeto, você irá implementar testes para quatro funções e, para avaliá-los, será utilizado a cobertura de testes.
+
+Essa cobertura avalia a eficácia dos testes implementados de acordo com os requisitos, determinando se cobrem o que foi pedido ou não.
+
+**Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
+
+Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 40%, 60%, 80%, e, por fim, 100% dos testes.
+
+Para executar a cobertura de testes, rode o comando abaixo:
+
+```bash
+npm run test:coverage
+```
+
+---
+
 # Requisitos do projeto
 
 ## API Shopping Cart
@@ -212,7 +236,10 @@ A seguir, estão listados como será a avaliação do seu projeto e todos os req
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
-Você deve utilizar o _endpoint_:
+Para isso, você terá de implementar a função `fetchProducts` que já está criada no arquivo `fetchProducts.js` que se encontra dentro da pasta `helpers`. Mas atenção, dentro do arquivo `fetchProducts.js` deve ser implementada **apenas** a função `fetchProducts`.
+
+A função `fetchProducts` que você irá implementar, deve consumir o seguinte _endpoint_:
+
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
@@ -408,11 +435,25 @@ O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pes
 ```
 A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acima.
 
-Você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
+Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
 
 Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
 **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+
+Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchProducts.test.js` e implemente os seguintes testes:
+
+1 - Teste se `fetchProducts` é uma função;
+
+2 - Execute a função `fetchProducts` e teste se ela foi chamada;
+
+3 - Teste se a função `fetchProducts` é chamada corretamente com o endpoint utilizado neste requisito;
+
+4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
+
+Use o comando `npm test` para verificar se seus testes estão passando.
+
+OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
 
 ### 2. Adicione o produto ao carrinho de compras
 
@@ -489,6 +530,48 @@ Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **o
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar que a requisição está em andamento.
 Mostre a palavra "loading..." em algum lugar da página **apenas durante** a requisição à API. O elemento mostrado durante o carregamento da página deve, **obrigatóriamente**, ter a classe `loading`.
+
+### 8. Desenvolva testes para atingir 40% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+Foi pedido que você realize testes em determinadas funções, mas quem avalia os testes? Para isso se tem a cobertura de testes. Ela é muito importante para garantir que os requisitos testados estejam cobrindo o que se foi pedido.
+
+**Não se esqueça de que a cobertura irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 40% da cobertura de testes.
+
+### 9. Desenvolva testes para atingir 60% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 60% da cobertura de testes.
+
+### 10. Desenvolva testes para atingir 80% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 80% da cobertura de testes.
+
+### 11. Desenvolva testes para atingir 100% de cobertura
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 100% da cobertura de testes.
 
 ---
 
