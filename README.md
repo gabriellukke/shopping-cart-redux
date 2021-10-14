@@ -511,11 +511,11 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 1 - Teste se `fetchItem` é uma função;
 
-2 - Execute a função `fetchItem` e teste se ela foi chamada;
+2 - Execute a função `fetchItem` e verifique se `fetch` foi chamada;
 
-3 - Teste se a função `fetchItem` é chamada corretamente com o endpoint utilizado neste requisito;
+3 - Teste se ao chamar a função `fetchItem`, a função `fetch` é chamada corretamente com o endpoint utilizado neste requisito;
 
-4 - Para este último teste, você precisará importar o objeto `item` que se encontra no arquivo `item.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchItem` é uma estrutura de dados igual ao objeto importado.
+4 - Para este último teste, você precisará importar o objeto `item` que se encontra no arquivo `item.js` que está dentro da pasta `mocks`. Teste se ao chamar a função `fetchItem` passando o id do `item`, ou seja MLB1615760527, o retorno da função `fetchItem` é uma estrutura de dados igual ao objeto importado.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
