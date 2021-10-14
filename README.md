@@ -245,7 +245,7 @@ A função `fetchProducts` que você irá implementar, deve consumir o seguinte 
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
-onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatóriamente** o termo `computador`.
+Onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatoriamente** o termo `computador`.
 
 O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pesquisado "computador":
 ```json
@@ -447,11 +447,11 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 1 - Teste se `fetchProducts` é uma função;
 
-2 - Execute a função `fetchProducts` e teste se ela foi chamada;
+2 - Execute a função `fetchProducts` e teste se fetch foi chamada;
 
-3 - Teste se a função `fetchProducts` é chamada corretamente com o endpoint utilizado neste requisito;
+3 - Teste se ao chamar a função `fetchProducts`, a função fetch é chamada corretamente com o endpoint utilizado neste requisito, ou seja, "computador";
 
-4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
+4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` com o endpoint "computador" é uma estrutura de dados igual a do objeto que você acabou de importar.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
