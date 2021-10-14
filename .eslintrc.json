@@ -7,6 +7,14 @@
     "func-names": "off",
     "no-unused-vars": "warn"
   },
+  "overrides": [
+    {
+      "files": ["script.js"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
   "env": {
     "browser": true
   }
