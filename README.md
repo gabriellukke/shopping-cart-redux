@@ -529,11 +529,12 @@ Para isso, dentro do arquivo `script.js` você deve procurar pela função `cart
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
-A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
-Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
-Após ter implementado com sucesso as funções `saveCartItems` e `getSavedCartItems`, você deve utilizá-las dentro do arquivo `script.js`. **Não** é necessário importá-las, basta chamá-las no escopo principal do arquivo.
+A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
 
-**Atenção:** as funções já estão importadas no `index.html`, sendo necessário apenas a sua implementação.
+Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
+Após ter implementado com sucesso as funções `saveCartItems` e `getSavedCartItems`, você deve utilizá-las dentro do arquivo `script.js`. 
+
+**Atenção:** as funções já estão importadas no `index.html`, então você deve **apenas** implementá-las e chamá-las no escopo principal do arquivo `script.js`.
 
 Além disso, implemente testes para as duas funções de acordo com as seguintes especificações:
 
