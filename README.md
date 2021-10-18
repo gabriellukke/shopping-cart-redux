@@ -542,7 +542,7 @@ Além disso, implemente testes para as duas funções de acordo com as seguintes
 
 - Teste se ao executar `saveCartItems`, `localStorage.setItem` é chamada;
 
-- Teste se ao executar `saveCartItems`, `localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`.
+- Teste se ao executar `saveCartItems`, `localStorage.setItem` é chamada com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como parâmetro para `saveCartItems`. Utilize como parâmetro o `mock` disponibilizado no teste.
 
 > Para a função `getSavedCartItems`: implemente os testes no arquivo `getSavedCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
