@@ -12,9 +12,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ## SUMÁRIO
 
-- [Boas vindas ao repositório do projeto de Carrinho de Compras!](#boas-vindas-ao-repositório-do-projeto-de-carrinho-de-compras)
-  - [SUMÁRIO](#sumário)
-  - [Habilidades](#habilidades)
+- [Habilidades](#habilidades)
 - [Entregáveis](#entregáveis)
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
@@ -37,13 +35,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [6. Crie um botão para limpar o carrinho de compras](#6-crie-um-botão-para-limpar-o-carrinho-de-compras)
     - [7. Adicione um texto de "carregando" durante uma requisição à API](#7-adicione-um-texto-de-carregando-durante-uma-requisição-à-api)
     - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
-      - [O que será avaliado](#o-que-será-avaliado)
     - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
-      - [O que será avaliado](#o-que-será-avaliado-1)
     - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
-      - [O que será avaliado](#o-que-será-avaliado-2)
     - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
-      - [O que será avaliado](#o-que-será-avaliado-3)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
