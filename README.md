@@ -466,7 +466,7 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 2 - Execute a função `fetchProducts` com o argumento "computador" e teste se `fetch` foi chamada;
 
-3 - Teste se ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` tenha o endpoint utilizado neste requisito, ou seja, "https://api.mercadolibre.com/sites/MLB/search?q=computador";
+3 - Teste se, ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/sites/MLB/search?q=computador";
 
 4 - Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
 
@@ -532,7 +532,7 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 2 - Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
 
-3 - Teste se ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` tenha o endpoint utilizado neste requisito, ou seja, "https://api.mercadolibre.com/items/MLB1615760527";
+3 - Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
 
 4 - Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
 
