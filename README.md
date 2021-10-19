@@ -231,7 +231,7 @@ Verifique com `npm test` se todos os itens da cobertura dos testes estão passan
 
 ### Pontos importantes para a implementação dos testes
 
-Disponibilizamos a API simulada para você implementar seus testes. Isso significa que será possível consumir todo os dados da API dentro do seu ambiente de testes, de forma segura e independente de fatores externos que possam ocorrer.
+Disponibilizamos a API simulada para você implementar seus testes. Isso significa que será possível simular o consumo de todos os dados da API dentro do seu ambiente de testes, de forma segura e independente de fatores externos que possam ocorrer.
 
 - As funções `fetchProducts` e `fetchItem` devem ser implementadas por você;
 - O `window.fetch` está definido em todos os testes, ou seja, será possível usar a função `fetch` dentro do seu ambiente de testes sem precisar importar ou instalar bibliotecas;
