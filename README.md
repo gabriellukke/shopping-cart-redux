@@ -227,17 +227,17 @@ Para executar a cobertura de testes, rode o comando abaixo:
 npm run test:coverage
 ```
 
-Verifique com `npm test` se todos os itens da cobertura dos testes estão passando corretamente e nenhum eventual falso/positivo que você estaria testando esteja quebrando.
+Verifique com `npm test` se todos os itens da cobertura dos testes estão passando corretamente. **Atenção**: cuidado com eventuais falso-positivos!
 
 ### Pontos importantes para a implementação dos testes
 
 Disponibilizamos a API simulada para você implementar seus testes. Isso significa que será possível consumir todo os dados da API dentro do seu ambiente de testes, de forma segura e independente de fatores externos que possam ocorrer.
 
 - As funções `fetchProducts` e `fetchItem` devem ser implementadas por você;
-- Todos os testes terá o `window.fetch` definido, ou seja, será possível usar a função `fetch` dentro do seu ambiente de testes sem precisar importar ou instalar bibliotecas;
-- Utilize o `localStorage.getItem` e o `localStorage.setItem` normalmente no ambiente de teste, pois a simulação dele esta pronta para ser chamada quando necessária.
-- Para nosso ambiente de testes, o `fetch` esta limita para atender somente a configuração da API referente ao projeto;
-- Deseja checar se uma função foi chamada ou com qual argumento foi utilizado? Que tal dar uma olhada nos matchers da [documentação](https://jestjs.io/pt-BR/docs/expect#tohavebeencalled).
+- O `window.fetch` está definido em todos os testes, ou seja, será possível usar a função `fetch` dentro do seu ambiente de testes sem precisar importar ou instalar bibliotecas;
+- Utilize o `localStorage.getItem` e o `localStorage.setItem` normalmente no ambiente de teste, pois a simulação dele está pronta para ser chamada quando necessário.
+- Para nosso ambiente de testes, o `fetch` está limitado a atender somente a configuração da API referente ao projeto;
+- Deseja checar se uma função foi chamada? Ou se foi chamada com um argumento específico? Que tal dar uma olhada nos matchers da [documentação](https://jestjs.io/pt-BR/docs/expect#tohavebeencalled).
 
 ---
 
@@ -468,9 +468,9 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 3 - Teste se ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` tenha o endpoint utilizado neste requisito, ou seja, "https://api.mercadolibre.com/sites/MLB/search?q=computador";
 
-4 - Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch` que já esta importado no arquivo.
+4 - Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
 
-5 - Teste se ao chamar a função `fetchProducts` sem argumento, retorna um erro igual a `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+5 - Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
@@ -534,9 +534,9 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 3 - Teste se ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` tenha o endpoint utilizado neste requisito, ou seja, "https://api.mercadolibre.com/items/MLB1615760527";
 
-4 - Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527", é uma estrutura de dados igual ao objeto `item` que já esta importado no arquivo.
+4 - Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
 
-5 - Teste se ao chamar a função `fetchItem` sem argumento, retorna um erro igual a `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+5 - Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
@@ -563,15 +563,15 @@ Além disso, implemente testes para as duas funções de acordo com as seguintes
 
 > Para a função `saveCartItems`: implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
-- Teste se ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
+- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
 
-- Teste se ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo seria o valor passado como argumento para `saveCartItems`.
+- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
 
 > Para a função `getSavedCartItems`: implemente os testes no arquivo `getSavedCartItems.test.js` da pasta `tests` que está na raiz do projeto.
 
-- Teste se ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
+- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
 
-- Teste se ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
+- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
