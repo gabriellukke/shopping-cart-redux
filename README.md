@@ -468,7 +468,7 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
-OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
+OBS: Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
 
 ### 2. Adicione o produto ao carrinho de compras
 
@@ -534,7 +534,7 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
-OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
+OBS: Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
 
 ### 3. Remova o item do carrinho de compras ao clicar nele
 
