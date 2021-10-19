@@ -1,7 +1,5 @@
 const saveCartItems = require('../helpers/saveCartItems');
 
-const mock = '<ol><li>Item</li></ol>';
-
 Object.defineProperty(window, 'localStorage', {
   value: {
     setItem: jest.fn(),
