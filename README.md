@@ -36,9 +36,13 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [6. Crie um botão para limpar o carrinho de compras](#6-crie-um-botão-para-limpar-o-carrinho-de-compras)
     - [7. Adicione um texto de "carregando" durante uma requisição à API](#7-adicione-um-texto-de-carregando-durante-uma-requisição-à-api)
     - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
+      - [O que será avaliado](#o-que-será-avaliado)
     - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
+      - [O que será avaliado](#o-que-será-avaliado-1)
     - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
+      - [O que será avaliado](#o-que-será-avaliado-2)
     - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
+      - [O que será avaliado](#o-que-será-avaliado-3)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -70,7 +74,7 @@ Nesse projeto vocês farão um **carrinho de compras** totalmente dinâmico! E o
 
 Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finalizado, **não se preocupe em replicar o visual, o gif so ilustra o comportamento**:
 
-![Project Gif](./out.gif)
+![Project Gif](./prototipo.gif)
 
 ---
 
@@ -245,7 +249,7 @@ A função `fetchProducts` que você irá implementar, deve consumir o seguinte 
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
-onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatóriamente** o termo `computador`.
+Onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatoriamente** o termo `computador`.
 
 O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pesquisado "computador":
 ```json
@@ -447,11 +451,11 @@ Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `t
 
 1 - Teste se `fetchProducts` é uma função;
 
-2 - Execute a função `fetchProducts` e teste se ela foi chamada;
+2 - Execute a função `fetchProducts` e teste se `fetch` foi chamada;
 
-3 - Teste se a função `fetchProducts` é chamada corretamente com o endpoint utilizado neste requisito;
+3 - Teste se ao chamar a função `fetchProducts`, a função `fetch` é chamada corretamente com o endpoint utilizado neste requisito, ou seja, "computador";
 
-4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` é uma estrutura de dados igual a do objeto que você acabou de importar.
+4 - Para este último teste, você precisará importar o objeto `computadorSearch` que se encontra no arquivo `search.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual a do objeto que você acabou de importar.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
@@ -511,11 +515,11 @@ Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests
 
 1 - Teste se `fetchItem` é uma função;
 
-2 - Execute a função `fetchItem` e teste se ela foi chamada;
+2 - Execute a função `fetchItem` e verifique se `fetch` foi chamada;
 
-3 - Teste se a função `fetchItem` é chamada corretamente com o endpoint utilizado neste requisito;
+3 - Teste se ao chamar a função `fetchItem`, a função `fetch` é chamada corretamente com o endpoint utilizado neste requisito;
 
-4 - Para este último teste, você precisará importar o objeto `item` que se encontra no arquivo `item.js` que está dentro da pasta `mocks`. Teste se o retorno da função `fetchItem` é uma estrutura de dados igual ao objeto importado.
+4 - Para este último teste, você precisará importar o objeto `item` que se encontra no arquivo `item.js` que está dentro da pasta `mocks`. Teste se ao chamar a função `fetchItem` passando o id do `item`, ou seja MLB1615760527, o retorno da função `fetchItem` é uma estrutura de dados igual ao objeto importado.
 
 Use o comando `npm test` para verificar se seus testes estão passando.
 
@@ -529,6 +533,7 @@ Para isso, dentro do arquivo `script.js` você deve procurar pela função `cart
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
+
 A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
 
 Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.

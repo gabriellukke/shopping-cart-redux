@@ -86,7 +86,7 @@
       ]
     },
     {
-      "description": "7 - Adicione um texto de `loading` durante uma requisição à API",
+      "description": "7 - Adicione um texto de `carregando` durante uma requisição à API",
       "bonus": false,
       "skill_ids":[
         "c9fdc424-f57c-4e3a-84c8-1b835157e52e",
