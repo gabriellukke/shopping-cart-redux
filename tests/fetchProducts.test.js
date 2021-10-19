@@ -4,8 +4,6 @@ const computadorSearch = require('../mocks/search');
 
 window.fetch = jest.fn(fetchSimulator);
 
-afterEach(jest.clearAllMocks);
-
 describe('1 - Teste a função fecthProducts', () => {
   // implemente seus testes aqui
   fail('Teste vazio');
