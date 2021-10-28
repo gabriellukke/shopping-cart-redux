@@ -197,13 +197,41 @@ describe('Shopping Cart Project', () => {
     });
   });
 
-  describe('7 - Adicione um texto de `loading` durante uma requisição à API', () => {
-    it('Adicionar um texto de "loading" durante uma requisição à API', () => {
+  describe('7 - Adicione um texto de `carregando` durante uma requisição à API', () => {
+    it('Adicionar um texto de "carregando" durante uma requisição à API', () => {
       cy.visit(PROJECT_URL)
       cy.get(LOADING)
         .should('exist')
         .wait(3000)
         .should('not.exist');
+    });
+  });
+
+  describe('8 - Desenvolva testes para atingir 40% de cobertura', () => {
+    it('Verifica a cobertura de testes unitários', () => {
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 40.00);
+    });
+  });
+
+  describe('9 - Desenvolva testes para atingir 60% de cobertura', () => {
+    it('Verifica a cobertura de testes unitários', () => {
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 60.00);
+    });
+  });
+
+  describe('10 - Desenvolva testes para atingir 80% de cobertura', () => {
+    it('Verifica a cobertura de testes unitários', () => {
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 80.00);
+    });
+  });
+
+  describe('11 - Desenvolva testes para atingir 100% de cobertura', () => {
+    it('Verifica a cobertura de testes unitários', () => {
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 100.00);
     });
   });
 });

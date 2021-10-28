@@ -1,2 +1,4 @@
 cypress/
 mocks/
+tests/
+coverage/
