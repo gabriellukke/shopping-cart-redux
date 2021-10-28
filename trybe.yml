@@ -1,3 +1,7 @@
 ignore_files:
-  - cypress/integration/project.spec.js
+  - cypress/
+  - .eslintignore
+  - .eslintrc.json
+  - .stylelintrc.json
+  - package.json
   
