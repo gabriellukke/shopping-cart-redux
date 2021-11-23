@@ -34,9 +34,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
     - [6. Crie um botão para limpar o carrinho de compras](#6-crie-um-botão-para-limpar-o-carrinho-de-compras)
     - [7. Adicione um texto de "carregando" durante uma requisição à API](#7-adicione-um-texto-de-carregando-durante-uma-requisição-à-api)
-    - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
-    - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
-    - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
+    - [8. Desenvolva testes para atingir 25% de cobertura](#8-desenvolva-testes-para-atingir-25-de-cobertura)
+    - [9. Desenvolva testes para atingir 50% de cobertura](#9-desenvolva-testes-para-atingir-50-de-cobertura)
+    - [10. Desenvolva testes para atingir 75% de cobertura](#10-desenvolva-testes-para-atingir-75-de-cobertura)
     - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
@@ -59,7 +59,7 @@ Nesse projeto, você será capaz de:
 
 Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
 
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
+Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git-github-e-internet/git-github-o-que-e-e-para-que-serve/82dcab41-249a-4738-8920-f0eb2cb91d1c) sempre que precisar!
 
 ## O que será desenvolvido
 
@@ -85,7 +85,7 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
-O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente.
+O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. Assim como, a implementação dos arquivos da pasta `helpers` e `tests`, que conterão seus códigos JavaScript e testes unitários, respectivamente.
 
 Caso você faça o download de bibliotecas externas, utilize o diretório `libs` (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
 
@@ -213,9 +213,9 @@ Essa cobertura avalia a eficácia dos testes implementados de acordo com os requ
 
 **Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
 
-Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 40%, 60%, 80%, e, por fim, 100% dos testes.
+Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes.
 
-Para executar a cobertura de testes, rode o comando abaixo:
+Para executar e acompanhar a implementação da sua cobertura de testes, rode o comando abaixo:
 
 ```bash
 npm run test:coverage
@@ -601,7 +601,7 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
-### 8. Desenvolva testes para atingir 40% de cobertura
+### 8. Desenvolva testes para atingir 25% de cobertura total e 100% da função `fetchProducts`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
@@ -611,19 +611,9 @@ Foi pedido que você realize testes em determinadas funções, mas quem avalia o
 
 #### O que será avaliado
 
-- Será avaliado se os testes implementados atigem 40% da cobertura de testes.
+- Será avaliado se os testes implementados atigem 25% da cobertura total e 100% da função `fetchProducts`.
 
-### 9. Desenvolva testes para atingir 60% de cobertura
-
-> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
-
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
-
-#### O que será avaliado
-
-- Será avaliado se os testes implementados atigem 60% da cobertura de testes.
-
-### 10. Desenvolva testes para atingir 80% de cobertura
+### 9. Desenvolva testes para atingir 50% de cobertura total e 100% da função `fetchItem`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
@@ -631,9 +621,9 @@ Foi pedido que você realize testes em determinadas funções, mas quem avalia o
 
 #### O que será avaliado
 
-- Será avaliado se os testes implementados atigem 80% da cobertura de testes.
+- Será avaliado se os testes implementados atigem 50% da cobertura total e 100% da função `fetchItem`.
 
-### 11. Desenvolva testes para atingir 100% de cobertura
+### 10. Desenvolva testes para atingir 75% de cobertura total e 100% da função `saveCartItems`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
@@ -641,7 +631,17 @@ Foi pedido que você realize testes em determinadas funções, mas quem avalia o
 
 #### O que será avaliado
 
-- Será avaliado se os testes implementados atigem 100% da cobertura de testes.
+- Será avaliado se os testes implementados atigem 75% da cobertura total e 100% da função `saveCartItems`.
+
+### 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atigem 100% da cobertura total e 100% da função `getSavedCartItems`
 
 ---
 
