@@ -213,13 +213,19 @@ Essa cobertura avalia a eficácia dos testes implementados de acordo com os requ
 
 **Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
 
-Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes.
+Conforme você for realizando os testes do projeto, a porcentagem da cobertura total irá aumentar. Para a cobertura total será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes. Agora a cobertura da função solicitada será avaliada 100% de cobertura da função e das linhas.
 
 Para executar e acompanhar a implementação da sua cobertura de testes, rode o comando abaixo:
 
 ```bash
 npm run test:coverage
 ```
+
+Ao realizar o comando terá um resultado similar a este:
+
+![Cobertura de Testes](cobertura.png)
+
+Os destaques em amarelo fazem referência à cobertura total e os em verde demonstram a função do requisito desejado.
 
 Verifique com `npm test` se todos os itens da cobertura dos testes estão passando corretamente. **Atenção**: cuidado com eventuais falso-positivos!
 
@@ -245,7 +251,11 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
+---
+
 ### 1. Crie uma listagem de produtos
+
+Este requisito pode ser feito em conjunto com o [requisito 8](#8-desenvolva-testes-para-atingir-25-de-cobertura) se você optar por aplicar TDD, basta olhar as orientações e aplicar em conjunto.
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -256,9 +266,16 @@ A função `fetchProducts` que você irá implementar, deve consumir o seguinte 
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
+
 Onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatoriamente** o termo `computador`.
 
 O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pesquisado "computador":
+
+---
+
+<details>
+<summary>CLIQUE AQUI PARA VER O RETORNO DA API</summary>
+
 ```json
 {
     "site_id": "MLB",
@@ -446,29 +463,25 @@ O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pes
     ]
 }
 ```
+</details>
+
+---
+
 A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acima.
 
-Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
+**Observações técnicas:**
 
-Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
+- O arquivo `fetchProducts.js` já esta importado na estrutura do seu arquivo _HTML_;
+- Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
+- Você **deve** utilizar a função createProductItemElement(product) para criar os componentes _HTML_ referentes a um produto.
+- Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
+- **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
-**Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+**O que será avaliado**
 
-Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchProducts.test.js` e implemente os seguintes testes:
+- O elemento com classe `.item` deve exibir a lista de produtos.
 
-1 - Teste se `fetchProducts` é uma função;
-
-2 - Execute a função `fetchProducts` com o argumento "computador" e teste se `fetch` foi chamada;
-
-3 - Teste se, ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/sites/MLB/search?q=computador";
-
-4 - Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
-
-5 - Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
-
-Use o comando `npm test` para verificar se seus testes estão passando.
-
-OBS: Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+---
 
 ### 2. Adicione o produto ao carrinho de compras
 
@@ -601,17 +614,38 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
+---
+
 ### 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-Foi pedido que você realize testes em determinadas funções, mas quem avalia os testes? Para isso se tem a cobertura de testes. Ela é muito importante para garantir que os requisitos testados estejam cobrindo o que se foi pedido.
+**Observações técnicas:**
 
-**Não se esqueça de que a cobertura irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+- Use o comando `npm test` para verificar se seus testes estão passando;
+- **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
 
-#### O que será avaliado
+- **A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
+
+**O que você deve testar**
+
+Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solicitado:
+
+1. Teste se `fetchProducts` é uma função;
+
+2. Execute a função `fetchProducts` com o argumento "computador" e teste se `fetch` foi chamada;
+
+3. Teste se, ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/sites/MLB/search?q=computador";
+
+4. Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
+
+5. Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+
+**O que será avaliado**
 
 - Será avaliado se os testes implementados atingem no mínimo 25% da cobertura total e 100% da função `fetchProducts`.
+
+---
 
 ### 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
