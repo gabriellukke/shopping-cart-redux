@@ -601,7 +601,7 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
-### 8. Desenvolva testes para atingir 25% de cobertura total e 100% da função `fetchProducts`
+### 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
@@ -611,19 +611,9 @@ Foi pedido que você realize testes em determinadas funções, mas quem avalia o
 
 #### O que será avaliado
 
-- Será avaliado se os testes implementados atigem 25% da cobertura total e 100% da função `fetchProducts`.
+- Será avaliado se os testes implementados atingem no mínimo 25% da cobertura total e 100% da função `fetchProducts`.
 
-### 9. Desenvolva testes para atingir 50% de cobertura total e 100% da função `fetchItem`
-
-> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
-
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
-
-#### O que será avaliado
-
-- Será avaliado se os testes implementados atigem 50% da cobertura total e 100% da função `fetchItem`.
-
-### 10. Desenvolva testes para atingir 75% de cobertura total e 100% da função `saveCartItems`
+### 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
@@ -631,7 +621,17 @@ Foi pedido que você realize testes em determinadas funções, mas quem avalia o
 
 #### O que será avaliado
 
-- Será avaliado se os testes implementados atigem 75% da cobertura total e 100% da função `saveCartItems`.
+- Será avaliado se os testes implementados atingem no mínimo 50% da cobertura total e 100% da função `fetchItem`.
+
+### 10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
+
+> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+#### O que será avaliado
+
+- Será avaliado se os testes implementados atingem no mínimo 75% da cobertura total e 100% da função `saveCartItems`.
 
 ### 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
 
