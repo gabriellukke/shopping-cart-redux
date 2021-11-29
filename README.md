@@ -249,7 +249,7 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 ## Observações técnicas
 
-A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+A seguir, estão listados os passos de como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
 ---
 
@@ -471,7 +471,7 @@ A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acim
 
 **Observações técnicas:**
 
-- O arquivo `fetchProducts.js` já esta importado na estrutura do seu arquivo _HTML_;
+- O arquivo `fetchProducts.js` já está importado na estrutura do seu arquivo _HTML_;
 - Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
 - Você **deve** utilizar a função createProductItemElement(product) para criar os componentes _HTML_ referentes a um produto.
 - Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
@@ -624,7 +624,7 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 - Use o comando `npm test` para verificar se seus testes estão passando;
 - **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
-
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
 - **A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
 
 **O que você deve testar**
