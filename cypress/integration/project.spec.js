@@ -131,7 +131,7 @@ describe('Shopping Cart Project', () => {
         .should('have.text', `SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
     });
 
-    it('Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após regarregar a página', () => {
+    it('Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após recarregar a página', () => {
       addToCart(29);
       addToCart(31);
       addToCart(15);
