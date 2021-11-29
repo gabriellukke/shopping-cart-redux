@@ -12,7 +12,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ## SUMÁRIO
 
-- [Habilidades](#habilidades)
+- [Boas vindas ao repositório do projeto de Carrinho de Compras!](#boas-vindas-ao-repositório-do-projeto-de-carrinho-de-compras)
+  - [SUMÁRIO](#sumário)
+  - [Habilidades](#habilidades)
 - [Entregáveis](#entregáveis)
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
@@ -37,7 +39,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts)
     - [9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem)
     - [10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems)
+      - [O que será avaliado](#o-que-será-avaliado)
     - [11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems)
+      - [O que será avaliado](#o-que-será-avaliado-1)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -255,7 +259,7 @@ A seguir, estão listados os passos de como será a avaliação do seu projeto e
 
 ### 1. Crie uma listagem de produtos
 
-Este requisito pode ser feito em conjunto com o [requisito 8](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts) se você optar por aplicar TDD, basta olhar as orientações e aplicar em conjunto.
+Este requisito pode ser feito em conjunto com o [requisito 8](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts) se você optar por aplicar TDD, para isso basta olhar as orientações e aplicar o que é solicitado em conjunto.
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -473,7 +477,7 @@ A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acim
 
 - O arquivo `fetchProducts.js` já está importado na estrutura do seu arquivo _HTML_;
 - Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
-- Você **deve** utilizar a função createProductItemElement(product) para criar os componentes _HTML_ referentes a um produto.
+- Você **deve** utilizar a função `createProductItemElement()` para criar os componentes _HTML_ referentes a um produto.
 - Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 - **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
@@ -485,18 +489,28 @@ A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acim
 
 ### 2. Adicione o produto ao carrinho de compras
 
-Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
+Este requisito pode ser feito em conjunto com o [requisito 9](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem) se você optar por aplicar TDD, para isso basta olhar as orientações e aplicar o que é solicitado em conjunto.
 
-Ao clicar nesse botão você deve realizar uma requisição. Para isso, acesse o arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
+Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho`.
+
+Ao clicar nesse botão você deve realizar uma requisição que irá retornar todos os dados específicos de um produto.
+
+Para isso, você terá de implementar a função `fetchItem` que já está criada no arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
 
 A função `fetchItem` que você irá implementar, deve consumir o seguinte _endpoint_:
 
 ```javascript
 "https://api.mercadolibre.com/items/$ItemID"
 ```
+
 onde `$ItemID` deve ser o valor `id` do item selecionado.
 
 Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no formato:
+
+---
+
+<details>
+<summary>CLIQUE AQUI PARA VER O RETORNO DA API</summary>
 ```JSON
 {
     "id": "MLB1341706310",
@@ -527,32 +541,31 @@ Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no form
     "catalog_listing": true
 }
 ```
-Preste atenção que o JSON deve conter apenas **um** item.
+</details>
 
-Após ter implementado com sucesso a função `fetchItem`, você deve utilizá-la dentro do arquivo `script.js`.  **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchItem` você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
+---
 
-Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
+Preste atenção que o `JSON` deve conter apenas **um** item.
 
-Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchItem.test.js` e implemente os seguintes testes:
+**Observações técnicas:**
 
-1 - Teste se `fetchItem` é uma função;
+- O arquivo `fetchItem.js` já está importado na estrutura do seu arquivo _HTML_;
+- Para executar sua função `fetchItem` basta chamar no seu arquivo `script.js`;
+- Você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
+- Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
-2 - Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
+**O que será avaliado**
 
-3 - Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
+- O elemento com classe `.cart__items` deve adicionar o item escolhido, apresentando corretamente suas informações de id, título e preço.
 
-4 - Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
-
-5 - Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
-
-Use o comando `npm test` para verificar se seus testes estão passando.
-
-OBS: Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+---
 
 ### 3. Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
 Para isso, dentro do arquivo `script.js` você deve procurar pela função `cartItemClickListener(event)` e implementar a lógica necessária para realizar a remoção.
+
+---
 
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
@@ -585,7 +598,7 @@ OBS: Você deve implementar os 4 requisitos, independente do que for suficiente 
 
 **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 
-
+---
 
 ### 5. Some o valor total dos itens do carrinho de compras
 
@@ -595,11 +608,15 @@ Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
+---
+
 ### 6. Crie um botão para limpar o carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatoriamente**, ter a classe `empty-cart`.
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+
+---
 
 ### 7. Adicione um texto de "carregando" durante uma requisição à API
 
@@ -651,11 +668,32 @@ Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solici
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+**Observações técnicas:**
 
-#### O que será avaliado
+- Use o comando `npm test` para verificar se seus testes estão passando;
+- **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+**O que você deve testar**
+
+Dentro da pasta `tests`, abra o arquivo `fetchItem.test.js` e faça o solicitado:
+
+1. Teste se `fetchItem` é uma função;
+
+2. Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
+
+3. Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
+
+4. Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
+
+5. Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+
+**O que será avaliado**
 
 - Será avaliado se os testes implementados atingem no mínimo 50% da cobertura total e 100% da função `fetchItem`.
+
+---
 
 ### 10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
 
