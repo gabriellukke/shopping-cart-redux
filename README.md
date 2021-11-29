@@ -34,10 +34,10 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
     - [6. Crie um botão para limpar o carrinho de compras](#6-crie-um-botão-para-limpar-o-carrinho-de-compras)
     - [7. Adicione um texto de "carregando" durante uma requisição à API](#7-adicione-um-texto-de-carregando-durante-uma-requisição-à-api)
-    - [8. Desenvolva testes para atingir 25% de cobertura](#8-desenvolva-testes-para-atingir-25-de-cobertura)
-    - [9. Desenvolva testes para atingir 50% de cobertura](#9-desenvolva-testes-para-atingir-50-de-cobertura)
-    - [10. Desenvolva testes para atingir 75% de cobertura](#10-desenvolva-testes-para-atingir-75-de-cobertura)
-    - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
+    - [8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts)
+    - [9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem)
+    - [10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems)
+    - [11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -255,7 +255,7 @@ A seguir, estão listados os passos de como será a avaliação do seu projeto e
 
 ### 1. Crie uma listagem de produtos
 
-Este requisito pode ser feito em conjunto com o [requisito 8](#8-desenvolva-testes-para-atingir-25-de-cobertura) se você optar por aplicar TDD, basta olhar as orientações e aplicar em conjunto.
+Este requisito pode ser feito em conjunto com o [requisito 8](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts) se você optar por aplicar TDD, basta olhar as orientações e aplicar em conjunto.
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
