@@ -12,9 +12,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 ## SUMÁRIO
 
-- [Boas vindas ao repositório do projeto de Carrinho de Compras!](#boas-vindas-ao-repositório-do-projeto-de-carrinho-de-compras)
-  - [SUMÁRIO](#sumário)
-  - [Habilidades](#habilidades)
+- [Habilidades](#habilidades)
 - [Entregáveis](#entregáveis)
   - [O que será desenvolvido](#o-que-será-desenvolvido)
     - [Protótipo do projeto](#protótipo-do-projeto)
@@ -39,9 +37,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts)
     - [9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem)
     - [10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems)
-      - [O que será avaliado](#o-que-será-avaliado)
     - [11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems)
-      - [O que será avaliado](#o-que-será-avaliado-1)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -570,34 +566,22 @@ Para isso, dentro do arquivo `script.js` você deve procurar pela função `cart
 
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
-Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
+Este requisito pode ser feito em conjunto com os requisitos [10](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems) e [11](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems), se você optar por aplicar TDD, para isso basta olhar as orientações e aplicar o que é solicitado em conjunto.
 
-A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
+Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**. Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
 
-Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
-Após ter implementado com sucesso as funções `saveCartItems` e `getSavedCartItems`, você deve utilizá-las dentro do arquivo `script.js`. 
+Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCartItems` que já estão criadas com o nome `saveCartItems.js` e `getSavedCartItems.js`, respectivamente, dentro da pasta `helpers`.
 
-**Atenção:** as funções já estão importadas no `index.html`, então você deve **apenas** implementá-las e chamá-las no escopo principal do arquivo `script.js`.
+**Observações técnicas:**
 
-Além disso, implemente testes para as duas funções de acordo com as seguintes especificações:
+- Os arquivos `saveCartItems.js` e `getSavedCartItems.js` já estão importados na estrutura do seu arquivo _HTML_;
+- Para executar suas funções `saveCartItems` e `getSavedCartItems`, basta chamar no seu arquivo `script.js`;
+- A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`.
+- A função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
 
-> Para a função `saveCartItems`: implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
+**O que será avaliado**
 
-- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
-
-- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
-
-> Para a função `getSavedCartItems`: implemente os testes no arquivo `getSavedCartItems.test.js` da pasta `tests` que está na raiz do projeto.
-
-- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
-
-- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
-
-Use o comando `npm test` para verificar se seus testes estão passando.
-
-OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
-
-**Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- A página ao ser atualizada deve permanecer com todos os itens do carrinho adicionados anteriomente.
 
 ---
 
@@ -642,12 +626,13 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 - Use o comando `npm test` para verificar se seus testes estão passando;
 - **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 - Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
 - **A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
 
 **O que você deve testar**
 
-Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solicitado:
+> Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solicitado:
 
 1. Teste se `fetchProducts` é uma função;
 
@@ -673,12 +658,13 @@ Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solici
 
 - Use o comando `npm test` para verificar se seus testes estão passando;
 - **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 - Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
 - **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
 
 **O que você deve testar**
 
-Dentro da pasta `tests`, abra o arquivo `fetchItem.test.js` e faça o solicitado:
+> Dentro da pasta `tests`, abra o arquivo `fetchItem.test.js` e faça o solicitado:
 
 1. Teste se `fetchItem` é uma função;
 
@@ -700,19 +686,49 @@ Dentro da pasta `tests`, abra o arquivo `fetchItem.test.js` e faça o solicitado
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+**Observações técnicas:**
 
-#### O que será avaliado
+- Use o comando `npm test` para verificar se seus testes estão passando;
+- **OBS:** Você deve implementar os 2 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+**O que você deve testar**
+
+> Dentro da pasta `tests`, abra o arquivo `saveCartItems.test.js` e faça o solicitado:
+
+1. Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
+
+2. Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
+
+**O que será avaliado**
 
 - Será avaliado se os testes implementados atingem no mínimo 75% da cobertura total e 100% da função `saveCartItems`.
+
+---
 
 ### 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+**Observações técnicas:**
 
-#### O que será avaliado
+- Use o comando `npm test` para verificar se seus testes estão passando.
+- **OBS:** Você deve implementar os 2 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+
+**O que você deve testar**
+
+> Dentro da pasta `tests`, abra o arquivo `getSavedCartItems.test.js` e faça o solicitado:
+
+1. Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
+2. Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
+
+**O que será avaliado**
 
 - Será avaliado se os testes implementados atigem 100% da cobertura total e 100% da função `getSavedCartItems`
 
