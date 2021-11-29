@@ -511,6 +511,7 @@ Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no form
 
 <details>
 <summary>CLIQUE AQUI PARA VER O RETORNO DA API</summary>
+
 ```JSON
 {
     "id": "MLB1341706310",
