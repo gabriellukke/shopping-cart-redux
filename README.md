@@ -213,7 +213,7 @@ Essa cobertura avalia a eficácia dos testes implementados de acordo com os requ
 
 **Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
 
-Conforme você for realizando os testes do projeto, a porcentagem da cobertura total irá aumentar. Para a cobertura total será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes. Para cada função solicitada a cobertura avaliada será de 100% da função e das linhas.
+Conforme você for realizando os testes do projeto, a porcentagem da cobertura total irá aumentar. Para a cobertura total será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes. Para cada função solicitada a cobertura de testes irá avaliar 100% das linhas da sua função.
 
 Para executar e acompanhar a implementação da sua cobertura de testes, rode o comando abaixo:
 
