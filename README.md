@@ -34,10 +34,10 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
     - [5. Some o valor total dos itens do carrinho de compras](#5-some-o-valor-total-dos-itens-do-carrinho-de-compras)
     - [6. Crie um botão para limpar o carrinho de compras](#6-crie-um-botão-para-limpar-o-carrinho-de-compras)
     - [7. Adicione um texto de "carregando" durante uma requisição à API](#7-adicione-um-texto-de-carregando-durante-uma-requisição-à-api)
-    - [8. Desenvolva testes para atingir 40% de cobertura](#8-desenvolva-testes-para-atingir-40-de-cobertura)
-    - [9. Desenvolva testes para atingir 60% de cobertura](#9-desenvolva-testes-para-atingir-60-de-cobertura)
-    - [10. Desenvolva testes para atingir 80% de cobertura](#10-desenvolva-testes-para-atingir-80-de-cobertura)
-    - [11. Desenvolva testes para atingir 100% de cobertura](#11-desenvolva-testes-para-atingir-100-de-cobertura)
+    - [8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts)
+    - [9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem)
+    - [10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems)
+    - [11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems)
   - [Depois de terminar o desenvolvimento](#depois-de-terminar-o-desenvolvimento)
   - [Revisando um pull request](#revisando-um-pull-request)
 - [Avisos finais](#avisos-finais)
@@ -59,7 +59,7 @@ Nesse projeto, você será capaz de:
 
 Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
 
-Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git) sempre que precisar!
+Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://app.betrybe.com/course/fundamentals/git-github-e-internet/git-github-o-que-e-e-para-que-serve/82dcab41-249a-4738-8920-f0eb2cb91d1c) sempre que precisar!
 
 ## O que será desenvolvido
 
@@ -85,7 +85,7 @@ Seu projeto deve ter o comportamento parecido com o do gif abaixo quando finaliz
 
 ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
-O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente.
+O seu Pull Request deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. Assim como, a implementação dos arquivos da pasta `helpers` e `tests`, que conterão seus códigos JavaScript e testes unitários, respectivamente.
 
 Caso você faça o download de bibliotecas externas, utilize o diretório `libs` (a partir da raiz do projeto) para colocar os arquivos (*.css, *.js, etc...) baixados.
 
@@ -213,13 +213,19 @@ Essa cobertura avalia a eficácia dos testes implementados de acordo com os requ
 
 **Será testado apenas as quatros funções pedidas, e não toda a aplicação!**
 
-Conforme você for realizando o projeto, a porcentagem da cobertura irá aumentar. Será avaliado 40%, 60%, 80%, e, por fim, 100% dos testes.
+Conforme você for realizando os testes do projeto, a porcentagem da cobertura total irá aumentar. Para a cobertura total será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes. Para cada função solicitada a cobertura de testes irá avaliar 100% das linhas da sua função.
 
-Para executar a cobertura de testes, rode o comando abaixo:
+Para executar e acompanhar a implementação da sua cobertura de testes, rode o comando abaixo:
 
 ```bash
 npm run test:coverage
 ```
+
+Ao realizar o comando terá um resultado similar a este:
+
+![Cobertura de Testes](cobertura.png)
+
+Os destaques em amarelo fazem referência à cobertura total e os em verde demonstram a função do requisito desejado.
 
 Verifique com `npm test` se todos os itens da cobertura dos testes estão passando corretamente. **Atenção**: cuidado com eventuais falso-positivos!
 
@@ -243,9 +249,13 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 ## Observações técnicas
 
-A seguir, estão listados como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+A seguir, estão listados os passos de como será a avaliação do seu projeto e todos os requisitos que devem ser cumpridos. Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
+
+---
 
 ### 1. Crie uma listagem de produtos
+
+Este requisito pode ser feito em conjunto com o [requisito 8](#8-desenvolva-testes-de-no-mínimo-25-de-cobertura-total-e-100-da-função-fetchproducts) se você optar por aplicar TDD, para isso basta olhar as orientações do requisito 8 e aplicar o que é solicitado em conjunto.
 
 Você deve criar uma listagem de produtos que devem ser consultados através da API do Mercado Livre.
 
@@ -256,9 +266,16 @@ A função `fetchProducts` que você irá implementar, deve consumir o seguinte 
 ```javascript
 "https://api.mercadolibre.com/sites/MLB/search?q=$QUERY"
 ```
+
 Onde `$QUERY` deve ser o valor da sua busca. Para este trabalho, a busca deve ser **obrigatoriamente** o termo `computador`.
 
 O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pesquisado "computador":
+
+---
+
+<details>
+<summary>CLIQUE AQUI PARA VER O RETORNO DA API</summary>
+
 ```json
 {
     "site_id": "MLB",
@@ -446,44 +463,51 @@ O retorno desse _endpoint_ será algo no formato `json`. Por exemplo, se for pes
     ]
 }
 ```
+</details>
+
+---
+
 A lista de produtos que devem ser exibidos é o _array_ `results` no `JSON` acima.
 
-Após ter implementado com sucesso a função `fetchProducts`, você deve utilizá-la dentro do arquivo `script.js`. **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchProducts` você **deve** utilizar a função `createProductItemElement(product)` para criar os componentes _HTML_ referentes a um produto.
+**Observações técnicas:**
 
-Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
+- O arquivo `fetchProducts.js` já está importado na estrutura do seu arquivo _HTML_;
+- Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
+- Você **deve** utilizar a função `createProductItemElement()` para criar os componentes _HTML_ referentes a um produto.
+- Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
+- **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
-**Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+**O que será avaliado**
 
-Hora de testar a implementação da função `fetchProducts`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchProducts.test.js` e implemente os seguintes testes:
+- O elemento com classe `.item` deve exibir a lista de produtos.
 
-1 - Teste se `fetchProducts` é uma função;
-
-2 - Execute a função `fetchProducts` com o argumento "computador" e teste se `fetch` foi chamada;
-
-3 - Teste se, ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/sites/MLB/search?q=computador";
-
-4 - Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
-
-5 - Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
-
-Use o comando `npm test` para verificar se seus testes estão passando.
-
-OBS: Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+---
 
 ### 2. Adicione o produto ao carrinho de compras
 
-Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho!`.
+Este requisito pode ser feito em conjunto com o [requisito 9](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem) se você optar por aplicar TDD, para isso basta olhar as orientações do requisito 9 e aplicar o que é solicitado em conjunto.
 
-Ao clicar nesse botão você deve realizar uma requisição. Para isso, acesse o arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
+Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho`.
+
+Ao clicar nesse botão você deve realizar uma requisição que irá retornar todos os dados específicos de um produto.
+
+Para isso, você terá de implementar a função `fetchItem` que já está criada no arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
 
 A função `fetchItem` que você irá implementar, deve consumir o seguinte _endpoint_:
 
 ```javascript
 "https://api.mercadolibre.com/items/$ItemID"
 ```
+
 onde `$ItemID` deve ser o valor `id` do item selecionado.
 
 Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no formato:
+
+---
+
+<details>
+<summary>CLIQUE AQUI PARA VER O RETORNO DA API</summary>
+
 ```JSON
 {
     "id": "MLB1341706310",
@@ -514,65 +538,52 @@ Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no form
     "catalog_listing": true
 }
 ```
-Preste atenção que o JSON deve conter apenas **um** item.
+</details>
 
-Após ter implementado com sucesso a função `fetchItem`, você deve utilizá-la dentro do arquivo `script.js`.  **Não** é necessário importá-la, pois o script `fetchProducts.js` já está na estrutura do arquivo HTML, basta chamá-la no escopo principal do arquivo. A partir dos dados obtidos pela função `fetchItem` você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
+---
 
-Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
+Preste atenção que o `JSON` deve conter apenas **um** item.
 
-Hora de testar a implementação da função `fetchItem`. Dentro da pasta `tests`, que está localizada na raiz do projeto, abra o arquivo `fetchItem.test.js` e implemente os seguintes testes:
+**Observações técnicas:**
 
-1 - Teste se `fetchItem` é uma função;
+- O arquivo `fetchItem.js` já está importado na estrutura do seu arquivo _HTML_;
+- Para executar sua função `fetchItem` basta chamar no seu arquivo `script.js`;
+- Você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
+- Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
-2 - Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
+**O que será avaliado**
 
-3 - Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
+- O elemento com classe `.cart__items` deve adicionar o item escolhido, apresentando corretamente suas informações de id, título e preço.
 
-4 - Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
-
-5 - Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
-
-Use o comando `npm test` para verificar se seus testes estão passando.
-
-OBS: Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+---
 
 ### 3. Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
 Para isso, dentro do arquivo `script.js` você deve procurar pela função `cartItemClickListener(event)` e implementar a lógica necessária para realizar a remoção.
 
+---
+
 ### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
-Para completar esse requisito, você deve implementar duas funções dentro da pasta `helpers`: `saveCartItems` e `getSavedCartItems`.
+Este requisito pode ser feito em conjunto com os requisitos [10](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems) e [11](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems), se você optar por aplicar TDD, para isso basta olhar as orientações dos requisitos 10 e 11 e aplicar o que é solicitado em conjunto.
 
-A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`. Todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
+Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**. Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
 
-Já a função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
-Após ter implementado com sucesso as funções `saveCartItems` e `getSavedCartItems`, você deve utilizá-las dentro do arquivo `script.js`. 
+Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCartItems` que já estão criadas com o nome `saveCartItems.js` e `getSavedCartItems.js`, respectivamente, dentro da pasta `helpers`.
 
-**Atenção:** as funções já estão importadas no `index.html`, então você deve **apenas** implementá-las e chamá-las no escopo principal do arquivo `script.js`.
+**Observações técnicas:**
 
-Além disso, implemente testes para as duas funções de acordo com as seguintes especificações:
+- Os arquivos `saveCartItems.js` e `getSavedCartItems.js` já estão importados na estrutura do seu arquivo _HTML_;
+- Para executar suas funções `saveCartItems` e `getSavedCartItems`, basta chamar no seu arquivo `script.js`;
+- A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`.
+- A função `getSavedCartItems` deve recuperar os itens do carrinho de compras do `localStorage` quando carregamos a página.
 
-> Para a função `saveCartItems`: implemente os testes no arquivo `saveCartItems.test.js` da pasta `tests` que está na raiz do projeto.
+**O que será avaliado**
 
-- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
+- A página ao ser atualizada deve permanecer com todos os itens do carrinho adicionados anteriomente.
 
-- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
-
-> Para a função `getSavedCartItems`: implemente os testes no arquivo `getSavedCartItems.test.js` da pasta `tests` que está na raiz do projeto.
-
-- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
-
-- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
-
-Use o comando `npm test` para verificar se seus testes estão passando.
-
-OBS: Você deve implementar os 4 requisitos, independente do que for suficiente para a cobertura de testes.
-
-**Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-
-
+---
 
 ### 5. Some o valor total dos itens do carrinho de compras
 
@@ -582,11 +593,15 @@ Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
+---
+
 ### 6. Crie um botão para limpar o carrinho de compras
 
 Crie um botão para remover todos os itens do carrinho de compras. Ele deve, **obrigatoriamente**, ter a classe `empty-cart`.
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+
+---
 
 ### 7. Adicione um texto de "carregando" durante uma requisição à API
 
@@ -601,47 +616,121 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
-### 8. Desenvolva testes para atingir 40% de cobertura
+---
+
+### 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-Foi pedido que você realize testes em determinadas funções, mas quem avalia os testes? Para isso se tem a cobertura de testes. Ela é muito importante para garantir que os requisitos testados estejam cobrindo o que se foi pedido.
+**Observações técnicas:**
 
-**Não se esqueça de que a cobertura irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+- Use o comando `npm test` para verificar se seus testes estão passando;
+- **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
 
-#### O que será avaliado
+**O que você deve testar**
 
-- Será avaliado se os testes implementados atigem 40% da cobertura de testes.
+> Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solicitado:
 
-### 9. Desenvolva testes para atingir 60% de cobertura
+1. Teste se `fetchProducts` é uma função;
+
+2. Execute a função `fetchProducts` com o argumento "computador" e teste se `fetch` foi chamada;
+
+3. Teste se, ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/sites/MLB/search?q=computador";
+
+4. Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
+
+5. Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+
+**O que será avaliado**
+
+- Será avaliado se os testes implementados atingem no mínimo 25% da cobertura total e 100% da função `fetchProducts`.
+
+---
+
+### 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+**Observações técnicas:**
 
-#### O que será avaliado
+- Use o comando `npm test` para verificar se seus testes estão passando;
+- **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
 
-- Será avaliado se os testes implementados atigem 60% da cobertura de testes.
+**O que você deve testar**
 
-### 10. Desenvolva testes para atingir 80% de cobertura
+> Dentro da pasta `tests`, abra o arquivo `fetchItem.test.js` e faça o solicitado:
+
+1. Teste se `fetchItem` é uma função;
+
+2. Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
+
+3. Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
+
+4. Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
+
+5. Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+
+**O que será avaliado**
+
+- Será avaliado se os testes implementados atingem no mínimo 50% da cobertura total e 100% da função `fetchItem`.
+
+---
+
+### 10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+**Observações técnicas:**
 
-#### O que será avaliado
+- Use o comando `npm test` para verificar se seus testes estão passando;
+- **OBS:** Você deve implementar os 2 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
 
-- Será avaliado se os testes implementados atigem 80% da cobertura de testes.
+**O que você deve testar**
 
-### 11. Desenvolva testes para atingir 100% de cobertura
+> Dentro da pasta `tests`, abra o arquivo `saveCartItems.test.js` e faça o solicitado:
+
+1. Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
+
+2. Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
+
+**O que será avaliado**
+
+- Será avaliado se os testes implementados atingem no mínimo 75% da cobertura total e 100% da função `saveCartItems`.
+
+---
+
+### 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+**Observações técnicas:**
 
-#### O que será avaliado
+- Use o comando `npm test` para verificar se seus testes estão passando.
+- **OBS:** Você deve implementar os 2 requisitos, independente do que for suficiente para a cobertura de testes.
+- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
 
-- Será avaliado se os testes implementados atigem 100% da cobertura de testes.
+
+**O que você deve testar**
+
+> Dentro da pasta `tests`, abra o arquivo `getSavedCartItems.test.js` e faça o solicitado:
+
+1. Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
+2. Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
+
+**O que será avaliado**
+
+- Será avaliado se os testes implementados atigem 100% da cobertura total e 100% da função `getSavedCartItems`
 
 ---
 

@@ -96,19 +96,19 @@
       ]
     },
     {
-      "description": "8 - Desenvolva testes para atingir 40% de cobertura",
+      "description": "8 - Desenvolva testes para atingir 25% de cobertura total e 100% da função fetchProducts",
       "bonus": false
     },
     {
-      "description": "9 - Desenvolva testes para atingir 60% de cobertura",
+      "description": "9 - Desenvolva testes para atingir 50% de cobertura total e 100% da função fetchItem",
       "bonus": false
     },
     {
-      "description": "10 - Desenvolva testes para atingir 80% de cobertura",
+      "description": "10 - Desenvolva testes para atingir 75% de cobertura total e 100% da função saveCartItems",
       "bonus": false
     },
     {
-      "description": "11 - Desenvolva testes para atingir 100% de cobertura",
+      "description": "11 - Desenvolva testes para atingir 100% de cobertura total e 100% da função getSavedCartItems",
       "bonus": false
     }
   ]

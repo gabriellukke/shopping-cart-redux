@@ -131,7 +131,7 @@ describe('Shopping Cart Project', () => {
         .should('have.text', `SKU: ${results[last].id} | NAME: ${results[last].title} | PRICE: $${results[last].price}`)
     });
 
-    it('Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após regarregar a página', () => {
+    it('Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após recarregar a página', () => {
       addToCart(29);
       addToCart(31);
       addToCart(15);
@@ -207,31 +207,39 @@ describe('Shopping Cart Project', () => {
     });
   });
 
-  describe('8 - Desenvolva testes para atingir 40% de cobertura', () => {
+  describe('8 - Desenvolva testes para atingir 25% de cobertura total e 100% da função fetchProducts', () => {
     it('Verifica a cobertura de testes unitários', () => {
-      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
-      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 40.00);
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0 && npm run serialize');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 25.00);
+      cy.readFile('coverage/coverage-summary.json').its('fetchProducts.functions.pct').should('be.gte', 100.00);
+      cy.readFile('coverage/coverage-summary.json').its('fetchProducts.lines.pct').should('be.gte', 100.00);
     });
   });
 
-  describe('9 - Desenvolva testes para atingir 60% de cobertura', () => {
+  describe('9 - Desenvolva testes para atingir 50% de cobertura total e 100% da função fetchItem', () => {
     it('Verifica a cobertura de testes unitários', () => {
-      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
-      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 60.00);
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0 && npm run serialize');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 50.00);
+      cy.readFile('coverage/coverage-summary.json').its('fetchItem.functions.pct').should('be.gte', 100.00);
+      cy.readFile('coverage/coverage-summary.json').its('fetchItem.lines.pct').should('be.gte', 100.00);
     });
   });
 
-  describe('10 - Desenvolva testes para atingir 80% de cobertura', () => {
+  describe('10 - Desenvolva testes para atingir 75% de cobertura total e 100% da função saveCartItems', () => {
     it('Verifica a cobertura de testes unitários', () => {
-      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
-      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 80.00);
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0 && npm run serialize');
+      cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 75.00);
+      cy.readFile('coverage/coverage-summary.json').its('saveCartItems.functions.pct').should('be.gte', 100.00);
+      cy.readFile('coverage/coverage-summary.json').its('saveCartItems.lines.pct').should('be.gte', 100.00);
     });
   });
 
-  describe('11 - Desenvolva testes para atingir 100% de cobertura', () => {
+  describe('11 - Desenvolva testes para atingir 100% de cobertura total e 100% da função getSavedCartItems', () => {
     it('Verifica a cobertura de testes unitários', () => {
-      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0');
+      cy.exec('npm run test:coverage -- --coverageReporters="json-summary" --testFailureExitCode=0 && npm run serialize');
       cy.readFile('coverage/coverage-summary.json').its('total.functions.pct').should('be.gte', 100.00);
+      cy.readFile('coverage/coverage-summary.json').its('getSavedCartItems.functions.pct').should('be.gte', 100.00);
+      cy.readFile('coverage/coverage-summary.json').its('getSavedCartItems.lines.pct').should('be.gte', 100.00);
     });
   });
 });
