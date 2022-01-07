@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./helpers/fetchItem.js" defer></script>
-    <script src="./helpers/fetchProducts.js" defer></script>
-    <script src="./helpers/saveCartItems.js" defer></script>
-    <script src="./helpers/getSavedCartItems.js" defer></script>
-    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header class="header">
+      <div class="container-title">
+        <span class="title"><strong>trybe</strong>shopping</span>
+      </div>
+      <img class="buy-cart" src="img/carrinho-de-compras.png">
+      <div class="container-cartTitle">
+        <span class="cart__title">Meu carrinho</span>
+      </div>
+    </header>
     <section class="container">
       <section class="items"></section>
       <section class="cart">
-        <span class="cart__title">Carrinho de compras</span>
         <button class="empty-cart">Esvaziar carrinho</button>
         <ol class="cart__items"></ol>
+        <section class="totalValues">
+          <span class="total">Total: R$</span>
+          <span class="total-price">0,00</span>
+        </section>
       </section>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>
