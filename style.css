@@ -1,13 +1,13 @@
 * {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .header {
   position: relative;
-  background-color: #03342D;
+  background-color: #03342d;
   display: flex;
   align-items: center;
   width: 100%;
@@ -33,7 +33,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: #0A764F;
+  background-color: #0a764f;
   width: 40%;
   height: 100%;
   margin-left: 30px;
@@ -50,7 +50,7 @@
   right: 61.5%;
   width: 39.5%;
   height: 15px;
-  background: #0A764F;
+  background: #0a764f;
   -webkit-transform: skew(-45deg);
   -ms-transform: skew(-45deg);
   transform: skew(-45deg);
@@ -64,7 +64,7 @@
   right: 61.5%;
   width: 39.5%;
   height: 15px;
-  background: #0A764F;
+  background: #0a764f;
   -webkit-transform: skew(45deg);
   -ms-transform: skew(45deg);
   transform: skew(45deg);
@@ -72,10 +72,10 @@
 }
 
 .container-cartTitle .cart__title {
-  color: #fff;
+  color: white;
   font-size: 20px;
   padding-left: 35px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .container {
@@ -86,7 +86,7 @@
 
 
 .title strong {
-  color: #fff;
+  color: white;
 }
 
 .items {
