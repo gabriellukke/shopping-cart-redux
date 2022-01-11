@@ -3,5 +3,4 @@ ignore_files:
   - .eslintignore
   - .eslintrc.json
   - .stylelintrc.json
-  - package.json
   
