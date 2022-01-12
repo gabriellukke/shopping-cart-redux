@@ -597,7 +597,7 @@ Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API
 
 ### 6. Implemente a lógica no botão `Esvaziar carrinho` para limpar o carrinho de compras
 
-Utilizando o botão disponibilizado no `HTML`, você deve implementar a lógica para remover todos os itens do carrinho de compras. O botão deve **obrigatoriamente**, ter a classe `empty-cart`.
+Implemente nesse botão a lógica para remover todos os itens do carrinho de compras. O botão deve **obrigatoriamente**, ter a classe `empty-cart`.
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
