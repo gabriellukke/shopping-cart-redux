@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Roboto, sans-serif;
+  font-family: Epilogue, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -26,11 +26,6 @@ body {
   color: rgb(221, 221, 221);
   font-size: 30px;
   padding-left: 30px;
-}
-
-.buy-cart {
-  width: 45px;
-  height: 45px;
 }
 
 .container-cartTitle {
@@ -143,14 +138,6 @@ body {
 .cart .cart__items {
   height: 500px;
   overflow-y: scroll;
-}
-
-.totalValues {
-  display: flex;
-  margin-left: 50px;
-  margin-bottom: 30px;
-  font-size: 20px;
-  color: rgb(68, 68, 68);
 }
 
 .empty-cart {
