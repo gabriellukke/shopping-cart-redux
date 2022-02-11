@@ -68,7 +68,7 @@
       ]
     },
     {
-      "description": "5 - Some o valor total dos itens do carrinho de compras de forma assíncrona",
+      "description": "5 - Calcule o valor total dos itens do carrinho de compras de forma assíncrona",
       "bonus": false,
       "skill_ids": [
         "af62fce8-1899-44fc-bfc0-ab88b7c1f459",
