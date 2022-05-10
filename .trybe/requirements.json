@@ -1,7 +1,11 @@
 {
   "requirements": [
     {
-      "description": "1 - Crie uma listagem de produtos",
+      "description": "1 - Desenvolva testes para atingir 25% de cobertura total e 100% da função fetchProducts",
+      "bonus": false
+    },
+    {
+      "description": "2 - Crie uma listagem de produtos",
       "bonus": false,
       "skill_ids": [
         "f7861af0-d7b1-45de-975e-2c77c00d0f36",
@@ -21,7 +25,11 @@
       ]
     },
     {
-      "description": "2 - Adicione o produto ao carrinho de compras",
+      "description": "3 - Desenvolva testes para atingir 50% de cobertura total e 100% da função fetchItem",
+      "bonus": false
+    },
+    {
+      "description": "4 - Adicione o produto ao carrinho de compras",
       "bonus": false,
       "skill_ids": [
         "f7861af0-d7b1-45de-975e-2c77c00d0f36",
@@ -46,7 +54,7 @@
       ]
     },
     {
-      "description": "3 - Remova o item do carrinho de compras ao clicar nele",
+      "description": "5 - Remova o item do carrinho de compras ao clicar nele",
       "bonus": false,
       "skill_ids": [
         "5497f4b7-ec08-4096-82f7-0dc3bd3f9f6f",
@@ -57,7 +65,15 @@
       ]
     },
     {
-      "description": "4 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
+      "description": "6 - Desenvolva testes para atingir 75% de cobertura total e 100% da função saveCartItems",
+      "bonus": false
+    },
+    {
+      "description": "7 - Desenvolva testes para atingir 100% de cobertura total e 100% da função getSavedCartItems",
+      "bonus": false
+    },
+    {
+      "description": "8 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
       "bonus": false,
       "skill_ids": [
         "c9c59370-1e4b-4b1b-8a8d-20da7b7a046a",
@@ -68,7 +84,7 @@
       ]
     },
     {
-      "description": "5 - Calcule o valor total dos itens do carrinho de compras de forma assíncrona",
+      "description": "9 - Calcule o valor total dos itens do carrinho de compras de forma assíncrona",
       "bonus": false,
       "skill_ids": [
         "af62fce8-1899-44fc-bfc0-ab88b7c1f459",
@@ -77,7 +93,7 @@
       ]
     },
     {
-      "description": "6 - Crie um botão para limpar carrinho de compras",
+      "description": "10 - Crie um botão para limpar carrinho de compras",
       "bonus": false,
       "skill_ids": [
         "5497f4b7-ec08-4096-82f7-0dc3bd3f9f6f",
@@ -86,7 +102,7 @@
       ]
     },
     {
-      "description": "7 - Adicione um texto de `carregando` durante uma requisição à API",
+      "description": "11 - Adicione um texto de `carregando` durante uma requisição à API",
       "bonus": false,
       "skill_ids":[
         "c9fdc424-f57c-4e3a-84c8-1b835157e52e",
@@ -94,22 +110,6 @@
         "1fda945a-b901-42dd-8697-ba74e12cbec0",
         "3188fe8a-e359-4666-8ad5-bf8bcb4d9a7b"
       ]
-    },
-    {
-      "description": "8 - Desenvolva testes para atingir 25% de cobertura total e 100% da função fetchProducts",
-      "bonus": false
-    },
-    {
-      "description": "9 - Desenvolva testes para atingir 50% de cobertura total e 100% da função fetchItem",
-      "bonus": false
-    },
-    {
-      "description": "10 - Desenvolva testes para atingir 75% de cobertura total e 100% da função saveCartItems",
-      "bonus": false
-    },
-    {
-      "description": "11 - Desenvolva testes para atingir 100% de cobertura total e 100% da função getSavedCartItems",
-      "bonus": false
     }
   ]
 }
