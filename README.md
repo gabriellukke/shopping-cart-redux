@@ -811,6 +811,11 @@ O botão para esvaziar o carrinho já está implementado, mas ele ainda não cum
 
 ## 7. Adicione um texto de `carregando` durante uma requisição à API
 
+<details>
+  <summary>
+    Adicione um elemento com o texto <code>carregando...</code> durante a requisição à API
+  </summary> <br />
+
 Uma requisição à API gasta um certo tempo e durante esse processo a pessoa que está utilizando a página não tem como saber se a requisição deu certo ou não. Por isso, normalmente é utilizada alguma forma para mostrar que a requisição ainda está em andamento. Para isso:
 
 - Crie um elemento que contenha o texto `carregando...`, que deve ser exibido em algum lugar da página;
