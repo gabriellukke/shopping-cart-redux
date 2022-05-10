@@ -588,8 +588,6 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 O arquivo para implementar o teste já está criado, se chama `fetchProducts.test.js` e se encontra dentro da pasta `tests`.
 
-⚠️ **Atenção:** Não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-
 **O que você deve testar:**
 
 - Teste se `fetchProducts` é uma função;
@@ -607,10 +605,6 @@ O arquivo para implementar o teste já está criado, se chama `fetchProducts.tes
 
 ⚠️ **Atenção:** Você deve implementar todos os testes acima, independente do que for suficiente para a cobertura de testes.
 
-- Use o comando `npm test` para verificar se seus testes estão passando;
-
-**A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
-
 **O que será testado:**
 
 - Será avaliado se os testes implementados atingem no mínimo 25% da cobertura total e 100% da função `fetchProducts`.
@@ -623,8 +617,6 @@ O arquivo para implementar o teste já está criado, se chama `fetchProducts.tes
   <summary>
     Utilize a função <code>fetchProducts</code> para criar uma listagem de produtos através da API do Mercado Livre.
   </summary> <br />
-
-> Caso você opte pelo TDD, faça esse requisito em conjunto com o requisito 8 😉
 
 O arquivo da função `fetchProducts` já está criado e se encontra dentro da pasta `helpers` e está importado dentro do arquivo HTML.
 
@@ -647,8 +639,6 @@ O arquivo da função `fetchProducts` já está criado e se encontra dentro da p
 - `image`: é o campo `thumbnail` retornado pela API.
 
 Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
-
-⚠️ Você não precisa importar nenhuma função dentro do arquivo `script.js`, pois elas já estão importadas dentro do HTML. Cuidado com as importações automáticas!
 
 <details>
 <summary>Clique aqui para ver o retorno da API</summary>
@@ -724,10 +714,6 @@ Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.j
     Implemente os testes necessários na função <code>fetchItem</code>
   </summary> <br />
 
-O arquivo para implementar o teste já está criado, se chama `fetchItem.test.js` e se encontra dentro da pasta `tests`.
-
-⚠️ **Atenção:** Não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-
 **O que você deve testar:**
 
 - Teste se `fetchItem` é uma função;
@@ -742,10 +728,6 @@ O arquivo para implementar o teste já está criado, se chama `fetchItem.test.js
 
 > **De olho na dica 👀:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
 > Leia com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
-
-⚠️ **Atenção:** Você deve implementar todos os testes acima, independente do que for suficiente para a cobertura de testes.
-
-**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
 
 **O que será testado:**
 
@@ -762,7 +744,7 @@ O arquivo para implementar o teste já está criado, se chama `fetchItem.test.js
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho` e, ao clicar nesse botão, você deve realizar uma requisição que vai retornar todos os detalhes de um produto.
 
-- Implemente a função `fetchItems` para fazer a requisição dos detalhes de um produto;
+- Implemente a função `fetchItems` para fazer a requisição dos detalhes de apenas **um** produto;
 
 - Utilize o _endpoint_ `https://api.mercadolibre.com/items/$ItemID`, onde `$ItemID` é o `id` do produto a ser buscado;
 
@@ -808,10 +790,6 @@ Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno do _endpoint_ s
 }
 ```
 </details>
-
-⚠️ O `JSON` deve conter apenas **um** item.
-
-⚠️ Você não precisa importar nenhuma função dentro do arquivo `script.js`, pois elas já estão importadas dentro do HTML. Cuidado com as importações automáticas!
 
 **O que será testado:**
 
