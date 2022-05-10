@@ -65,11 +65,11 @@ Ao finalizar o projeto, ele deve ter o comportamento parecido com o gif abaixo:
   * Instale as dependências:
     * `npm install`
 
-3. Crie uma branch a partir da branch `master`
-  * Verifique que você está na branch `master`
+3. Crie uma branch a partir da branch `main`
+  * Verifique que você está na branch `main`
     * Exemplo: `git branch`
-  * Se não estiver, mude para a branch `master`
-    * Exemplo: `git checkout master`
+  * Se não estiver, mude para a branch `main`
+    * Exemplo: `git checkout main`
   * Agora, crie uma branch onde você vai guardar os `commits` do seu projeto
     * Você deve criar uma branch no seguinte formato: `nome-sobrenome-nome-do-projeto`
     * Exemplo: `git checkout -b maria-silva-shopping-cart`
@@ -546,6 +546,23 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
   </details>
 
+  </details>
+
+  <details>
+    <summary><strong>🗣 Nós dê feedbacks sobre o projeto!</strong></summary> <br />
+
+  Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. 
+  **Leva menos de 3 minutos!**
+
+  [Formulário de avaliação do projeto](https://be-trybe.typeform.com/to/ZTeR4IbH)
+
+  </details>
+
+  <details>
+  <summary><strong>🗂 Compartilhe seu portfólio!</strong></summary><br />
+
+  Você sabia que o LinkedIn é a principal rede social profissional e compartilhar o seu aprendizado lá é muito importante para quem deseja construir uma carreira de sucesso? Compartilhe esse projeto no seu LinkedIn, marque o perfil da Trybe (@trybe) e mostre para a sua rede toda a sua evolução.
+
 </details>
 
 # Requisitos Obrigatórios
@@ -872,114 +889,90 @@ O arquivo para implementar o teste já está criado, se chama `fetchProducts.tes
 
 ## 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
-> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+<details>
+  <summary>
+    Implemente os testes necessários na função <code>fetchItem</code>
+  </summary> <br />
 
-**Observações técnicas:**
+O arquivo para implementar o teste já está criado, se chama `fetchItem.test.js` e se encontra dentro da pasta `tests`.
 
-- Use o comando `npm test` para verificar se seus testes estão passando;
-- **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
-- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
-- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+⚠️ **Atenção:** Não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 
-**O que você deve testar**
+**O que você deve testar:**
 
-> Dentro da pasta `tests`, abra o arquivo `fetchItem.test.js` e faça o solicitado:
+- Teste se `fetchItem` é uma função;
 
-1. Teste se `fetchItem` é uma função;
+- Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
 
-2. Execute a função `fetchItem` com o argumento do item "MLB1615760527" e teste se `fetch` foi chamada;
+- Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
 
-3. Teste se, ao chamar a função `fetchItem` com o argumento do item "MLB1615760527", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/items/MLB1615760527";
+- Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
 
-4. Teste se o retorno da função `fetchItem` com o argumento do item "MLB1615760527" é uma estrutura de dados igual ao objeto `item` que já está importado no arquivo.
+- Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `'You must provide an url'`.
 
-5. Teste se, ao chamar a função `fetchItem` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+> **De olho na dica 👀:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+> Leia com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
 
-**O que será avaliado**
+⚠️ **Atenção:** Você deve implementar todos os testes acima, independente do que for suficiente para a cobertura de testes.
+
+**A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+
+**O que será testado:**
 
 - Será avaliado se os testes implementados atingem no mínimo 50% da cobertura total e 100% da função `fetchItem`.
 
----
+</details>
 
 ### 10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
 
-> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+<details>
+  <summary>
+    Implemente os testes necessários na função <code>saveCartItems</code>
+  </summary> <br />
 
-**Observações técnicas:**
+O arquivo para implementar o teste já está criado, se chama `saveCartItems.test.js` e se encontra dentro da pasta `tests`.
 
-- Use o comando `npm test` para verificar se seus testes estão passando;
-- **OBS:** Você deve implementar os 2 requisitos, independente do que for suficiente para a cobertura de testes.
-- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
-- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+⚠️ **Atenção:** Não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 
-**O que você deve testar**
+**O que você deve testar:**
 
-> Dentro da pasta `tests`, abra o arquivo `saveCartItems.test.js` e faça o solicitado:
+- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
 
-1. Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado;
+- Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
 
-2. Teste se, ao executar `saveCartItems` com o argumento `<ol><li>Item</li></ol>`, o método `localStorage.setItem` é chamado com dois parâmetros, sendo o primeiro 'cartItems' e o segundo sendo o valor passado como argumento para `saveCartItems`.
+> **De olho na dica 👀:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+> Leia com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
 
-**O que será avaliado**
+⚠️ **Atenção:** Você deve implementar todos os testes acima, independente do que for suficiente para a cobertura de testes.
+
+**O que será testado:**
 
 - Será avaliado se os testes implementados atingem no mínimo 75% da cobertura total e 100% da função `saveCartItems`.
 
----
+</details>
 
 ### 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
 
-> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+<details>
+  <summary>
+    Implemente os testes necessários na função <code>getSavedCartItems</code>
+  </summary> <br />
 
-**Observações técnicas:**
+O arquivo para implementar o teste já está criado, se chama `getSavedCartItems.test.js` e se encontra dentro da pasta `tests`.
 
-- Use o comando `npm test` para verificar se seus testes estão passando.
-- **OBS:** Você deve implementar os 2 requisitos, independente do que for suficiente para a cobertura de testes.
-- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
-- **A cobertura de testes irá checar apenas as funções que estão sendo testadas, e não toda a aplicação!**
+⚠️ **Atenção:** Não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
 
+**O que você testar:**
 
-**O que você deve testar**
+- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
 
-> Dentro da pasta `tests`, abra o arquivo `getSavedCartItems.test.js` e faça o solicitado:
+- Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
 
-1. Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado;
-2. Teste se, ao executar `getSavedCartItems`, o método `localStorage.getItem` é chamado com o 'cartItems' como parâmetro.
+> **De olho na dica 👀:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+> Leia com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
 
-**O que será avaliado**
+⚠️ **Atenção:** Você deve implementar todos os testes acima, independente do que for suficiente para a cobertura de testes.
 
-- Será avaliado se os testes implementados atigem 100% da cobertura total e 100% da função `getSavedCartItems`
+**O que será testado:**
 
----
-
-## Depois de terminar o desenvolvimento
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-00`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
----
-
-## Revisando um pull request
-
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
----
-
-# Avisos finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
+- Será avaliado se os testes implementados atingem 100% da cobertura total e 100% da função `getSavedCartItems`.
