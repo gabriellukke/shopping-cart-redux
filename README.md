@@ -760,8 +760,6 @@ O arquivo para implementar o teste já está criado, se chama `fetchItem.test.js
     Implemente a função <code>fetchItems</code> para retornar dados de um produto e adicioná-lo ao carrinho.
   </summary> <br />
 
-A função `fetchItem` é responsável por retornar os detalhes de um produto. Ela está dentro da pasta `helpers` em um arquivo chamado `fetchItem.js`.
-
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho` e, ao clicar nesse botão, você deve realizar uma requisição que vai retornar todos os detalhes de um produto.
 
 - Implemente a função `fetchItems` para fazer a requisição dos detalhes de um produto;
@@ -772,12 +770,12 @@ Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinh
 
 **Obs:** `salePrice` é o campo `price` retornado pela API.
 
-  - Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
+- Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
 Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno do _endpoint_ será algo no formato:
 
 <details>
-<summary>Clique aqui para ver o retorno da API</summary>
+<summary><strong>Clique aqui para ver o retorno da API<strong></summary>
 
 ```json
 {
@@ -814,7 +812,6 @@ Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno do _endpoint_ s
 ⚠️ O `JSON` deve conter apenas **um** item.
 
 ⚠️ Você não precisa importar nenhuma função dentro do arquivo `script.js`, pois elas já estão importadas dentro do HTML. Cuidado com as importações automáticas!
-
 
 **O que será testado:**
 
