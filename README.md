@@ -30,7 +30,7 @@ E não para por aí! 🤩
 
 Você já aprendeu sobre a importância de ter uma mentalidade orientada a testes, não é mesmo? E também já sabe como a implementação de testes contribui para a escrita de códigos mais confiáveis e com boa performance. 
 
-Nesse projeto você vai ter a experiência de pôr em prática o desenvolvimento orientado a testes, que te ajuda a garantir um código de qualidade, percebendo os casos de uso da sua aplicação e garantindo que ela está funcionando da maneira correta! 🚀
+Nesse projeto você vai ter a experiência de pôr em prática o desenvolvimento orientado a testes, o famoso TDD (Test Driven Development)! Que te ajuda a garantir um código de qualidade, percebendo os casos de uso da sua aplicação e garantindo que ela está funcionando da maneira correta! 🚀
 
 Ao finalizar o projeto, ele deve ter o comportamento parecido com o gif abaixo:
 
@@ -178,6 +178,58 @@ Em caso de dúvidas, confira o material do course sobre [ESLint e Stylelint](htt
 <details>
   <summary><strong>🛠 Testes</strong></summary><br />
 
+Nesse projeto você vai implementar o TDD (Test Driven Development) também conhecido como _desenvolvimento orientado a testes_. Ou seja, primeiro você vai escrever o teste para uma função e depois vai implementar a lógica para que a função execute.
+
+Neste projeto, você vai implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems`. 
+
+### Cobertura de testes
+
+Para avaliar se seus testes estão cobrindo toda a função, será utilizado a **cobertura de testes**, que avalia a eficácia dos testes implementados de acordo com os requisitos, determinando se cobrem o que foi pedido ou não.
+
+⚠️ **Será testado apenas as quatros funções pedidas e não toda a aplicação!**
+
+Conforme você for realizando os testes do projeto, a porcentagem da cobertura total irá aumentar. Para a cobertura total será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes. Para cada função solicitada a cobertura de testes irá avaliar 100% das linhas da sua função.
+
+Para executar seus testes, execute o comando abaixo:
+
+```bash
+npm test
+```
+
+Para executar e acompanhar a implementação da sua cobertura de testes, rode o comando abaixo:
+
+```bash
+npm run test:coverage
+```
+
+Ao realizar o comando de cobertura de testes terá um resultado similar a este:
+
+![Cobertura de Testes](cobertura.png)
+
+Os destaques em amarelo fazem referência à cobertura total e os em verde do requisito desejado.
+
+Verifique com o comando `npm test` se todos os itens da cobertura dos testes estão passando corretamente.
+
+⚠️ **Atenção:** cuidado com eventuais falso-positivos!
+
+### Pontos importantes para a implementação dos testes
+
+Disponibilizamos a API simulada para você implementar seus testes. Isso significa que será possível simular o consumo de todos os dados da API dentro do seu ambiente de testes, de forma segura e independente de fatores externos que possam ocorrer.
+
+- As funções `fetchProducts` e `fetchItem` devem ser implementadas por você;
+
+- Os retornos esperados das funções já estão importados nos arquivos de teste e vão estar especificados nos requisitos;
+
+- O `window.fetch` está definido em todos os testes, ou seja, será possível usar a função `fetch` dentro do seu ambiente de testes sem precisar importar ou instalar bibliotecas;
+
+- Utilize o `localStorage.getItem` e o `localStorage.setItem` normalmente no ambiente de teste, pois a simulação dele está pronta para ser chamada quando necessário;
+
+- Para nosso ambiente de testes, o `fetch` está limitado a atender somente a configuração da API referente ao projeto;
+
+- Deseja checar se uma função foi chamada? Ou se foi chamada com um argumento específico? Que tal dar uma olhada nos matchers da [documentação](https://jestjs.io/pt-BR/docs/expect#tohavebeencalled).
+
+Para avaliar o seu projeto como um todo, será utilizado o _Cypress_.
+
 ### Cypress
 
 Cypress é uma ferramenta de teste de front-end desenvolvida para a web.
@@ -203,48 +255,6 @@ Após executar um dos comandos acima, será aberta uma janela de navegador e ent
 Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) vídeo 😉🎙
 
 ⚠️ **Atente-se para os nomes de classes que alguns elementos de seu projeto devem possuir**. O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
-
-### Cobertura de testes
-
-Neste projeto, você vai implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems`. Você pode optar por realizar o TDD (Desenvolvimento Orientado a Testes) ou fazer o teste após a implementação da função. Para avaliar os testes, será utilizada a cobertura de testes.
-
-Essa cobertura avalia a eficácia dos testes implementados de acordo com os requisitos, determinando se cobrem o que foi pedido ou não.
-
-⚠️ **Será testado apenas as quatros funções pedidas e não toda a aplicação!**
-
-Conforme você for realizando os testes do projeto, a porcentagem da cobertura total irá aumentar. Para a cobertura total será avaliado 25%, 50%, 75%, e, por fim, 100% dos testes. Para cada função solicitada a cobertura de testes irá avaliar 100% das linhas da sua função.
-
-Para executar e acompanhar a implementação da sua cobertura de testes, rode o comando abaixo:
-
-```bash
-npm run test:coverage
-```
-
-Ao realizar o comando terá um resultado similar a este:
-
-![Cobertura de Testes](cobertura.png)
-
-Os destaques em amarelo fazem referência à cobertura total e os em verde do requisito desejado.
-
-Verifique com o comando `npm test` se todos os itens da cobertura dos testes estão passando corretamente.
-
-⚠️ **Atenção:** cuidado com eventuais falso-positivos!
-
-### Pontos importantes para a implementação dos testes
-
-Disponibilizamos a API simulada para você implementar seus testes. Isso significa que será possível simular o consumo de todos os dados da API dentro do seu ambiente de testes, de forma segura e independente de fatores externos que possam ocorrer.
-
-- As funções `fetchProducts` e `fetchItem` devem ser implementadas por você;
-
-- O `window.fetch` está definido em todos os testes, ou seja, será possível usar a função `fetch` dentro do seu ambiente de testes sem precisar importar ou instalar bibliotecas;
-
-- Utilize o `localStorage.getItem` e o `localStorage.setItem` normalmente no ambiente de teste, pois a simulação dele está pronta para ser chamada quando necessário;
-
-- Para nosso ambiente de testes, o `fetch` está limitado a atender somente a configuração da API referente ao projeto;
-
-- Deseja checar se uma função foi chamada? Ou se foi chamada com um argumento específico? Que tal dar uma olhada nos matchers da [documentação](https://jestjs.io/pt-BR/docs/expect#tohavebeencalled).
-
-⚠️ **Atenção:** Se caso você optar pelo TDD (Desenvolvimento Orientado a Testes), preste atenção nos requisitos de teste para ver o que é pedido e tenha em mente que a ordem dos requisitos será diferente. Por exemplo, ao desenvolver o teste e implementar a função `fetchProducts`, você vai realizar os requisitos 1 e 8 em conjunto.
 
 </details>
 
