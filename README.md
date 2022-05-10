@@ -180,7 +180,7 @@ Em caso de dúvidas, confira o material do course sobre [ESLint e Stylelint](htt
 
 Nesse projeto você vai implementar o TDD (Test Driven Development) também conhecido como _desenvolvimento orientado a testes_. Ou seja, primeiro você vai escrever o teste para uma função e depois vai implementar a lógica para que a função execute.
 
-Neste projeto, você vai implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems`. 
+Você vai ser responsável por implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems`. 
 
 ### Cobertura de testes
 
