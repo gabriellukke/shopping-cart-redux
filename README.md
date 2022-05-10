@@ -178,7 +178,7 @@ Em caso de dúvidas, confira o material do course sobre [ESLint e Stylelint](htt
 <details>
   <summary><strong>🛠 Testes</strong></summary><br />
 
-Nesse projeto você vai implementar o TDD (Test Driven Development) também conhecido como _desenvolvimento orientado a testes_. Ou seja, primeiro você vai escrever o teste para uma função e depois vai implementar a lógica para que a função execute.
+Nesse projeto você vai implementar o TDD (Test Driven Development) também conhecido como _desenvolvimento orientado a testes_, que é uma prática muito utilizada no mercado de trabalho para garantir que o código será implementado da maneira correta. Ou seja, primeiro você vai escrever o teste para uma função e depois vai implementar a lógica para que a função execute.
 
 Você vai ser responsável por implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems`. 
 
@@ -597,7 +597,7 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 ⚠️ **Atenção:** Ao criar novas funções para resolver os requisitos, faça as implementações **sempre** dentro do arquivo `script.js`.
 
-## 1. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
+## 1. (TDD) Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
 <details>
   <summary>
@@ -725,7 +725,7 @@ Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.j
 
 </details>
 
-## 3. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
+## 3. (TDD) Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
 <details>
   <summary>
