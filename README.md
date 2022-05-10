@@ -821,6 +821,10 @@ Uma requisição à API gasta um certo tempo e durante esse processo a pessoa qu
 
 > **De olho na dica 👀:** Você pode criar uma função que adicione ao DOM o elemento com o texto `carregando...` e outra para retirá-lo, o que acha?
 
+**O que será testado:**
+
+- Verifica se adiciona um texto de "carregando" durante uma requisição à API.
+
 </details>
 
 ## 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
