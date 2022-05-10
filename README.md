@@ -550,6 +550,8 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 # Requisitos Obrigatórios
 
+⚠️ **Atenção:** Ao criar novas funções para resolver os requisitos, faça as implementações **sempre** dentro do arquivo `script.js`.
+
 ## 1. Crie uma listagem de produtos
 
 <details>
@@ -751,9 +753,9 @@ Ao carregar a página, o estado atual do carrinho de compras deve ser carregado 
 
 Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCartItems` que já estão criadas com o nome `saveCartItems.js` e `getSavedCartItems.js`, respectivamente, dentro da pasta `helpers`.
 
-- Implemente a função `saveCartItems` que deve apenas **adicionar** o item no `localStorage` em uma chave chamada `cartItems`;
+- Implemente a função `saveCartItems` que deve possuir a lógica para apenas **adicionar** o item no `localStorage` em uma chave chamada `cartItems`;
 
-- Implemente a função `getSavedCartItems` que deve apenas recuperar o item do `localStorage`.
+- Implemente a função `getSavedCartItems` que deve possuir a lógica para apenas **recuperar** o item do `localStorage`.
 
 ⚠️ A função `saveCartItems` **não** deve recuperar os itens do `localStorage`. A função `getSavedCartItems` **não** deve adicionar um item no `localStorage`.
 
@@ -795,26 +797,31 @@ Cada vez que o carrinho de compras é modificado, será necessário calcular o v
     Implemente a lógica no botão <code>Esvaziar carrinho</code> para limpar o carrinho de compras
   </summary> <br />
 
-Implemente nesse botão a lógica para remover todos os itens do carrinho de compras. O botão deve **obrigatoriamente**, ter a classe `empty-cart`.
+O botão para esvaziar o carrinho já está implementado, mas ele ainda não cumpre seu objetivo. Para isso:
 
-**Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+- Certifique-se que o botão possui **obrigatoriamente** a classe `empty-cart`;
+
+- Implemente a lógica para remover **todos** os itens do carrinho de compras;
+
+**O que será testado:**
+
+- Verifica o botão para limpar carrinho de compras;
 
 </details>
 
-## 7. Adicione um texto de "carregando" durante uma requisição à API
+## 7. Adicione um texto de `carregando` durante uma requisição à API
 
-Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
-Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requisição está em andamento.
+Uma requisição à API gasta um certo tempo e durante esse processo a pessoa que está utilizando a página não tem como saber se a requisição deu certo ou não. Por isso, normalmente é utilizada alguma forma para mostrar que a requisição ainda está em andamento. Para isso:
 
-* Crie um elemento que contenha o texto "carregando...", que deve ser exibido em algum lugar da página;
-* Este elemento deve ser mostrado **apenas durante** a requisição à API;
-* Este elemento deve **obrigatoriamente** ter a classe `loading`;
+- Crie um elemento que contenha o texto `carregando...`, que deve ser exibido em algum lugar da página;
 
-***spoiler-alert***: você pode criar uma função que adicione ao DOM o elemento com o texto "carregando" e outra para retirá-lo, o que acha?
+- Adicione a classe `loading` ao elemento que possui o texto `carregando...`;
 
-**Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+- Exiba esse elemento apenas **durante** a requisição à API.
 
----
+> **De olho na dica 👀:** Você pode criar uma função que adicione ao DOM o elemento com o texto `carregando...` e outra para retirá-lo, o que acha?
+
+</details>
 
 ## 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
