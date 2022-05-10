@@ -206,7 +206,7 @@ Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) ví
 
 ### Cobertura de testes
 
-Neste projeto, você vai implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems` e, para avaliá-las, será utilizada a cobertura de testes.
+Neste projeto, você vai implementar testes para quatro funções: `fetchProducts`, `fetchItem`, `saveCartItems` e `getSavedCartItems`. Você pode optar por realizar o TDD (Desenvolvimento Orientado a Testes) ou fazer o teste após a implementação da função. Para avaliar os testes, será utilizada a cobertura de testes.
 
 Essa cobertura avalia a eficácia dos testes implementados de acordo com os requisitos, determinando se cobrem o que foi pedido ou não.
 
@@ -249,7 +249,7 @@ Disponibilizamos a API simulada para você implementar seus testes. Isso signifi
 
 O seu _Pull Request_ deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. 
 
-O arquivo `scripts.js` contém uma estrutura de código inicial, que cria alguns elementos HTML. Leia cada função atentamente para entender o que o código está fazendo. É nesse arquivo que você vai implementar a lógica para desenvolver o projeto.
+O arquivo `scripts.js` contém uma estrutura de código inicial, que cria alguns elementos HTML. Leia cada função atentamente para entender o que o código está fazendo. É nesse arquivo que você vai implementar a lógica para desenvolver o projeto. Fique à vontade para criar novas funções se sentir necessidade. 😉
 
 A pasta `helpers` contém os arquivos `fetchItem.js`, `fetchProducts.js`, `getSavedCartItems.js` e `saveCartItems.js` e cada um possui uma estrutura para você implementar cada uma das funções que serão utilizadas seu código JavaScript.
 
@@ -553,23 +553,27 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
     Utilize a função <code>fetchProducts</code> para criar uma listagem de produtos através da API do Mercado Livre.
   </summary> <br />
 
+> Caso você opte pelo TDD, faça esse requisito em conjunto com o requisito 8 😉
+
 O arquivo da função `fetchProducts` já está criado e se encontra dentro da pasta `helpers` e está importado dentro do arquivo HTML.
 
 - Implemente a função `fetchProducts`;
 
 - Utilize o endpoint `'https://api.mercadolibre.com/sites/MLB/search?q=$QUERY'`, onde:
 
-    - O valor de `QUERY` deve ser **obrigatoriamente** o termo `computador`;
+  - O valor de `QUERY` deve ser **obrigatoriamente** o termo `computador`;
 
-    - O retorno de produtos se encontra no array `results`;
+  - O retorno de produtos se encontra no array `results`;
 
 - Utilize a função `createProductItemElement()` para criar os componentes _HTML_ referentes a um produto:
-  - Adicione o retorno dessa função como filho do
 
-- Adicione o elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
-- **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+  - Adicione cada elemento retornado dessa função como filho do elemento `<section class="items">`.
 
-- Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
+**Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+
+Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
+
+⚠️ Você não precisa importar nenhuma função dentro do arquivo `script.js`, pois elas já estão importadas dentro do HTML. Cuidado com as importações automáticas!
 
 <details>
 <summary>Clique aqui para ver o retorno da API</summary>
@@ -634,13 +638,14 @@ O arquivo da função `fetchProducts` já está criado e se encontra dentro da p
 
 **O que será testado:**
 
-- O elemento com classe `.items` deve exibir a lista de produtos.
+- O elemento com classe `.item` deve ser cada item da lista de produtos.
 
 </details>
 
-### 2. Adicione o produto ao carrinho de compras
+## 2. Adicione o produto ao carrinho de compras
 
-Este requisito pode ser feito em conjunto com o [requisito 9](#9-desenvolva-testes-de-no-mínimo-50-de-cobertura-total-e-100-da-função-fetchitem) se você optar por aplicar TDD, para isso basta olhar as orientações do requisito 9 e aplicar o que é solicitado em conjunto.
+> Caso você opte pelo TDD, faça esse requisito em conjunto com o requisito 9 😉
+
 
 Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho`.
 
@@ -712,14 +717,14 @@ Preste atenção que o `JSON` deve conter apenas **um** item.
 
 ---
 
-### 3. Remova o item do carrinho de compras ao clicar nele
+## 3. Remova o item do carrinho de compras ao clicar nele
 
 Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
 Para isso, dentro do arquivo `script.js` você deve procurar pela função `cartItemClickListener(event)` e implementar a lógica necessária para realizar a remoção.
 
 ---
 
-### 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
+## 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
 
 Este requisito pode ser feito em conjunto com os requisitos [10](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems) e [11](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems), se você optar por aplicar TDD, para isso basta olhar as orientações dos requisitos 10 e 11 e aplicar o que é solicitado em conjunto.
 
@@ -740,7 +745,7 @@ Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCa
 
 ---
 
-### 5. Calcule o valor total dos itens do carrinho de compras
+## 5. Calcule o valor total dos itens do carrinho de compras
 
 Cada vez que se modificar os itens do carrinho de compras, será necessário calcular seus valores e apresentá-los na página principal do projeto. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatoriamente**, a classe `total-price`.
 
@@ -750,7 +755,7 @@ Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API
 
 ---
 
-### 6. Implemente a lógica no botão `Esvaziar carrinho` para limpar o carrinho de compras
+## 6. Implemente a lógica no botão `Esvaziar carrinho` para limpar o carrinho de compras
 
 Implemente nesse botão a lógica para remover todos os itens do carrinho de compras. O botão deve **obrigatoriamente**, ter a classe `empty-cart`.
 
@@ -758,7 +763,7 @@ Implemente nesse botão a lógica para remover todos os itens do carrinho de com
 
 ---
 
-### 7. Adicione um texto de "carregando" durante uma requisição à API
+## 7. Adicione um texto de "carregando" durante uma requisição à API
 
 Uma requisição à API gasta um tempo e durante ele, ficamos sem saber se está tudo certo ou se algo deu errado.
 Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requisição está em andamento.
@@ -773,7 +778,7 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 ---
 
-### 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
+## 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
@@ -805,7 +810,7 @@ Normalmente é utilizada alguma forma para mostrar a pessoa usuária que a requi
 
 ---
 
-### 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
+## 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
 > Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
 
