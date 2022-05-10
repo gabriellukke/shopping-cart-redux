@@ -815,8 +815,6 @@ Cada vez que o carrinho de compras é modificado, será necessário calcular o v
 
 </details>
 
----
-
 ## 6. Limpe o carrinho de compras
 
 <details>
@@ -933,7 +931,7 @@ O arquivo para implementar o teste já está criado, se chama `fetchItem.test.js
 
 </details>
 
-### 10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
+## 10. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
 
 <details>
   <summary>
@@ -961,7 +959,7 @@ O arquivo para implementar o teste já está criado, se chama `saveCartItems.tes
 
 </details>
 
-### 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
+## 11. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
 
 <details>
   <summary>
