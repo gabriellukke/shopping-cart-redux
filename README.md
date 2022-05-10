@@ -832,7 +832,7 @@ Ao clicar em um dos itens do carrinho de compras, esse item deve ser removido da
 
 </details>
 
-## 6. Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
+## 6. (TDD) Desenvolva testes de no mínimo 75% de cobertura total e 100% da função `saveCartItems`
 
 <details>
   <summary>
@@ -860,7 +860,7 @@ O arquivo para implementar o teste já está criado, se chama `saveCartItems.tes
 
 </details>
 
-## 7. Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
+## 7. (TDD) Desenvolva testes para atingir 100% de cobertura total e 100% da função `getSavedCartItems`
 
 <details>
   <summary>
