@@ -235,9 +235,13 @@ Verifique com o comando `npm test` se todos os itens da cobertura dos testes est
 Disponibilizamos a API simulada para você implementar seus testes. Isso significa que será possível simular o consumo de todos os dados da API dentro do seu ambiente de testes, de forma segura e independente de fatores externos que possam ocorrer.
 
 - As funções `fetchProducts` e `fetchItem` devem ser implementadas por você;
+
 - O `window.fetch` está definido em todos os testes, ou seja, será possível usar a função `fetch` dentro do seu ambiente de testes sem precisar importar ou instalar bibliotecas;
+
 - Utilize o `localStorage.getItem` e o `localStorage.setItem` normalmente no ambiente de teste, pois a simulação dele está pronta para ser chamada quando necessário;
+
 - Para nosso ambiente de testes, o `fetch` está limitado a atender somente a configuração da API referente ao projeto;
+
 - Deseja checar se uma função foi chamada? Ou se foi chamada com um argumento específico? Que tal dar uma olhada nos matchers da [documentação](https://jestjs.io/pt-BR/docs/expect#tohavebeencalled).
 
 ⚠️ **Atenção:** Se caso você optar pelo TDD (Desenvolvimento Orientado a Testes), preste atenção nos requisitos de teste para ver o que é pedido e tenha em mente que a ordem dos requisitos será diferente. Por exemplo, ao desenvolver o teste e implementar a função `fetchProducts`, você vai realizar os requisitos 1 e 8 em conjunto.
@@ -249,7 +253,7 @@ Disponibilizamos a API simulada para você implementar seus testes. Isso signifi
 
 O seu _Pull Request_ deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. 
 
-O arquivo `scripts.js` contém uma estrutura de código inicial, que cria alguns elementos HTML. Leia cada função atentamente para entender o que o código está fazendo. É nesse arquivo que você vai implementar a lógica para desenvolver o projeto. Fique à vontade para criar novas funções se sentir necessidade. 😉
+O arquivo `scripts.js` contém uma estrutura de código inicial, que cria alguns elementos HTML. Leia cada função atentamente para entender o que o código está fazendo. É nesse arquivo que você vai implementar a lógica para desenvolver o projeto. Fique à vontade para criar novas funções desde que elas estejam dentro do `script.js`. 😉
 
 A pasta `helpers` contém os arquivos `fetchItem.js`, `fetchProducts.js`, `getSavedCartItems.js` e `saveCartItems.js` e cada um possui uma estrutura para você implementar cada uma das funções que serão utilizadas seu código JavaScript.
 
@@ -569,7 +573,7 @@ O arquivo da função `fetchProducts` já está criado e se encontra dentro da p
 
   - Adicione cada elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
-**Obs:** as variáveis no código fornecido se referem aos seguintes campos:
+**Obs:** Utilize as variáveis fornecidas no código, elas devem se referir aos seguintes campos:
 
 - `sku`: é o campo `id` retornado pela API;
 - `name`: é o campo `title` retornado pela API;
@@ -748,6 +752,7 @@ Ao carregar a página, o estado atual do carrinho de compras deve ser carregado 
 Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCartItems` que já estão criadas com o nome `saveCartItems.js` e `getSavedCartItems.js`, respectivamente, dentro da pasta `helpers`.
 
 - Implemente a função `saveCartItems` que deve apenas **adicionar** o item no `localStorage` em uma chave chamada `cartItems`;
+
 - Implemente a função `getSavedCartItems` que deve apenas recuperar o item do `localStorage`.
 
 ⚠️ A função `saveCartItems` **não** deve recuperar os itens do `localStorage`. A função `getSavedCartItems` **não** deve adicionar um item no `localStorage`.
@@ -760,21 +765,41 @@ Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCa
 
 ## 5. Calcule o valor total dos itens do carrinho de compras
 
-Cada vez que se modificar os itens do carrinho de compras, será necessário calcular seus valores e apresentá-los na página principal do projeto. O elemento que tem como filho o preço total dos itens do carrinho deve ter, **obrigatoriamente**, a classe `total-price`.
+<details>
+  <summary>
+    O elemento com o valor <strong>total</strong> dos produtos deve possuir a classe <code>total-price</code>
+  </summary> <br />
 
-Obs: Devemos tomar cuidado, pois estamos buscando os dados do produto em uma API. Portanto, é necessário garantir que a API já retornou as informações para somente depois realizar o cálculo dos valores do carrinho.
+Cada vez que o carrinho de compras é modificado, será necessário calcular o valor total dos produtos e apresentá-los na página principal do projeto. Para isso:
 
-**Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
+- Implemente uma lógica para somar todos os produtos do carrinho;
+
+- Crie um elemento com a classe `total-price` e adicione o texto com o valor total dos produtos;
+
+> **Lembre-se 💭:** Ao adicionar um produto no carrinho é realizada uma requisição para a API. Certifique-se de que a API já retornou as informações antes de realizar a soma dos produtos.
+
+> **De olho na dica 👀:** Não utilize o `toFixed()`, encontre outras alternativas para arredondar valores.
+
+**O que será testado:**
+
+- Calcule o valor total dos itens do carrinho de compras de forma assíncrona;
+
+</details>
 
 ---
 
-## 6. Implemente a lógica no botão `Esvaziar carrinho` para limpar o carrinho de compras
+## 6. Limpe o carrinho de compras
+
+<details>
+  <summary>
+    Implemente a lógica no botão <code>Esvaziar carrinho</code> para limpar o carrinho de compras
+  </summary> <br />
 
 Implemente nesse botão a lógica para remover todos os itens do carrinho de compras. O botão deve **obrigatoriamente**, ter a classe `empty-cart`.
 
 **Atenção:** ao criar novas funções para resolver este requisito, faça as implementações **sempre** dentro do arquivo `script.js`.
 
----
+</details>
 
 ## 7. Adicione um texto de "carregando" durante uma requisição à API
 
