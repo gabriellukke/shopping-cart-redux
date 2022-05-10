@@ -263,7 +263,25 @@ Você também pode assistir a [este](https://vimeo.com/539240375/a116a166b9) ví
 
 O seu _Pull Request_ deverá conter os arquivos `index.html`, `style.css` e `script.js`, que conterão seu código HTML, CSS e JavaScript, respectivamente. 
 
-O arquivo `scripts.js` contém uma estrutura de código inicial, que cria alguns elementos HTML. Leia cada função atentamente para entender o que o código está fazendo. É nesse arquivo que você vai implementar a lógica para desenvolver o projeto. Fique à vontade para criar novas funções desde que elas estejam dentro do `script.js`. 😉
+O arquivo `scripts.js` contém uma estrutura de código inicial, que cria alguns elementos HTML. Leia cada função atentamente para entender o que o código está fazendo. 
+
+Não se preocupe! O requisito vai informar quando for necessário utilizar as funções já existentes.
+
+É no `script.js` que você vai implementar a lógica para desenvolver o projeto. Fique à vontade para criar novas funções desde que elas estejam dentro do `script.js`. 😉
+
+<details>
+  <summary>
+    Clique aqui para saber um pouco mais sobre o que cada função faz
+  </summary> <br />
+
+  - `createProductImageElement`: Cria um elemento de imagem;
+  - `createCustomElement`: Estrutura para criar um elemento;
+  - `createProductItemElement`: Cria a lista de produtos;
+  - `getSkuFromProductItem`: Pega o `id` de um produto;
+  - `cartItemClickListener`: Escuta a ação de clicar em um item no carrinho;
+  - `createCartItemElement`: Cria os elementos do carrinho.
+
+</details>
 
 A pasta `helpers` contém os arquivos `fetchItem.js`, `fetchProducts.js`, `getSavedCartItems.js` e `saveCartItems.js` e cada um possui uma estrutura para você implementar cada uma das funções que serão utilizadas seu código JavaScript.
 
