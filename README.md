@@ -743,20 +743,16 @@ Ao clicar em um dos itens do carrinho de compras, esse item deve ser removido da
 
 > Caso você opte pelo TDD, faça esse requisito em conjunto com os requisito 10 e 11 😉
 
-Este requisito pode ser feito em conjunto com os requisitos [10](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems) e [11](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems), se você optar por aplicar TDD, para isso basta olhar as orientações dos requisitos 10 e 11 e aplicar o que é solicitado em conjunto.
-
-Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**. Para que isso funcione, o carrinho de compras deve ser salvo no **LocalStorage**, ou seja, todas as **adições** e **remoções** devem ser abordadas para que a lista esteja sempre atualizada.
+Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**. Para que isso funcione, os itens do carrinho de compras devem ser salvos no **LocalStorage**, ou seja, a **adição** e **remoção** um produto devem ser abordadas para que a lista esteja sempre atualizada.
 
 Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCartItems` que já estão criadas com o nome `saveCartItems.js` e `getSavedCartItems.js`, respectivamente, dentro da pasta `helpers`.
 
-**Observações técnicas:**
+- Implemente a função `saveCartItems` que deve apenas **adicionar** o item no `localStorage` em uma chave chamada `cartItems`;
+- Implemente a função `getSavedCartItems` que deve apenas recuperar o item do `localStorage`.
 
-- Os arquivos `saveCartItems.js` e `getSavedCartItems.js` já estão importados na estrutura do seu arquivo _HTML_;
-- Para executar suas funções `saveCartItems` e `getSavedCartItems`, basta chamar no seu arquivo `script.js`;
-- A função `saveCartItems` deve salvar os itens do carrinho de compras no `localStorage`, em uma chave denominada `cartItems`.
-- A função `getSavedCartItems` deve retornar os itens do carrinho de compras do `localStorage` quando carregamos a página.
+⚠️ A função `saveCartItems` **não** deve recuperar os itens do `localStorage`. A função `getSavedCartItems` **não** deve adicionar um item no `localStorage`.
 
-**O que será avaliado**
+**O que será testado:**
 
 - A página ao ser atualizada deve permanecer com todos os itens do carrinho adicionados anteriomente.
 
