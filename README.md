@@ -749,7 +749,7 @@ Ao clicar em um dos itens do carrinho de compras, esse item deve ser removido da
 
 > Caso você opte pelo TDD, faça esse requisito em conjunto com os requisito 10 e 11 😉
 
-Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**. Para que isso funcione, os itens do carrinho de compras devem ser salvos no **LocalStorage**, ou seja, a **adição** e **remoção** um produto devem ser abordadas para que a lista esteja sempre atualizada.
+Ao carregar a página, o estado atual do carrinho de compras deve ser carregado do **LocalStorage**. Para que isso funcione, os itens do carrinho de compras devem ser salvos no **LocalStorage**, ou seja, a **adição** e **remoção** de um produto devem ser abordadas para que a lista esteja sempre atualizada.
 
 Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCartItems` que já estão criadas com o nome `saveCartItems.js` e `getSavedCartItems.js`, respectivamente, dentro da pasta `helpers`.
 
@@ -834,35 +834,41 @@ Uma requisição à API gasta um certo tempo e durante esse processo a pessoa qu
 
 ## 8. Desenvolva testes de no mínimo 25% de cobertura total e 100% da função `fetchProducts`
 
-> Implemente os testes nos arquivos da pasta `tests` que está na raiz do projeto.
+<details>
+  <summary>
+    Implemente os testes necessários na função <code>fetchProducts</code>
+  </summary> <br />
 
-**Observações técnicas:**
+O arquivo para implementar o teste já está criado, se chama `fetchProducts.test.js` e se encontra dentro da pasta `tests`.
+
+⚠️ **Atenção:** Não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
+
+**O que você deve testar:**
+
+- Teste se `fetchProducts` é uma função;
+
+- Execute a função `fetchProducts` com o argumento `'computador'` e teste se `fetch` foi chamada;
+
+- Teste se, ao chamar a função `fetchProducts` com o argumento `'computador'`, a função `fetch` utiliza o endpoint `'https://api.mercadolibre.com/sites/MLB/search?q=computador'`;
+
+- Teste se o retorno da função `fetchProducts` com o argumento `'computador'` é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
+
+- Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `'You must provide an url'`.
+
+> **De olho na dica 👀:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
+> Leia com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
+
+⚠️ **Atenção:** Você deve implementar todos os testes acima, independente do que for suficiente para a cobertura de testes.
 
 - Use o comando `npm test` para verificar se seus testes estão passando;
-- **OBS:** Você deve implementar os 5 requisitos, independente do que for suficiente para a cobertura de testes.
-- **Atenção:** não altere a estrutura já implementada nos arquivos de testes, apenas adicione os testes dentro do bloco `describe`.
-- Lembre-se de ler com bastante atenção o que está sendo solicitado e implemente um teste de cada vez!
-- **A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
 
-**O que você deve testar**
+**A cobertura irá checar apenas as funções destacadas e não toda a aplicação!**
 
-> Dentro da pasta `tests`, abra o arquivo `fetchProducts.test.js` e faça o solicitado:
-
-1. Teste se `fetchProducts` é uma função;
-
-2. Execute a função `fetchProducts` com o argumento "computador" e teste se `fetch` foi chamada;
-
-3. Teste se, ao chamar a função `fetchProducts` com o argumento "computador", a função `fetch` utiliza o endpoint "https://api.mercadolibre.com/sites/MLB/search?q=computador";
-
-4. Teste se o retorno da função `fetchProducts` com o argumento "computador" é uma estrutura de dados igual ao objeto `computadorSearch`, que já está importado no arquivo.
-
-5. Teste se, ao chamar a função `fetchProducts` sem argumento, retorna um erro com a mensagem: `You must provide an url`. **Dica:** Lembre-se de usar o `new Error('mensagem esperada aqui')` para comparar com o objeto retornado da API.
-
-**O que será avaliado**
+**O que será testado:**
 
 - Será avaliado se os testes implementados atingem no mínimo 25% da cobertura total e 100% da função `fetchProducts`.
 
----
+</details>
 
 ## 9. Desenvolva testes de no mínimo 50% de cobertura total e 100% da função `fetchItem`
 
