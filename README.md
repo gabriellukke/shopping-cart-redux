@@ -557,9 +557,9 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
 
 O arquivo da função `fetchProducts` já está criado e se encontra dentro da pasta `helpers` e está importado dentro do arquivo HTML.
 
-- Implemente a função `fetchProducts`;
+- Implemente a função `fetchProducts` para retornar a listagem de produtos;
 
-- Utilize o endpoint `'https://api.mercadolibre.com/sites/MLB/search?q=$QUERY'`, onde:
+- Utilize o _endpoint_ `https://api.mercadolibre.com/sites/MLB/search?q=$QUERY`, onde:
 
   - O valor de `QUERY` deve ser **obrigatoriamente** o termo `computador`;
 
@@ -567,7 +567,7 @@ O arquivo da função `fetchProducts` já está criado e se encontra dentro da p
 
 - Utilize a função `createProductItemElement()` para criar os componentes _HTML_ referentes a um produto:
 
-  - Adicione cada elemento retornado dessa função como filho do elemento `<section class="items">`.
+  - Adicione cada elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
 **Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
 
@@ -644,31 +644,32 @@ Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.j
 
 ## 2. Adicione o produto ao carrinho de compras
 
+<details>
+  <summary>
+    Implemente a função <code>fetchItems</code> para retornar dados de um produto e adicioná-lo ao carrinho.
+  </summary> <br />
+</details>
+
 > Caso você opte pelo TDD, faça esse requisito em conjunto com o requisito 9 😉
 
+A função `fetchItem` é responsável por retornar os detalhes de um produto. Ela está dentro da pasta `helpers` em um arquivo chamado `fetchItem.js`.
 
-Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho`.
+Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinho` e, ao clicar nesse botão, você deve realizar uma requisição que vai retornar todos os detalhes de um produto.
 
-Ao clicar nesse botão você deve realizar uma requisição que irá retornar todos os dados específicos de um produto.
+- Implemente a função `fetchItems` para fazer a requisição dos detalhes de um produto;
 
-Para isso, você terá de implementar a função `fetchItem` que já está criada no arquivo `fetchItem.js`, que se encontra dentro da pasta `helpers`. Lá, você deverá implementar **apenas** a função `fetchItem`.
+- Utilize o _endpoint_ `https://api.mercadolibre.com/items/$ItemID`, onde `ItemID` é o `id` do produto a ser buscado;
 
-A função `fetchItem` que você irá implementar, deve consumir o seguinte _endpoint_:
+- Utilize a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho;
 
-```javascript
-"https://api.mercadolibre.com/items/$ItemID"
-```
+  - Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
-onde `$ItemID` deve ser o valor `id` do item selecionado.
-
-Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no formato:
-
----
+Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno do _endpoint_ será algo no formato:
 
 <details>
-<summary>CLIQUE AQUI PARA VER O RETORNO DA API</summary>
+<summary>Clique aqui para ver o retorno da API</summary>
 
-```JSON
+```json
 {
     "id": "MLB1341706310",
     "site_id": "MLB",
@@ -684,7 +685,7 @@ Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no form
     "initial_quantity": 0,
     "available_quantity": 0,
     "sold_quantity": 0,
-    ...
+    //[...]
     "warranty": "Garantia de fábrica: 3 anos",
     "catalog_product_id": "MLB9196241",
     "domain_id": "MLB-COMPUTER_PROCESSORS",
@@ -700,18 +701,12 @@ Quando colocado o id `MLB1341706310` retorno desse _endpoint_ será algo no form
 ```
 </details>
 
----
+⚠️ O `JSON` deve conter apenas **um** item.
 
-Preste atenção que o `JSON` deve conter apenas **um** item.
+⚠️ Você não precisa importar nenhuma função dentro do arquivo `script.js`, pois elas já estão importadas dentro do HTML. Cuidado com as importações automáticas!
 
-**Observações técnicas:**
 
-- O arquivo `fetchItem.js` já está importado na estrutura do seu arquivo _HTML_;
-- Para executar sua função `fetchItem` basta chamar no seu arquivo `script.js`;
-- Você **deve** utilizar a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho.
-- Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
-
-**O que será avaliado**
+**O que será testado:**
 
 - O elemento com classe `.cart__items` deve adicionar o item escolhido, apresentando corretamente suas informações de id, título e preço.
 
