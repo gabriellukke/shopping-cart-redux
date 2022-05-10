@@ -93,7 +93,7 @@
       ]
     },
     {
-      "description": "10 - Crie um botão para limpar carrinho de compras",
+      "description": "10 - Implemente a lógica no botão Esvaziar Carrinho para limpar o carrinho de compras",
       "bonus": false,
       "skill_ids": [
         "5497f4b7-ec08-4096-82f7-0dc3bd3f9f6f",

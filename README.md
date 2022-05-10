@@ -883,7 +883,7 @@ Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCa
 
 - Implemente a função `saveCartItems` que deve possuir a lógica para apenas **adicionar** o item no `localStorage` em uma chave chamada `cartItems`;
 
-- Implemente a função `getSavedCartItems` que deve possuir a lógica para apenas **recuperar** o item do `localStorage`.
+- Implemente a função `getSavedCartItems` que deve possuir a lógica para apenas **retornar** o item do `localStorage`.
 
 ⚠️ A função `saveCartItems` **não** deve recuperar os itens do `localStorage`. A função `getSavedCartItems` **não** deve adicionar um item no `localStorage`.
 

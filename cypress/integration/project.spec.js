@@ -221,7 +221,7 @@ describe('Shopping Cart Project', () => {
     });
   });
 
-  describe('10 - Crie um botão para limpar carrinho de compras', () => {
+  describe('10 - Implemente a lógica no botão Esvaziar Carrinho para limpar o carrinho de compras', () => {
     it('Botão para limpar carrinho de compras', () => {
       addToCart(3);
       addToCart(0);
