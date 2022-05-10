@@ -270,7 +270,7 @@ Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, po
 
 O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/itens-e-buscas) contém todas as informações acerca da API (retorno, estrutura). Nesse projeto você vai precisar apenas de alguns dos _endpoints_, sendo eles:
 
-- `https://api.mercadolibre.com/sites/MLB/search?q=$QUERY`: traz uma lista de produtos, onde `QUERY` é o termo a ser buscado. Por exemplo, se o termo for `computador`, o retorno será parecido com esse:
+- `https://api.mercadolibre.com/sites/MLB/search?q=$QUERY`: traz uma lista de produtos, onde `$QUERY` é o termo a ser buscado. Por exemplo, se o termo for `computador`, o retorno será parecido com esse:
 
   <details>
     <summary>Retorno da requisição de listagem de produtos</summary>
@@ -466,7 +466,7 @@ O [manual da API do Mercado Livre](https://developers.mercadolivre.com.br/pt_br/
   ```
   </details>
 
-- `https://api.mercadolibre.com/items/$ItemID`: traz detalhes de um determinado produto, onde `ItemID` é o `id` do produto a ser buscado. Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno será parecido com esse:
+- `https://api.mercadolibre.com/items/$ItemID`: traz detalhes de um determinado produto, onde `$ItemID` é o `id` do produto a ser buscado. Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno será parecido com esse:
 
   <details>
     <summary>Retorno da requisição de detalhes de um produto</summary>
@@ -561,7 +561,7 @@ O arquivo da função `fetchProducts` já está criado e se encontra dentro da p
 
 - Utilize o _endpoint_ `https://api.mercadolibre.com/sites/MLB/search?q=$QUERY`, onde:
 
-  - O valor de `QUERY` deve ser **obrigatoriamente** o termo `computador`;
+  - O valor de `$QUERY` deve ser **obrigatoriamente** o termo `computador`;
 
   - O retorno de produtos se encontra no array `results`;
 
@@ -569,7 +569,11 @@ O arquivo da função `fetchProducts` já está criado e se encontra dentro da p
 
   - Adicione cada elemento retornado da função `createProductItemElement(product)` como filho do elemento `<section class="items">`.
 
-**Obs:** as variáveis `sku`, no código fornecido, se referem aos campos `id` retornados pela API.
+**Obs:** as variáveis no código fornecido se referem aos seguintes campos:
+
+- `sku`: é o campo `id` retornado pela API;
+- `name`: é o campo `title` retornado pela API;
+- `image`: é o campo `thumbnail` retornado pela API.
 
 Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.js`;
 
@@ -648,7 +652,6 @@ Para executar sua função `fetchProducts` basta chamar no seu arquivo `script.j
   <summary>
     Implemente a função <code>fetchItems</code> para retornar dados de um produto e adicioná-lo ao carrinho.
   </summary> <br />
-</details>
 
 > Caso você opte pelo TDD, faça esse requisito em conjunto com o requisito 9 😉
 
@@ -658,9 +661,11 @@ Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinh
 
 - Implemente a função `fetchItems` para fazer a requisição dos detalhes de um produto;
 
-- Utilize o _endpoint_ `https://api.mercadolibre.com/items/$ItemID`, onde `ItemID` é o `id` do produto a ser buscado;
+- Utilize o _endpoint_ `https://api.mercadolibre.com/items/$ItemID`, onde `$ItemID` é o `id` do produto a ser buscado;
 
 - Utilize a função `createCartItemElement()` para criar os componentes _HTML_ referentes a um item do carrinho;
+
+**Obs:** `salePrice` é o campo `price` retornado pela API.
 
   - Adicione o elemento retornado da função `createCartItemElement(product)` como filho do elemento `<ol class="cart__items">`.
 
@@ -710,16 +715,33 @@ Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno do _endpoint_ s
 
 - O elemento com classe `.cart__items` deve adicionar o item escolhido, apresentando corretamente suas informações de id, título e preço.
 
----
+</details>
 
 ## 3. Remova o item do carrinho de compras ao clicar nele
 
-Ao clicar no **produto no carrinho de compra**, ele deve ser removido da lista.
-Para isso, dentro do arquivo `script.js` você deve procurar pela função `cartItemClickListener(event)` e implementar a lógica necessária para realizar a remoção.
+<details>
+  <summary>
+    Ao clicar no <strong>produto no carrinho de compra</strong>, ele deve ser removido da lista.
+  </summary> <br />
 
----
+Ao clicar em um dos itens do carrinho de compras, esse item deve ser removido da lista. Para isso:
 
-## 4. Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página
+- Utilize a função `cartItemClickListener(event)` para implementar a lógica necessária para remover o item do carrinho.
+
+**O que será testado:**
+
+- Remova o item do carrinho de compras ao clicar nele;
+
+</details>
+
+## 4. Carregue o carrinho de compras ao iniciar a página
+
+<details>
+  <summary>
+    Salve os itens adicionados no carrinho de compras no <code>localStorage</code>
+  </summary> <br />
+
+> Caso você opte pelo TDD, faça esse requisito em conjunto com os requisito 10 e 11 😉
 
 Este requisito pode ser feito em conjunto com os requisitos [10](#10-desenvolva-testes-de-no-mínimo-75-de-cobertura-total-e-100-da-função-savecartitems) e [11](#11-desenvolva-testes-para-atingir-100-de-cobertura-total-e-100-da-função-getsavedcartitems), se você optar por aplicar TDD, para isso basta olhar as orientações dos requisitos 10 e 11 e aplicar o que é solicitado em conjunto.
 
@@ -738,7 +760,7 @@ Para isso, você terá de implementar as funções `saveCartItems` e `getSavedCa
 
 - A página ao ser atualizada deve permanecer com todos os itens do carrinho adicionados anteriomente.
 
----
+</details>
 
 ## 5. Calcule o valor total dos itens do carrinho de compras
 
