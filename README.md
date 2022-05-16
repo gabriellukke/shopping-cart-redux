@@ -775,7 +775,7 @@ Cada produto na página _HTML_ possui um botão com o nome `Adicionar ao carrinh
 Por exemplo, se o `id` do produto for `MLB1341706310`, o retorno do _endpoint_ será algo no formato:
 
 <details>
-<summary><strong>Clique aqui para ver o retorno da API<strong></summary>
+<summary><strong>Clique aqui para ver o retorno da API</strong></summary>
 
 ```json
 {
