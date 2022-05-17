@@ -2,7 +2,12 @@
   "requirements": [
     {
       "description": "1 - Desenvolva testes para atingir 25% de cobertura total e 100% da função fetchProducts",
-      "bonus": false
+      "bonus": false,
+      "skill_ids": [
+        "8e72d617-4573-41e0-bcc4-702198f9efa2",
+        "fd1a6cd8-c137-4851-8c41-9da698f19ab2",
+        "c6f6c695-c734-45d4-a2d9-da33747aae37"
+      ]
     },
     {
       "description": "2 - Crie uma listagem de produtos",
@@ -26,7 +31,12 @@
     },
     {
       "description": "3 - Desenvolva testes para atingir 50% de cobertura total e 100% da função fetchItem",
-      "bonus": false
+      "bonus": false,
+      "skill_ids": [
+        "8e72d617-4573-41e0-bcc4-702198f9efa2",
+        "fd1a6cd8-c137-4851-8c41-9da698f19ab2",
+        "c6f6c695-c734-45d4-a2d9-da33747aae37"
+      ]
     },
     {
       "description": "4 - Adicione o produto ao carrinho de compras",
@@ -66,11 +76,21 @@
     },
     {
       "description": "6 - Desenvolva testes para atingir 75% de cobertura total e 100% da função saveCartItems",
-      "bonus": false
+      "bonus": false,
+      "skill_ids": [
+        "8e72d617-4573-41e0-bcc4-702198f9efa2",
+        "fd1a6cd8-c137-4851-8c41-9da698f19ab2",
+        "c6f6c695-c734-45d4-a2d9-da33747aae37"
+      ]
     },
     {
       "description": "7 - Desenvolva testes para atingir 100% de cobertura total e 100% da função getSavedCartItems",
-      "bonus": false
+      "bonus": false,
+      "skill_ids": [
+        "8e72d617-4573-41e0-bcc4-702198f9efa2",
+        "fd1a6cd8-c137-4851-8c41-9da698f19ab2",
+        "c6f6c695-c734-45d4-a2d9-da33747aae37"
+      ]
     },
     {
       "description": "8 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
