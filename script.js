@@ -39,14 +39,22 @@ const createCartItemElement = ({ sku, name, salePrice }) => {
 };
 
 const renderProductsFromAPI = async () => {
+  /**
+   * Using createDocumentFragment to improve perfomance when add multiples elements into DOM
+   * https://davidwalsh.name/documentfragment
+   * https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment
+   */
+  const frag = document.createDocumentFragment();
   const parentElement = document.querySelector('.items');
 
-  const products = await fetchProducts();
+  const products = await fetchProducts('computador');
 
   products.forEach((product) => {
     const itemElement = createProductItemElement(product);
-    parentElement.appendChild(itemElement);
+    frag.appendChild(itemElement);
   });
+
+  parentElement.appendChild(frag);
 }
 
 window.onload = () => {
