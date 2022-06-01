@@ -89,7 +89,7 @@ const renderProductsFromAPI = async () => {
   });
 
   parentElement.appendChild(frag);
-}
+};
 
 const addProductToCart = async (id) => {
   const parentElement = document.querySelector('.cart__items');
@@ -105,7 +105,7 @@ const addProductToCart = async (id) => {
 
   parentElement.appendChild(productElement);
   saveTotalPrice();
-}
+};
 
 const renderLocalStorageCartItems = () => {
   const frag = document.createDocumentFragment();
@@ -123,7 +123,18 @@ const renderLocalStorageCartItems = () => {
 
   saveTotalPrice();
   return null;
-}
+};
+
+const emptyCart = () => {
+  const parentElement = document.querySelector('.cart__items');
+  parentElement.innerText = '';
+
+  saveCartItems([]);
+};
+
+const emptyCartBtn = document.querySelector('.empty-cart');
+emptyCartBtn.addEventListener('click', emptyCart);
+
 
 window.onload = () => {
   renderLocalStorageCartItems();
