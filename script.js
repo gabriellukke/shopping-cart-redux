@@ -35,7 +35,6 @@ const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) =>
   return section;
 };
 
-
 const saveTotalPrice = () => {
   const totalPriceElement = document.querySelector('.total-price');
 
@@ -52,10 +51,16 @@ const saveTotalPrice = () => {
 const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').innerText;
 
 const cartItemClickListener = (event) => {
-  const parentElement = event.target.parentElement;
   event.target.remove();
-  
-  saveCartItems(parentElement);
+
+  // localStorage
+  const FIRST_SKU_INDEX = 5;
+  const LAST_SKU_INDEX = 18;
+  const productId = event.target.innerText.substring(FIRST_SKU_INDEX, LAST_SKU_INDEX);
+  const localStorageItems = JSON.parse(localStorage.getItem('cartItem'));
+  const filteredProducts = localStorageItems.filter((item) => item.id !== productId);
+  saveCartItems(filteredProducts);
+
   saveTotalPrice();
 };
 
@@ -91,24 +96,29 @@ const addProductToCart = async (id) => {
 
   const product = await fetchItem(id);
 
+  // localStorage
+  const localStorageItems = JSON.parse(localStorage.getItem('cartItem'));
+  const allProducts = localStorageItems ? [...localStorageItems, product] : [product];
+  saveCartItems(allProducts);  
+
   const productElement = createCartItemElement(product);
 
   parentElement.appendChild(productElement);
-  saveCartItems(parentElement);  
   saveTotalPrice();
 }
 
 const renderLocalStorageCartItems = () => {
-  const cartSection = document.querySelector('.cart');
-  const cartItemsList = getSavedCartItems();
-  
-  if (cartItemsList) {
-    cartSection.innerHTML = cartItemsList;
+  const frag = document.createDocumentFragment();
+  const parentElement = document.querySelector('.cart__items');
+  const cartItemsList = JSON.parse(getSavedCartItems());
 
-    const cartItemsElements = document.querySelectorAll('.cart__item');
-    cartItemsElements.forEach((cartItemsElement) => {
-      cartItemsElement.addEventListener('click', cartItemClickListener);
-    })
+  if (cartItemsList && cartItemsList.length > 0) {
+    cartItemsList.forEach((item) => {
+      const productElement = createCartItemElement(item);
+      frag.appendChild(productElement);
+    });
+    
+    parentElement.appendChild(frag);
   }
 
   saveTotalPrice();
