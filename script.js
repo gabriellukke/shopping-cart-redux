@@ -80,8 +80,16 @@ const renderProductsFromAPI = async () => {
    */
   const frag = document.createDocumentFragment();
   const parentElement = document.querySelector('.items');
+  
+  
+  const loadingElement = document.createElement('h1');
+  loadingElement.className = 'loading';
+  loadingElement.innerText = 'carregando...';
+  parentElement.appendChild(loadingElement);
 
   const products = await fetchProducts('computador');
+
+  parentElement.removeChild(loadingElement);
 
   products.forEach((product) => {
     const itemElement = createProductItemElement(product);
