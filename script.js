@@ -15,33 +15,48 @@ const createCustomElement = (element, className, innerText) => {
 const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) => {
   const section = document.createElement('section');
   section.className = 'item';
-
+  
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
   section.appendChild(createProductImageElement(image));
-
+  
   const addProductToCartBtn = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!');
   addProductToCartBtn.addEventListener('click', (e) => {
     // Using DOM Methods
     // const productIdFromHTML = e.target.parentElement.firstChild.innerText;
-
+    
     // Using created Function
     const productIdFromHTML = getSkuFromProductItem(e.target.parentElement);
-
+    
     addProductToCart(productIdFromHTML);
   });
+  
   section.appendChild(addProductToCartBtn);
-
   return section;
 };
+
+
+const saveTotalPrice = () => {
+  const totalPriceElement = document.querySelector('.total-price');
+
+  const itemElements = Array.from(document.querySelectorAll('.cart__item'));
+  
+  const totalPrice = itemElements.reduce((acc, cur) => {
+    const itemPrice = cur.innerText.substring(cur.innerText.indexOf('$') + 1);
+    return acc + Number(itemPrice);
+  }, 0);
+
+  totalPriceElement.innerText = totalPrice;
+}
 
 const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').innerText;
 
 const cartItemClickListener = (event) => {
   const parentElement = event.target.parentElement;
   event.target.remove();
-
+  
   saveCartItems(parentElement);
+  saveTotalPrice();
 };
 
 const createCartItemElement = ({ id: sku, title: name, price: salePrice }) => {
@@ -75,10 +90,12 @@ const addProductToCart = async (id) => {
   const parentElement = document.querySelector('.cart__items');
 
   const product = await fetchItem(id);
+
   const productElement = createCartItemElement(product);
 
   parentElement.appendChild(productElement);
   saveCartItems(parentElement);  
+  saveTotalPrice();
 }
 
 const renderLocalStorageCartItems = () => {
@@ -94,6 +111,7 @@ const renderLocalStorageCartItems = () => {
     })
   }
 
+  saveTotalPrice();
   return null;
 }
 
