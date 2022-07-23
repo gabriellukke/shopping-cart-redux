@@ -1,6 +1,17 @@
+const productsReducer = (state, action) => {
+  switch (action.type) {
+    case '': {
+      return state;
+    }
+    default: {
+      return state;
+    }
+  }
+};
+
 /* eslint-disable no-underscore-dangle */
 const store = Redux.createStore(
-  () => {},
+  productsReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
