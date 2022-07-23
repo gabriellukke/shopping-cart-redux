@@ -157,6 +157,14 @@ const emptyCart = () => {
 const emptyCartBtn = document.querySelector('.empty-cart');
 emptyCartBtn.addEventListener('click', emptyCart);
 
+const setProductsToState = async () => {
+  const products = await fetchProducts('computador');
+  store.dispatch({
+    type: 'GET_PRODUCTS',
+    payload: products,
+  });
+};
+
 window.onload = () => {
   renderLocalStorageCartItems();
   renderProductsFromAPI();
