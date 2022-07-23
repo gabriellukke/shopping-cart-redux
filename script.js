@@ -1,3 +1,34 @@
+const INITIAL_STATE = {
+  products: [],
+  cartItems: [],
+};
+
+const productsReducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case 'GET_PRODUCTS': {
+      return {
+        ...state,
+        products: action.payload,
+      };
+    }
+    case 'ADD_PRODUCT': {
+      return {
+        ...state,
+        cartItems: [...state.cartItems, action.payload],
+      };
+    }
+    default: {
+      return state;
+    }
+  }
+};
+
+/* eslint-disable no-underscore-dangle */
+const store = Redux.createStore(
+  productsReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+
 const CART_ITEMS_CLASS = '.cart__items';
 
 const createProductImageElement = (imageSource) => {
@@ -15,10 +46,11 @@ const createCustomElement = (element, className, innerText) => {
 };
 
 const saveTotalPrice = () => {
+  store.getState();
   const totalPriceElement = document.querySelector('.total-price');
 
   const itemElements = Array.from(document.querySelectorAll('.cart__item'));
-  
+
   const totalPrice = itemElements.reduce((acc, cur) => {
     const itemPrice = cur.innerText.substring(cur.innerText.indexOf('$') + 1);
     return acc + Number(itemPrice);
@@ -49,28 +81,38 @@ const createCartItemElement = ({ id: sku, title: name, price: salePrice }) => {
   return li;
 };
 
-const addProductToCart = async (id) => {
+const renderCartProducts = (cartProducts) => {
   const parentElement = document.querySelector(CART_ITEMS_CLASS);
-
-  const product = await fetchItem(id);
+  const frag = document.createDocumentFragment();
 
   // localStorage
   const localStorageItems = JSON.parse(localStorage.getItem('cartItem'));
-  const allProducts = localStorageItems ? [...localStorageItems, product] : [product];
-  saveCartItems(allProducts);  
+  const allProducts = localStorageItems ? [...localStorageItems, ...cartProducts] : cartProducts;
+  saveCartItems(allProducts);
+  cartProducts.forEach((product) => {
+    const productElement = createCartItemElement(product);
+    frag.appendChild(productElement);
+  });
 
-  const productElement = createCartItemElement(product);
+  parentElement.appendChild(frag);
 
-  parentElement.appendChild(productElement);
   saveTotalPrice();
 };
 
 const getSkuFromProductItem = (item) => item.querySelector('span.item__sku').innerText;
 
+const setProductToCart = async (id) => {
+  const product = await fetchItem(id);
+  store.dispatch({
+    type: 'ADD_PRODUCT',
+    payload: product,
+  });
+};
+
 const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) => {
   const section = document.createElement('section');
   section.className = 'item';
-  
+
   section.appendChild(createCustomElement('span', 'item__sku', sku));
   section.appendChild(createCustomElement('span', 'item__title', name));
   section.appendChild(createProductImageElement(image));
@@ -78,15 +120,15 @@ const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) =>
   const addProductToCartBtn = createCustomElement('button', 'item__add', 'Adicionar ao carrinho!');
   addProductToCartBtn.addEventListener('click', (e) => {
     const productIdFromHTML = getSkuFromProductItem(e.target.parentElement);
-    
-    addProductToCart(productIdFromHTML);
+    setProductToCart(productIdFromHTML);
+    // addProductToCart(productIdFromHTML);
   });
   
   section.appendChild(addProductToCartBtn);
   return section;
 };
 
-const renderProductsFromAPI = async () => {
+const renderProductsFromRedux = (products) => {
   const frag = document.createDocumentFragment();
   const parentElement = document.querySelector('.items');
   
@@ -94,8 +136,6 @@ const renderProductsFromAPI = async () => {
   loadingElement.className = 'loading';
   loadingElement.innerText = 'carregando...';
   parentElement.appendChild(loadingElement);
-
-  const products = await fetchProducts('computador');
 
   parentElement.removeChild(loadingElement);
 
@@ -135,7 +175,21 @@ const emptyCart = () => {
 const emptyCartBtn = document.querySelector('.empty-cart');
 emptyCartBtn.addEventListener('click', emptyCart);
 
+const setProductsToState = async () => {
+  const products = await fetchProducts('computador');
+  store.dispatch({
+    type: 'GET_PRODUCTS',
+    payload: products,
+  });
+};
+
+store.subscribe(() => {
+  const { products, cartItems } = store.getState();
+  renderProductsFromRedux(products);
+  renderCartProducts(cartItems);
+});
+
 window.onload = () => {
   renderLocalStorageCartItems();
-  renderProductsFromAPI();
+  setProductsToState();
 };
