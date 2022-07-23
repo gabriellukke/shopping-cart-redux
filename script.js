@@ -1,6 +1,11 @@
-const productsReducer = (state, action) => {
+const INITIAL_STATE = {
+  products: [],
+  cartItems: [],
+};
+
+const productsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case '': {
+    case 'GET_PRODUCTS': {
       return state;
     }
     default: {
