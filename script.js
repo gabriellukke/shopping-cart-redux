@@ -1,3 +1,9 @@
+/* eslint-disable no-underscore-dangle */
+const store = Redux.createStore(
+  () => {},
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+
 const CART_ITEMS_CLASS = '.cart__items';
 
 const createProductImageElement = (imageSource) => {
