@@ -111,16 +111,16 @@ const createProductItemElement = ({ id: sku, title: name, thumbnail: image }) =>
   return section;
 };
 
-const renderProductsFromAPI = async () => {
+const renderProductsFromState = async (products) => {
   const frag = document.createDocumentFragment();
   const parentElement = document.querySelector('.items');
-  
+
   const loadingElement = document.createElement('h1');
   loadingElement.className = 'loading';
   loadingElement.innerText = 'carregando...';
   parentElement.appendChild(loadingElement);
 
-  const products = await fetchProducts('computador');
+  // const products = await fetchProducts('computador');
 
   parentElement.removeChild(loadingElement);
 
@@ -168,8 +168,13 @@ const setProductsToState = async () => {
   });
 };
 
+store.subscribe(() => {
+  const { products } = store.getState();
+  renderProductsFromState(products);
+});
+
 window.onload = () => {
   renderLocalStorageCartItems();
-  renderProductsFromAPI();
+  // renderProductsFromAPI();
   setProductsToState();
 };
