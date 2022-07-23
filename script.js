@@ -6,7 +6,10 @@ const INITIAL_STATE = {
 const productsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case 'GET_PRODUCTS': {
-      return state;
+      return {
+        ...state,
+        products: action.payload,
+      };
     }
     default: {
       return state;
@@ -168,4 +171,5 @@ const setProductsToState = async () => {
 window.onload = () => {
   renderLocalStorageCartItems();
   renderProductsFromAPI();
+  setProductsToState();
 };
